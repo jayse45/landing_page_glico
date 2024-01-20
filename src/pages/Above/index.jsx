@@ -15,7 +15,7 @@ const AbovePage = () => {
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <Button
           className="common-pointer cursor-pointer flex items-center justify-center min-w-[1440px] md:min-w-full"
-          onClick={() => navigate("/aboveone")}
+          onClick={() => navigate("/")}
           leftIcon={
             <Img
               className="h-5 mt-px mr-2.5"

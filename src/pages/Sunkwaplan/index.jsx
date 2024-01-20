@@ -245,6 +245,8 @@ const SunkwaplanPage = () => {
                 className="flex flex-col gap-[19px] items-start justify-start w-auto sm:w-full"
                 onClick={() => navigate("/above")}
               />
+
+
             </div>
             <div className="md:h-[534px] h-[589px] relative w-[48%] md:w-full sm:hidden">
               <Img
