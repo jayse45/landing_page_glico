@@ -54,6 +54,9 @@ const SunkwaplanPage = () => {
                 </Text>
               </div>
               <Button
+                onClick={() => {
+                  handleSectionNavigation("block1");
+                }}
                 className="cursor-pointer min-w-[133px] md:ml-[0] ml-[143px] text-[15px] text-center"
                 shape="round"
                 color="white_A700"

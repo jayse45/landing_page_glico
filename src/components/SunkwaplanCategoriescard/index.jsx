@@ -11,7 +11,7 @@ const SunkwaplanCategoriescard = (props) => {
       <div className={props.className}>
       <>
   {/* component */}
-  <div className="m-2 space-y-2">
+  <div className="m-2 space-y-2 bg-gray-100">
     <div
       className="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
       tabIndex={1}
