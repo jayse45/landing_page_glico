@@ -7,10 +7,10 @@ const LastSection = () => {
           <div className="h-[336px] md:px-5 relative w-full">
             <Img
               className="h-[336px] m-auto object-cover w-full sm:object-[80%]"
-              src="images/img_rectangle2.png"
+              src="images/cta1.png"
               alt="rectangleTwo"
             />
-            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[61px] md:px-10 sm:px-5 w-full">
+            <div className="absolute  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[61px] md:px-10 sm:px-5 w-full">
               <div className="flex flex-col gap-8 items-start justify-start mb-[11px] md:ml-[0] ml-[74px] w-auto md:w-full">
                 <div className="flex flex-col gap-5 items-start justify-center w-[598px] md:w-full">
                   <div className="flex flex-col gap-[15px] items-start justify-start w-full">
