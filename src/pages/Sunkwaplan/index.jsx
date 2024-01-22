@@ -26,7 +26,7 @@ const SunkwaplanPage = () => {
               src="images/img_rectangle1.png"
               alt="rectangleOne"
             />
-            <div className="absolute flex flex-col bg-gradient1 gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
+            <div className="absolute flex flex-col  gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
               <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[141px] mt-2.5 w-[538px] sm:w-full">
                 <Text
                   className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
