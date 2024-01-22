@@ -20,10 +20,10 @@ const SunkwaplanPage = () => {
         <div className="bg-white-A700 flex flex-row gap-2.5 items-center justify-start md:px-10 px-20 sm:px-5 py-3 w-full">
         </div>
         <div className="items-center justify-start w-full">
-          <div className="h-[620px] sm:px-0 md:px-5 relative w-full sm:h-[500px]">
+          <div className="h-auto sm:px-0 md:px-5 relative w-full sm:h-[500px]">
             <Img
-              className="h-[620px] m-auto object-cover w-full object-top sm:h-[500px] sm:object-center"
-              src="images/img_rectangle1.png"
+              className="h-auto m-auto object-cover w-full object-top sm:h-[500px] sm:object-center"
+              src="images/hero1.png"
               alt="rectangleOne"
             />
             <div className="absolute flex flex-col  gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
@@ -32,15 +32,13 @@ const SunkwaplanPage = () => {
                   className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
                   size="txtMontserratBold44"
                 >
-                  Bringing Quality Healthcare to Your Loved Ones in Ghana
+                  Sunkwa wɔ hɔ aa, efie yɛ  dɛ!
                 </Text>
                 <Text
                   className="leading-[24.00px] max-w-[442px] md:max-w-full text-[16px] text-white-A700"
                   size="txtMontserratMedium15WhiteA700"
                 >
-                  The GLICO Sunkwa Health Plan is a special package designed to
-                  help Ghanaians living abroad purchase a health insurance plan
-                  for their dependants and relatives residing in Ghana.
+                  Save your family abroad from the stress of having to worry about your medical needs.
                 </Text>
               </div>
             </div>
