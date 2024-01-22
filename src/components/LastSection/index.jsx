@@ -4,7 +4,7 @@ import React from "react";
 const LastSection = () => {
     return (
         <div className="flex flex-col items-center justify-start w-full">
-          <div className="h-[336px] md:px-5 relative w-full">
+          <div className="h-[336px] md:px-5 relative w-full sm:px-0">
             <Img
               className="h-[336px] m-auto object-cover w-full sm:object-[80%]"
               src="images/cta1.png"
