@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Img, Input, List, Text } from "components";
-import Footer from "components/Footer";
+import Footer1 from "components/Footer1";
 import Header from "components/Header";
 
 const AbovePage = () => {
@@ -28,9 +28,7 @@ const AbovePage = () => {
           size="sm"
           variant="fill"
         >
-          <div className="!text-gray-700 font-medium text-[15px] text-left">
-            Back
-          </div>
+          <div className="font-medium text-[15px] text-left">Back</div>
         </Button>
         <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 sm:pl-5 pl-[103px] w-full">
           <div className="flex md:flex-col flex-row md:gap-10 gap-[62px] items-center justify-end w-full">
@@ -43,7 +41,7 @@ const AbovePage = () => {
               </Text>
               <Text
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
                 Plan is crafted to offer essential health coverage while
@@ -54,7 +52,7 @@ const AbovePage = () => {
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
-                size="txtMontserratSemiBold15"
+                size="txtMontserratSemiBold15Indigo800"
               >
                 Key Features
               </Text>
@@ -71,7 +69,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Essential Coverage{" "}
                     </Text>
@@ -84,7 +82,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Affordable Premiums
                     </Text>
@@ -99,7 +97,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Network Access
                     </Text>
@@ -112,7 +110,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Versatility
                     </Text>
@@ -120,7 +118,8 @@ const AbovePage = () => {
                 </div>
               </List>
               <Button
-                className="cursor-pointer font-medium min-w-[134px] mt-[45px] text-[15px] text-center"
+                className="common-pointer cursor-pointer font-medium min-w-[134px] mt-[45px] text-[15px] text-center"
+                onClick={() => navigate("/paymentportalone")}
                 shape="round"
                 color="indigo_800"
                 size="sm"
@@ -157,7 +156,7 @@ const AbovePage = () => {
             </div>
             <div className="flex flex-col items-center justify-start p-1 w-full">
               <Text
-                className="text-center text-gray-600 text-xl tracking-[-1.00px]"
+                className="text-center text-gray-600_01 text-xl tracking-[-1.00px]"
                 size="txtMontserratMedium20"
               >
                 In-Patient Benefits
@@ -165,7 +164,7 @@ const AbovePage = () => {
             </div>
             <div className="flex flex-col items-center justify-start p-1 w-full">
               <Text
-                className="text-center text-gray-600 text-xl tracking-[-1.00px]"
+                className="text-center text-gray-600_01 text-xl tracking-[-1.00px]"
                 size="txtMontserratMedium20"
               >
                 Additional Benefits
@@ -189,7 +188,7 @@ const AbovePage = () => {
                       <div className="flex flex-1 flex-col items-start justify-start max-w-[913px] py-3 w-full">
                         <Text
                           className="text-[15px] text-gray-700 w-auto"
-                          size="txtMontserratRegular15"
+                          size="txtMontserratRegular15Gray700"
                         >
                           Total max benefit per person per annum
                         </Text>
@@ -198,13 +197,13 @@ const AbovePage = () => {
                     <div className="flex sm:flex-col flex-row md:gap-10 items-center justify-between overflow-auto w-full">
                       <Text
                         className="border-blue_gray-100 border-solid border-t flex-1 max-w-[913px] md:max-w-full pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         General Practitioner Consultation{" "}
                       </Text>
                       <Text
                         className="border-blue_gray-100 border-solid border-t flex-1 max-w-[913px] md:max-w-full py-3 text-[15px] text-gray-700 w-full"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         Hospital Accommodation
                       </Text>
@@ -212,7 +211,7 @@ const AbovePage = () => {
                     <div className="flex sm:flex-col flex-row md:gap-10 items-center justify-between overflow-auto w-full">
                       <Text
                         className="border-blue_gray-100 border-solid border-t flex-1 max-w-[913px] md:max-w-full pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         <>
                           Specialist Consultation (Pediatrician,
@@ -221,7 +220,7 @@ const AbovePage = () => {
                       </Text>
                       <Text
                         className="border-blue_gray-100 border-solid border-t flex-1 max-w-[913px] md:max-w-full py-3 text-[15px] text-gray-700 w-full"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         Fees for Doctors, Specialists, Surgeon, Anesthetists,
                         Physiotherapist
@@ -231,7 +230,7 @@ const AbovePage = () => {
                       <div className="border-blue_gray-100 border-solid border-t flex flex-1 flex-col items-start justify-start max-w-[913px] py-3 w-full">
                         <Text
                           className="leading-[20.00px] text-[15px] text-gray-700"
-                          size="txtMontserratRegular15"
+                          size="txtMontserratRegular15Gray700"
                         >
                           <>
                             Procedures Pathology <br />
@@ -242,7 +241,7 @@ const AbovePage = () => {
                       </div>
                       <Text
                         className="border-blue_gray-100 border-solid border-t flex-1 h-16 max-w-[913px] md:max-w-full pb-8 pt-3 text-[15px] text-gray-700 w-full"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         Laparoscopic procedures are to be disclosed at the point
                         of registration.
@@ -251,7 +250,7 @@ const AbovePage = () => {
                     <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                       <Text
                         className="leading-[20.00px] text-[15px] text-gray-700"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         <>
                           Imaging <br />
@@ -263,7 +262,7 @@ const AbovePage = () => {
                     <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                       <Text
                         className="leading-[20.00px] text-[15px] text-gray-700"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         <>
                           Out-Patient /Minor Surgery <br />
@@ -276,7 +275,7 @@ const AbovePage = () => {
                     <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                       <Text
                         className="leading-[20.00px] text-[15px] text-gray-700"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         <>
                           Prescribed Drugs
@@ -297,14 +296,14 @@ const AbovePage = () => {
                       wrapClassName="w-[68%]"
                       shape="square"
                       color="blue_gray_100"
-                      size="xs"
+                      size="sm"
                       variant="outline"
                     ></Input>
                     <div className="flex flex-col items-center justify-start w-[68%] md:w-full">
                       <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                         <Text
                           className="leading-[20.00px] text-[15px] text-gray-700"
-                          size="txtMontserratRegular15"
+                          size="txtMontserratRegular15Gray700"
                         >
                           <>
                             Optical - Optometry, frames and lenses (Every
@@ -320,7 +319,7 @@ const AbovePage = () => {
                       <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                         <Text
                           className="leading-[20.00px] text-[15px] text-gray-700"
-                          size="txtMontserratRegular15"
+                          size="txtMontserratRegular15Gray700"
                         >
                           <>
                             Dentistry: Basic Dental Procedures
@@ -333,7 +332,7 @@ const AbovePage = () => {
                       <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                         <Text
                           className="leading-[20.00px] text-[15px] text-gray-700"
-                          size="txtMontserratRegular15"
+                          size="txtMontserratRegular15Gray700"
                         >
                           <>
                             Special Dental Procedures
@@ -346,7 +345,7 @@ const AbovePage = () => {
                       <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                         <Text
                           className="leading-[20.00px] text-[15px] text-gray-700"
-                          size="txtMontserratRegular15"
+                          size="txtMontserratRegular15Gray700"
                         >
                           <>
                             Auxiliary Services (Upon referral & at the tertiary
@@ -367,7 +366,7 @@ const AbovePage = () => {
                     <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                       <Text
                         className="leading-[20.00px] max-w-[913px] md:max-w-full text-[15px] text-gray-700"
-                        size="txtMontserratRegular15"
+                        size="txtMontserratRegular15Gray700"
                       >
                         Complementary Medicine - Herbal Medicine, Chiropractic,
                         Acupuncture (Upon referral & at the tertiary
@@ -383,7 +382,7 @@ const AbovePage = () => {
                 <div className="flex flex-col items-center justify-center px-2 py-3 w-full">
                   <Text
                     className="text-[15px] text-center text-indigo-800 w-auto"
-                    size="txtMontserratSemiBold15"
+                    size="txtMontserratSemiBold15Indigo800"
                   >
                     GH¢7,500
                   </Text>
@@ -468,52 +467,52 @@ const AbovePage = () => {
               <div className="border-blue_gray-50 border-r border-solid flex flex-col items-start justify-start w-full">
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Operating Theatre Fees
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Surgical Procedure (Minor & Major)
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Ward Medicines & Take home Medicines
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Consumables (Infusion, Materials for Dressing, Sutures,
                   Bandages, Syringes, Catheters, Giving Sets, Cannulae)
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Pathology Procedures Lab. Tests requested by a doctor.
                   (Biopsies, Histopathology tests)
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Imaging{" "}
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Intensive Care
                 </Text>
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     <>
                       Maternity <br />
@@ -526,7 +525,7 @@ const AbovePage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     <>
                       Auxiliary Services <br />
@@ -540,7 +539,7 @@ const AbovePage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     <>
                       Cancer Treatment <br />
@@ -554,7 +553,7 @@ const AbovePage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="text-[15px] text-gray-700 w-auto"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Annual Medical Checkup/Screening (At designated Centers)
                   </Text>
@@ -570,53 +569,44 @@ const AbovePage = () => {
               src="images/img_rectangle2.png"
               alt="rectangleTwo"
             />
-            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[61px] md:px-10 sm:px-5 w-full">
-              <div className="flex flex-col gap-10 items-start justify-start mb-[11px] md:ml-[0] ml-[74px] w-auto md:w-full">
-                <div className="flex flex-col gap-5 items-start justify-center w-[598px] md:w-full">
-                  <div className="flex flex-col gap-[15px] items-start justify-start w-full">
-                    <Text
-                      className="text-2xl md:text-[22px] text-white-A700 sm:text-xl w-auto"
-                      size="txtMontserratSemiBold24"
-                    >
-                      Need more information?
-                    </Text>
-                    <Text
-                      className="text-[15px] text-white-A700 w-full"
-                      size="txtMontserratRegular15WhiteA700"
-                    >
-                      Get in touch with our team know about all that Sunkwa has
-                      for you
-                    </Text>
-                  </div>
-                  <Button
-                    className="cursor-pointer font-medium min-w-[308px] text-[15px] text-center"
-                    shape="round"
-                    color="white_A700"
-                    size="sm"
-                    variant="fill"
-                  >
-                    Contact Customer Experience Center
-                  </Button>
-                </div>
-                <div className="flex flex-row gap-[27px] items-end justify-start w-auto">
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 274 6500
-                  </Text>
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 225 5742
-                  </Text>
-                </div>
+            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[67px] md:px-10 sm:px-5 w-full">
+              <Text
+                className="md:ml-[0] ml-[122px] mt-[17px] md:text-3xl sm:text-[28px] text-[32px] text-white-A700"
+                size="txtMontserratSemiBold32"
+              >
+                Need more information?
+              </Text>
+              <Text
+                className="leading-[24.00px] md:ml-[0] ml-[122px] mt-4 text-[15px] text-white-A700 w-[33%] sm:w-full"
+                size="txtMontserratRegular15WhiteA700"
+              >
+                Get in touch with our team know about all that Sunkwa has for
+                you
+              </Text>
+              <div className="flex flex-row gap-[27px] items-end justify-start md:ml-[0] ml-[123px] mt-[15px] w-auto">
+                <Text
+                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
+                  size="txtMontserratSemiBold22"
+                >
+                  030 274 6500
+                </Text>
+                <Text
+                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
+                  size="txtMontserratSemiBold22"
+                >
+                  030 225 5742
+                </Text>
               </div>
+              <Text
+                className="md:ml-[0] ml-[123px] mt-[18px] text-[15px] text-white-A700"
+                size="txtMontserratMedium15WhiteA700"
+              >
+                Contact Customer Experience Center for more info.
+              </Text>
             </div>
           </div>
         </div>
-        <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
+        <Footer1 className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
       </div>
     </>
   );

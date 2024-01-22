@@ -22,7 +22,7 @@ const SunkwaplanCategoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
           </div>
@@ -43,13 +43,13 @@ const SunkwaplanCategoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
             <div className="bg-gray-100 flex flex-col items-center justify-start p-5 w-full">
               <Text
                 className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 {props?.descriptionThree}
               </Text>

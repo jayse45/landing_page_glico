@@ -6,10 +6,10 @@ const Header1 = (props) => {
   return (
     <>
       <header className={props.className}>
-        <div className="flex md:flex-col flex-row md:gap-10 gap-[120px] sm:gap-[40%] items-center justify-between w-auto sm:w-full">
+        <div className="flex md:flex-col flex-row md:gap-10 gap-[191px] items-center justify-between w-auto">
           <div className="header-row my-px">
             <Img
-              className="h-auto object-cover w-[200px]"
+              className="h-[18px] md:h-auto object-cover w-[180px]"
               src="images/img_glicohealthcarelogo300x301.png"
               alt="glicohealthcare"
             />
@@ -30,7 +30,7 @@ const Header1 = (props) => {
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800 w-20"
+                className="text-[15px] text-indigo-800"
                 size="txtMontserratRegular15Indigo800"
               >
                 About Us
@@ -38,7 +38,7 @@ const Header1 = (props) => {
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800 w-[150px]"
+                className="text-[15px] text-indigo-800"
                 size="txtMontserratRegular15Indigo800"
               >
                 Product & Services
@@ -46,7 +46,7 @@ const Header1 = (props) => {
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800 w-[120px]"
+                className="text-[15px] text-indigo-800"
                 size="txtMontserratRegular15Indigo800"
               >
                 Customer Care
@@ -54,7 +54,7 @@ const Header1 = (props) => {
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800 w-[90px]"
+                className="text-[15px] text-indigo-800"
                 size="txtMontserratRegular15Indigo800"
               >
                 Contact Us

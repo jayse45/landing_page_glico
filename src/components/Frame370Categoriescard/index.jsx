@@ -22,15 +22,15 @@ const Frame370Categoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
             <div className="bg-gray-100 flex flex-col items-center justify-start p-5 w-full">
               <Text
                 className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
-                {props?.descriptionTwo}
+                {props?.descriptiontwo}
               </Text>
             </div>
             <div className="bg-gray-100 flex flex-col items-center justify-start px-5 py-2 w-full">
@@ -40,7 +40,7 @@ const Frame370Categoriescard = (props) => {
                 size="xs"
                 variant="fill"
               >
-                {props?.learnMoreTwo}
+                {props?.learnmoretwo}
               </Button>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Frame370Categoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
           </div>
@@ -72,9 +72,9 @@ const Frame370Categoriescard = (props) => {
 };
 
 Frame370Categoriescard.defaultProps = {
-  descriptionTwo:
+  descriptiontwo:
     "Designed for individuals who are below the age of 60. Offering a comprehensive range of health benefits to ensure that your family members receive the care they need",
-  learnMoreTwo: "Learn more",
+  learnmoretwo: "Learn more",
 };
 
 export default Frame370Categoriescard;

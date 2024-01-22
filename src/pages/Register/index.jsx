@@ -10,7 +10,7 @@ const RegisterPage = () => {
   return (
     <>
       <div className="bg-white-A700 flex sm:flex-col md:flex-col flex-row font-montserrat sm:gap-10 md:gap-10 gap-[98px] items-start mx-auto md:pr-10 sm:pr-5 pr-[168px] w-full">
-        <div className="bg-blue_gray-100_01 flex flex-col items-center justify-start md:px-5 w-[58%] md:w-full">
+        <div className="bg-blue_gray-100_02 flex flex-col items-center justify-start md:px-5 w-[58%] md:w-full">
           <div className="h-[1024px] relative w-full">
             <Img
               className="h-[1024px] m-auto object-cover w-full"
@@ -116,7 +116,7 @@ const RegisterPage = () => {
             </div>
             <Text
               className="leading-[20.00px] max-w-[444px] md:max-w-full text-[15px] text-black-900"
-              size="txtMontserratRegular15Black900"
+              size="txtMontserratRegular15"
             >
               <span className="text-black-900 font-montserrat text-left font-normal">
                 By submitting this form you agree to our{" "}
@@ -129,7 +129,8 @@ const RegisterPage = () => {
               </a>
             </Text>
             <Button
-              className="cursor-pointer text-[15px] text-center w-[444px]"
+              className="common-pointer cursor-pointer text-[15px] text-center w-[444px]"
+              onClick={() => navigate("/paymentportalone1")}
               shape="square"
               color="indigo_800"
               size="sm"
@@ -141,7 +142,7 @@ const RegisterPage = () => {
           <div className="flex flex-row gap-[9px] items-start justify-start w-auto">
             <Text
               className="text-[15px] text-black-900 w-auto"
-              size="txtMontserratRegular15Black900"
+              size="txtMontserratRegular15"
             >
               Already an existing user?
             </Text>

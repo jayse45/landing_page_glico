@@ -72,7 +72,7 @@ const LoginPage = () => {
                   ></CheckBox>
                   <Text
                     className="text-[15px] text-black-900 text-right w-auto"
-                    size="txtMontserratRegular15Black900"
+                    size="txtMontserratRegular15"
                   >
                     Forget password?
                   </Text>
@@ -80,7 +80,8 @@ const LoginPage = () => {
               </div>
             </div>
             <Button
-              className="cursor-pointer text-[15px] text-center w-[444px]"
+              className="common-pointer cursor-pointer text-[15px] text-center w-[444px]"
+              onClick={() => navigate("/paymentportalone1")}
               shape="square"
               color="indigo_800"
               size="sm"
@@ -92,7 +93,7 @@ const LoginPage = () => {
           <div className="flex flex-row gap-[9px] items-start justify-start w-auto">
             <Text
               className="text-[15px] text-black-900 w-auto"
-              size="txtMontserratRegular15Black900"
+              size="txtMontserratRegular15"
             >
               Not an existing user?
             </Text>
