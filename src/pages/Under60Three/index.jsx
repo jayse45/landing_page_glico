@@ -16,8 +16,8 @@ const Under60ThreePage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/under60seven")} />
-        <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 sm:pl-5 pl-[103px] w-full">
-          <div className="flex md:flex-col flex-row md:gap-10 gap-[62px] items-center justify-end w-full">
+        <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 pl-[103px] w-full sm:pl-4">
+          <div className="flex md:flex-col flex-row md:gap-10 gap-[62px] items-center justify-end w-full sm:flex-col-reverse">
             <div className="flex md:flex-1 flex-col items-start justify-start w-[42%] md:w-full">
               <Text
                 className="md:text-3xl sm:text-[28px] text-[32px] text-indigo-800 tracking-[-1.00px]"
@@ -104,7 +104,7 @@ const Under60ThreePage = () => {
                 </div>
               </List>
               <Button
-                className="cursor-pointer font-medium min-w-[134px] mt-[46px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-indigo-800 hover:text-white-A700"
+                className="cursor-pointer font-medium min-w-[134px] mt-[46px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-indigo-800 hover:text-white-A700 sm:mb-4"
                 shape="round"
                 color="blue_gray_101"
                 size="sm"

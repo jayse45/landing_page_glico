@@ -14,9 +14,9 @@ const AboveOnePage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/")}/>
-        <div className="bg-white-A700 md:h-[481px] h-[620px] sm:p-[] sm:pl-[] sm:pr-[] md:px-5 relative w-full">
+        <div className="bg-white-A700 md:h-[481px] h-[520px] sm:p-[] sm:pl-[] sm:pr-[] md:px-5 relative w-full">
           <Img
-            className="h-[620px] m-auto sm:m-auto object-cover w-full"
+            className="h-[520px] m-auto sm:m-auto object-cover w-full"
             src="images/img_rectangle1_481x1440.png"
             alt="rectangleOne"
           />
@@ -51,7 +51,7 @@ const AboveOnePage = () => {
             className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-4 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full"
             orientation="horizontal"
           >
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8doctorsbag.svg"
@@ -64,7 +64,7 @@ const AboveOnePage = () => {
                 Dedicated In-Patient and Out-Patient Services
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img className="h-8 w-8" src="images/img_user.svg" alt="user" />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
@@ -73,7 +73,7 @@ const AboveOnePage = () => {
                 designed to address the unique health considerations of seniors
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8medicaldoctor.svg"
@@ -86,7 +86,7 @@ const AboveOnePage = () => {
                 Enhanced Access to Specialists
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_layer1_indigo_800.svg"
@@ -132,7 +132,7 @@ const AboveOnePage = () => {
                 </div>
               </div>
               <Img
-                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px]"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-2xl"
                 src="images/img_rectangle25.png"
                 alt="rectangleTwentyFive"
               />

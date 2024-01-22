@@ -17,13 +17,16 @@ const SunkwaplanCategoriescard = (props) => {
       className="group flex flex-col gap-1 rounded-lg bg-black px-5 text-white"
       tabIndex={1}
     >
-      <div className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full">
+      <div 
+      className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full"
+      onClick={() => setDropBtn("btn1")}>
             <Input
               name="duration_One"
               placeholder="Under 60 Years Plan"
-              className="font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
+              className="common-pointer font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
               wrapClassName="flex w-full"
-              readonly
+              readonly="true"
+              onClick={() => setDropBtn("btn1")}
               suffix={
                 <Img
                   className="h-5 ml-[35px] my-px"
@@ -46,7 +49,9 @@ const SunkwaplanCategoriescard = (props) => {
                 {props?.descriptionTwo}
               </Text>
 
-              <div className="bg-gray-100 flex flex-col items-start justify-start px-5 py-2 mt-5 w-full">
+              <div 
+              className="bg-gray-100 flex flex-col items-start justify-start px-5 py-2 mt-5 w-full"
+              onClick={() => navigate("/under60seven")}>
               <Button
                 className={`common-pointer !text-deep_purple-A700 cursor-pointer font-montserrat min-w-[111px] rounded-[16px] text-[15px] text-center`}
                 onClick={() => navigate("/under60seven")}
@@ -67,12 +72,16 @@ const SunkwaplanCategoriescard = (props) => {
       className="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
       tabIndex={3}
     >
-      <div className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full">
+      <div 
+      className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full"
+      onClick={() => setDropBtn("btn2")}>
             <Input
               name="duration_One"
               placeholder="60 Years and Above Plan"
-              className="font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
+              className="common-pointer font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
               wrapClassName="flex w-full"
+              readonly="true"
+              onClick={() => setDropBtn("btn2")}
               suffix={
                 <Img
                   className="h-5 ml-[35px] my-px"
@@ -95,7 +104,8 @@ const SunkwaplanCategoriescard = (props) => {
                 {props?.descriptionThree}
               </Text>
 
-              <div className="bg-gray-100 flex flex-col items-start justify-start px-5 py-2 mt-5 w-full">
+              <div className="bg-gray-100 flex flex-col items-start justify-start px-5 py-2 mt-5 w-full"
+              onClick={props?.onClick}>
               <Button
                 className="common-pointer !text-deep_purple-A700 cursor-pointer font-montserrat min-w-[111px] rounded-[16px] text-[15px] text-center"
                 onClick={props?.onClick}

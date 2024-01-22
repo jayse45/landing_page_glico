@@ -6,7 +6,7 @@ const LastSection = () => {
         <div className="flex flex-col items-center justify-start w-full">
           <div className="h-[336px] md:px-5 relative w-full">
             <Img
-              className="h-[336px] m-auto object-cover w-full"
+              className="h-[336px] m-auto object-cover w-full sm:object-[80%]"
               src="images/img_rectangle2.png"
               alt="rectangleTwo"
             />

@@ -18,30 +18,11 @@ const SunkwaplanPage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <div className="bg-white-A700 flex flex-row gap-2.5 items-center justify-start md:px-10 px-20 sm:px-5 py-3 w-full">
-        {/* <Button
-          className="common-pointer cursor-pointer flex items-center justify-start w-full ml-10 md:min-w-full"
-          onClick={() => navigate("/")}
-          leftIcon={
-            <Img
-              className="h-5 mt-px mr-2.5"
-              src="images/img_arrowdown.svg"
-              alt="arrow_down"
-            />
-          }
-          shape="square"
-          color="white_A700"
-          size="sm"
-          variant="fill"
-        >
-          <div className="!text-gray-700 font-medium text-[15px] text-left">
-            Back
-          </div>
-        </Button> */}
         </div>
         <div className="items-center justify-start w-full">
-          <div className="h-[620px] sm:px-0 md:px-5 relative w-full">
+          <div className="h-[620px] sm:px-0 md:px-5 relative w-full sm:h-[500px]">
             <Img
-              className="h-[620px] m-auto object-cover w-full object-top"
+              className="h-[620px] m-auto object-cover w-full object-top sm:h-[500px] sm:object-center"
               src="images/img_rectangle1.png"
               alt="rectangleOne"
             />
@@ -65,7 +46,7 @@ const SunkwaplanPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-indigo-800 h-[518px] sm:h-[900px] sm:p-[] pl-[78px] md:px-5 relative w-full">
+        <div className="bg-indigo-800 h-[518px] sm:h-[1200px] sm:p-[] pl-[78px] md:px-5 relative w-full">
           <div className="absolute h-[518px] sm:hidden inset-y-[0] my-auto right-[0] w-[22%]">
             <div className="absolute flex sm:hidden inset-y-[0] left-[0] my-auto w-[82%]">
               <Img
@@ -107,10 +88,10 @@ const SunkwaplanPage = () => {
             </Text>
           </div>
           <List
-            className="absolute bottom-[13%] sm:flex-col flex-row gap-[11px] grid md:grid-cols-2 grid-cols-4 h-[198px] inset-x-[0] justify-start max-w-[1284px] mx-auto sm:relative w-full sm:bottom-0 sm:h-[300px] sm:mt-16"
+            className="absolute bottom-[13%] sm:flex-col flex-row gap-[11px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 h-[198px] inset-x-[0] justify-start max-w-[1284px] mx-auto sm:relative w-full sm:bottom-0 sm:h-[500px] sm:mt-20"
             orientation="horizontal"
           >
-            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full">
+            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full transition-transform duration-300 ease-out hover:scale-105">
               <div className="flex flex-col gap-[22px] h-full items-start justify-start w-full">
                 <Img
                   className="h-[30px] w-[30px]"
@@ -134,7 +115,7 @@ const SunkwaplanPage = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full">
+            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full transition-transform duration-300 ease-out hover:scale-105">
               <div className="flex flex-col gap-[22px] h-full items-start justify-between w-full">
                 <Img
                   className="h-8 w-8"
@@ -158,7 +139,7 @@ const SunkwaplanPage = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full">
+            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full transition-transform duration-300 ease-out hover:scale-105">
               <div className="flex flex-col gap-[22px] h-full items-start justify-between w-full">
                 <Img
                   className="h-8 w-8"
@@ -182,7 +163,7 @@ const SunkwaplanPage = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full">
+            <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full transition-transform duration-300 ease-out hover:scale-105">
               <div className="flex flex-col gap-[22px] h-full items-start justify-between w-full">
                 <Img
                   className="h-7 w-[30px]"
@@ -215,6 +196,28 @@ const SunkwaplanPage = () => {
           <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between max-w-[1292px] mb-[3px] mt-[19px] mx-auto w-full">
             <div className="flex md:flex-1 flex-col gap-[52px] items-center justify-start w-[41%] md:w-full">
               <div className="flex flex-col gap-[13px] items-start justify-start w-full">
+              <div className="hidden md:h-[400px] h-[589px] relative w-[48%] md:w-full sm:block sm:mb-10">
+              <Img
+                className="absolute h-[400px] inset-y-[0] left-[7%] my-auto object-cover rounded-[32px] w-[85%]"
+                src="images/img_rectangle12.png"
+                alt="rectangleTwelve"
+              />
+              <Img
+                className="absolute bottom-[0] h-[183px] object-cover right-[0] sm:right-[-7%] sm:bottom-[-7%] rounded-[20px] w-[183px]"
+                src="images/img_rectangle13.png"
+                alt="rectangleThirteen"
+              />
+              <div
+                className="absolute bg-cover bg-no-repeat flex flex-col h-32 items-center justify-start left-[0] p-8 sm:px-5 rounded-[20px] top-[0] sm:top-[-10%] sm:left-[-7%] w-32"
+                style={{ backgroundImage: "url('images/img_group3.svg')" }}
+              >
+                <Img
+                  className="h-[62px] w-[62px]"
+                  src="images/img_television.svg"
+                  alt="television"
+                />
+              </div>
+            </div>
                 <Button
                   className="cursor-pointer font-semibold min-w-[168px] rounded-[16px] text-center text-xs"
                   color="red_50"

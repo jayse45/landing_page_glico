@@ -16,9 +16,9 @@ const Under60SevenPage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/")} />
-        <div className="bg-white-A700 md:h-[481px] h-[620px] md:px-5 relative w-full">
+        <div className="bg-white-A700 md:h-[481px] h-[520px] relative w-full sm:h-[500px] sm:px-0">
           <Img
-            className="h-[620px] m-auto object-cover w-full"
+            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-cover sm:max-w-full"
             src="images/img_rectangle1_1.png"
             alt="rectangleOne"
           />
@@ -42,7 +42,7 @@ const Under60SevenPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-50 flex flex-col gap-[42px] items-center justify-start p-[61px] md:px-10 sm:px-5 w-full">
+        <div className="bg-gray-50 flex flex-col gap-[42px] items-center justify-start p-[61px] md:px-10 sm:px-5 w-full sm:h-[800px] relative">
           <Text
             className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 tracking-[-1.00px]"
             size="txtMontserratBold32"
@@ -53,7 +53,7 @@ const Under60SevenPage = () => {
             className="sm:flex-col flex-row gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 h-[177px] justify-start max-w-7xl mx-auto w-full"
             orientation="horizontal"
           >
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8move11.svg"
@@ -66,7 +66,7 @@ const Under60SevenPage = () => {
                 Tailored for the dynamic and active members of your family
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8okhand1.svg"
@@ -80,7 +80,7 @@ const Under60SevenPage = () => {
                 of daily life
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_frame381.svg"
@@ -93,7 +93,7 @@ const Under60SevenPage = () => {
                 Exciting features to keep your loved ones at their absolute best
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_layer1_indigo_800.svg"
@@ -108,9 +108,9 @@ const Under60SevenPage = () => {
             </div>
           </List>
         </div>
-        <div className="bg-white-A700 flex flex-col items-end justify-start sm:pl-5 pl-6 py-6 w-full">
-          <div className="flex flex-col items-start justify-start mb-[17px] md:px-5 w-full md:w-full">
-            <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full pl-20">
+        <div className="bg-white-A700 flex flex-col items-end justify-start pl-6 py-6 w-full sm:relative sm:items-start sm:pl-0 sm:w-full">
+          <div className="flex flex-col items-start justify-start mb-[17px] md:px-5 w-full md:w-full sm:px-0">
+            <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full pl-20 sm:flex-col-reverse sm:pr-4 sm:pl-6">
               <div className="flex flex-col gap-[23px] items-start justify-start md:mt-0 mt-[39px]">
                 <Button
                   className="cursor-pointer font-semibold min-w-[152px] rounded-[16px] text-center text-xs"
@@ -138,17 +138,17 @@ const Under60SevenPage = () => {
                 </div>
               </div>
               <Img
-                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px]"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-2xl sm:w-full sm:max-w-full sm:h-[300px]"
                 src="images/img_rectangle25_315x720.png"
                 alt="rectangleTwentyFive"
               />
             </div>
             <List
-              className="sm:flex-col flex-row gap-[21px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-cetner mt-20 w-full px-32"
+              className="sm:flex-col flex-row gap-[21px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-cetner mt-20 w-full px-32 sm:px-6 sm:mt-10"
               orientation="horizontal"
             >
               <div className="bg-indigo-800 flex flex-1 flex-col gap-4 items-start justify-start p-5 rounded-[20px] w-full">
-                <div className="flex flex-col gap-2 items-start justify-start w-auto">
+                <div className="flex flex-col gap-2 items-start justify-start w-auto sm:w-full">
                   <Text
                     className="text-white-A700 text-xl tracking-[-1.00px] w-full"
                     size="txtMontserratBold20WhiteA700"
