@@ -149,9 +149,6 @@ const Header = (props) => {
                 Contact Us
               </Text>
             </li>
-            <li className="text-[15px] text-indigo-800">
-              <DropdownButton head={"About Us"} options={aboutOptions}/>
-            </li>
           </ul>
           <div className="flex flex-row gap-10 sm:hidden items-start justify-start w-auto">
             

@@ -244,7 +244,7 @@ const Under60SevenPage = () => {
                 </Button>
               </div>
             </List>
-            <div className="flex justify-center w-full">
+            <div className="justify-center w-full hidden">
               <Button
                 className="cursor-pointer font-medium min-w-[156px] md:ml-[0] mt-[60px] rounded-[24px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-red-700 hover:text-white-A700"
                 color="red_700"

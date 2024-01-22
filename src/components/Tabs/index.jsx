@@ -53,7 +53,7 @@ const Tabs = ({ amount }) => {
           <table className='table-auto w-[90%]'>
             <tbody className='sm:text-[12px]'>
                 <tr className='border-slate-300 border-b h-14'>
-                    <td className='w-[75%] font-semibold sm:w-[80%]'>Total max benefit per person per annum</td>
+                    <td className='w-[77%] font-semibold sm:w-[80%]'>Total max benefit per person per annum</td>
                     <td className='text-center'>
                         <Text
                             className="text-indigo-800 text-center"
@@ -133,7 +133,7 @@ const Tabs = ({ amount }) => {
                             <br/>
                             <p>
                                 For pre-existing conditions (i.e. Diabetes, Tuberculosis, Hepatitis B and Hypertension) disclosed.
-                                Including Glucose Strips, Insulin Pen
+                                Including Glucose Strips, Insulin Pen.
                             </p>
                         </div>
                        

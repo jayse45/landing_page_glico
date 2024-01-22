@@ -15,7 +15,7 @@ const SunkwaplanPage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
+      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full sm:overflow-x-hidden">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <div className="bg-white-A700 flex flex-row gap-2.5 items-center justify-start md:px-10 px-20 sm:px-5 py-3 w-full">
         </div>
@@ -31,16 +31,16 @@ const SunkwaplanPage = () => {
               src="images/hero1.png"
               alt="rectangleOne"
             />
-            <div className="absolute xm:bg-gradient1 flex flex-col gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
+            <div className="absolute sm:bg-gradient1 flex flex-col gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full sm:justify-start">
               <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[141px] mt-2.5 w-[538px] sm:w-full">
                 <Text
-                  className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
+                  className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[24px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px] sm:w-[58%]"
                   size="txtMontserratBold44"
                 >
                   Sunkwa wɔ hɔ aa, efie yɛ  dɛ!
                 </Text>
                 <Text
-                  className="leading-[24.00px] max-w-[442px] md:max-w-full text-[16px] text-white-A700"
+                  className="leading-[24.00px] max-w-[442px] md:max-w-full text-[16px] text-white-A700 sm:w-[50%]"
                   size="txtMontserratMedium15WhiteA700"
                 >
                   Save your family abroad from the stress of having to worry about your medical needs.
@@ -248,7 +248,7 @@ const SunkwaplanPage = () => {
                 </div>
               </div>
               <SunkwaplanCategoriescard
-                className="flex flex-col gap-[19px] items-start justify-start w-auto sm:w-full bg-white-A700 h-[350px]"
+                className="flex flex-col gap-[19px] items-start justify-start w-auto sm:w-full bg-white-A700 h-[350px] sm:mb-14"
                 onClick={() => navigate("/aboveone")}
               />
 
