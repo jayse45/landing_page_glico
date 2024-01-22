@@ -17,7 +17,7 @@ const SunkwaplanPage = () => {
     <>
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
-        <div className="bg-white-A700 flex flex-row gap-2.5 items-center justify-start md:px-10 px-20 sm:px-5 py-3 w-full">
+        <div className="bg-white-A700 flex flex-row gap-2.5 items-center justify-start md:px-10 px-20 sm:px-5 py-3 w-full" >
         {/* <Button
           className="common-pointer cursor-pointer flex items-center justify-start w-full ml-10 md:min-w-full"
           onClick={() => navigate("/")}
@@ -39,13 +39,13 @@ const SunkwaplanPage = () => {
         </Button> */}
         </div>
         <div className="items-center justify-start w-full">
-          <div className="h-[620px] sm:px-0 md:px-5 relative w-full">
+          <div className="h-auto sm:px-0 md:px-5 relative w-full">
             <Img
-              className="h-[620px] m-auto object-cover w-full object-top"
-              src="images/img_rectangle1.png"
+              className=" h-[100%] m-auto object-contain w-full object-top"
+              src="images/hero1.png"
               alt="rectangleOne"
             />
-            <div className="absolute flex flex-col bg-gradient1 gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
+            <div className="absolute flex flex-col  gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
               <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[141px] mt-2.5 w-[538px] sm:w-full">
                 <Text
                   className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
