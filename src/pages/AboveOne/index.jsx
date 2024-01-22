@@ -15,8 +15,13 @@ const AboveOnePage = () => {
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/")}/>
         <div className="bg-white-A700 md:h-[481px] h-[520px] sm:p-[] sm:pl-[] sm:pr-[] md:px-5 relative w-full sm:h-[500px] sm:px-0">
+        <Img
+            className="hidden sm:block sm:h-[500px] sm:max-w-full object-cover"
+            src="images/Above60-banner-mobile.png"
+            alt="rectangleOne"
+          />
           <Img
-            className="h-[520px] m-auto sm:m-auto object-cover w-full sm:h-[500px] sm:max-w-full"
+            className="h-[520px] m-auto sm:m-auto object-cover w-full sm:hidden"
             src="images/img_rectangle1_481x1440.png"
             alt="rectangleOne"
           />

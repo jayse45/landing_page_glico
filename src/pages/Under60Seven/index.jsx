@@ -18,7 +18,12 @@ const Under60SevenPage = () => {
         <BackButton onClick={() => navigate("/")} />
         <div className="bg-white-A700 md:h-[481px] h-[520px] relative w-full sm:h-[500px] sm:px-0">
           <Img
-            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-cover sm:max-w-full"
+            className="h-[520px] m-auto object-cover w-full sm:h-[500px] hidden sm:block sm:object-cover sm:max-w-full"
+            src="images/under60-banner-mobile.png"
+            alt="rectangleOne"
+          />
+          <Img
+            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:hidden"
             src="images/img_rectangle1_1.png"
             alt="rectangleOne"
           />
