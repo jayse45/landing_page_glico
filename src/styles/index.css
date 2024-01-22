@@ -100,7 +100,7 @@ ul li a{
 .mobile-menu div{
   height: 1.5px;
   width: 20px;
-  background-color: #000;
+  background-color: transparent;
   margin:4px 0;
 }
 .mobile-menu {
