@@ -9,6 +9,7 @@ const RegisterPage = () => {
 
   return (
     <>
+
       <div className="bg-white-A700 flex sm:flex-col md:flex-col flex-row font-montserrat sm:gap-10 md:gap-10 gap-[98px] items-start mx-auto md:pr-10 sm:pr-5 pr-[168px] w-full sm:h-[100vh]">
       <div className="hidden sm:block absolute z-[0] h-full">
         <Img
@@ -18,6 +19,7 @@ const RegisterPage = () => {
           />
         </div>
         <div className="bg-blue_gray-100_01 flex flex-col items-center justify-start md:px-5 w-[58%] md:w-full sm:hidden">
+ main
           <div className="h-[1024px] relative w-full">
             <Img
               className="h-[1024px] m-auto object-cover w-full"
@@ -123,7 +125,7 @@ const RegisterPage = () => {
             </div>
             <Text
               className="leading-[20.00px] max-w-[444px] md:max-w-full text-[15px] text-black-900"
-              size="txtMontserratRegular15Black900"
+              size="txtMontserratRegular15"
             >
               <span className="text-black-900 sm:text-white-A700 font-montserrat text-left font-normal">
                 By submitting this form you agree to our{" "}
@@ -135,6 +137,7 @@ const RegisterPage = () => {
                 Terms & Conditions
               </a>
             </Text>
+
             <div className="sm:w-full sm:flex sm:justify-center"> 
               <Button
                 className="cursor-pointer text-[15px] text-center w-[444px]"
@@ -151,6 +154,7 @@ const RegisterPage = () => {
             <Text
               className="text-[15px] text-black-900 w-auto sm:text-white-A700"
               size="txtMontserratRegular15Black900"
+ main
             >
               Already an existing user?
             </Text>

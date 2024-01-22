@@ -14,10 +14,34 @@ const Home = () => {
           <Link to="/frame370">Frame370</Link>
         </li>
         <li>
-          <Link to="/under60">Under60</Link>
+          <Link to="/paymentportalone">PaymentPortalOne</Link>
         </li>
         <li>
-          <Link to="/">Sunkwaplan</Link>
+          <Link to="/paymentportalsix">PaymentPortalSix</Link>
+        </li>
+        <li>
+          <Link to="/paymentportaleight">PaymentPortalEight</Link>
+        </li>
+        <li>
+          <Link to="/paymentportaltwo">PaymentPortalTwo</Link>
+        </li>
+        <li>
+          <Link to="/paymentportalfour">PaymentPortalFour</Link>
+        </li>
+        <li>
+          <Link to="/paymentportalseven">PaymentPortalSeven</Link>
+        </li>
+        <li>
+          <Link to="/paymentportalthree">PaymentPortalThree</Link>
+        </li>
+        <li>
+          <Link to="/paymentportalone1">PaymentPortalOne1</Link>
+        </li>
+        <li>
+          <Link to="/paymentportal">PaymentPortal</Link>
+        </li>
+        <li>
+          <Link to="/paymentportalfive">PaymentPortalFive</Link>
         </li>
         <li>
           <Link to="/under60one">Under60One</Link>
@@ -32,9 +56,6 @@ const Home = () => {
           <Link to="/under60three">Under60Three</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
           <Link to="/under60four">Under60Four</Link>
         </li>
         <li>
@@ -42,12 +63,6 @@ const Home = () => {
         </li>
         <li>
           <Link to="/under60six">Under60Six</Link>
-        </li>
-        <li>
-          <Link to="/aboveone">AboveOne</Link>
-        </li>
-        <li>
-          <Link to="/abovetwo">AboveTwo</Link>
         </li>
         <li>
           <Link to="/abovethree">AboveThree</Link>
@@ -59,22 +74,37 @@ const Home = () => {
           <Link to="/under60seven">Under60Seven</Link>
         </li>
         <li>
-          <Link to="/abovefive">AboveFive</Link>
-        </li>
-        <li>
           <Link to="/abovesix">AboveSix</Link>
-        </li>
-        <li>
-          <Link to="/aboveseven">AboveSeven</Link>
-        </li>
-        <li>
-          <Link to="/aboveeight">AboveEight</Link>
         </li>
         <li>
           <Link to="/abovenine">AboveNine</Link>
         </li>
         <li>
           <Link to="/under60eight">Under60Eight</Link>
+        </li>
+        <li>
+          <Link to="/under60">Under60</Link>
+        </li>
+        <li>
+          <Link to="/sunkwaplan">Sunkwaplan</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/aboveone">AboveOne</Link>
+        </li>
+        <li>
+          <Link to="/abovetwo">AboveTwo</Link>
+        </li>
+        <li>
+          <Link to="/abovefive">AboveFive</Link>
+        </li>
+        <li>
+          <Link to="/aboveseven">AboveSeven</Link>
+        </li>
+        <li>
+          <Link to="/aboveeight">AboveEight</Link>
         </li>
         <li>
           <Link to="/register">Register</Link>

@@ -78,14 +78,17 @@ const LoginPage = () => {
                     label="Remember me"
                   ></CheckBox>
                   <Text
+
                     className="text-[15px] text-black-900 text-right w-auto sm:text-white-A700"
                     size="txtMontserratRegular15Black900"
+ main
                   >
                     Forget password?
                   </Text>
                 </div>
               </div>
             </div>
+
             <div className="sm:w-full sm:flex sm:justify-center"> 
               <Button
                 className="cursor-pointer text-[15px] text-center w-[444px]"
@@ -102,6 +105,7 @@ const LoginPage = () => {
             <Text
               className="text-[15px] text-black-900 w-auto sm:text-white-A700"
               size="txtMontserratRegular15Black900"
+ main
             >
               Not an existing user?
             </Text>
