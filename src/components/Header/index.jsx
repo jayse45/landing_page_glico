@@ -1,19 +1,15 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
-
 import { Img, Text } from "components";
 
 const Header = (props) => {
-  const navigate = useNavigate();
-
   return (
     <>
       <header className={props.className}>
-        <div className="flex md:flex-col flex-row md:gap-10 gap-[191px] items-center justify-between w-auto">
+        <div className="flex md:flex-col flex-row md:gap-10 gap-[120px] sm:gap-[40%] items-center justify-between w-auto sm:w-full">
           <div className="header-row my-px">
             <Img
-              className="h-[18px] md:h-auto object-cover w-[180px]"
+              className="h-auto object-cover w-[200px]"
               src="images/img_glicohealthcarelogo300x301.png"
               alt="glicohealthcare"
             />
@@ -34,15 +30,15 @@ const Header = (props) => {
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800"
+                className="text-[15px] text-indigo-800 w-20"
                 size="txtMontserratRegular15Indigo800"
               >
-                About us
+                About Us
               </Text>
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800"
+                className="text-[15px] text-indigo-800 w-[150px]"
                 size="txtMontserratRegular15Indigo800"
               >
                 Product & Services
@@ -50,25 +46,22 @@ const Header = (props) => {
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800"
+                className="text-[15px] text-indigo-800 w-[120px]"
                 size="txtMontserratRegular15Indigo800"
               >
-                Customer care
+                Customer Care
               </Text>
             </li>
             <li>
               <Text
-                className="text-[15px] text-indigo-800"
+                className="text-[15px] text-indigo-800 w-[90px]"
                 size="txtMontserratRegular15Indigo800"
               >
                 Contact Us
               </Text>
             </li>
           </ul>
-          <div
-            className="common-pointer flex flex-row gap-10 sm:hidden items-start justify-start w-auto"
-            onClick={() => navigate("/login")}
-          >
+          <div className="flex flex-row gap-10 sm:hidden items-start justify-start w-auto">
             <Text
               className="text-[15px] text-indigo-800 w-auto"
               size="txtMontserratRegular15Indigo800"

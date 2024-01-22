@@ -9,10 +9,17 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex sm:flex-col md:flex-col flex-row font-montserrat sm:gap-10 md:gap-10 gap-[78px] items-start mx-auto md:pr-10 sm:pr-5 pr-[188px] w-full">
-        <div className="h-[1024px] relative w-[59%] md:w-full">
+      <div className="bg-white-A700 flex sm:flex-col md:flex-col flex-row font-montserrat sm:gap-10 md:gap-10 gap-[78px] items-start mx-auto md:pr-10 sm:pr-5 pr-[188px] w-full sm:h-[100vh] sm:justify-center">
+        <div className="hidden sm:block absolute z-[0] h-full">
+        <Img
+            className="sm-auto object-cover w-full min-h-full object-"
+            src="images/img_rectangle7.png"
+            alt="rectangleSeven"
+          />
+        </div>
+        <div className="h-full relative w-[59%] md:w-full sm:hidden">
           <Img
-            className="h-[1024px] m-auto object-cover w-full"
+            className="h-[100vh] m-auto object-cover w-full"
             src="images/img_rectangle7.png"
             alt="rectangleSeven"
           />
@@ -30,12 +37,12 @@ const LoginPage = () => {
             </Text>
           </div>
         </div>
-        <div className="flex flex-col gap-[52px] items-center justify-start md:mt-0 mt-[150px] w-auto sm:w-full">
+        <div className="flex flex-col gap-[52px] items-center justify-start md:mt-0 mt-[150px] w-auto sm:w-full sm:justify-center sm:p-6 sm:z-3 sm:relative">
           <a
             href="javascript:"
             className="text-2xl md:text-[22px] text-black-900 text-center sm:text-xl w-full"
           >
-            <Text size="txtMontserratSemiBold24Black900">Log in</Text>
+            <Text size="txtMontserratSemiBold24Black900" className="sm:text-white-A700">Log in</Text>
           </a>
           <div className="flex flex-col gap-9 items-start justify-start w-auto sm:w-full">
             <div className="flex flex-col gap-3 items-start justify-start w-auto sm:w-full">
@@ -62,7 +69,7 @@ const LoginPage = () => {
                   size="xs"
                   variant="fill"
                 ></Input>
-                <div className="flex flex-row items-center justify-between w-[444px] sm:w-full">
+                <div className="flex flex-row items-center justify-between w-[444px] sm:w-full sm:mt-4 sm:text-white-A700">
                   <CheckBox
                     className="text-[15px] text-left"
                     inputClassName="h-3 mr-[5px] w-3"
@@ -71,29 +78,34 @@ const LoginPage = () => {
                     label="Remember me"
                   ></CheckBox>
                   <Text
-                    className="text-[15px] text-black-900 text-right w-auto"
-                    size="txtMontserratRegular15"
+
+                    className="text-[15px] text-black-900 text-right w-auto sm:text-white-A700"
+                    size="txtMontserratRegular15Black900"
+ main
                   >
                     Forget password?
                   </Text>
                 </div>
               </div>
             </div>
-            <Button
-              className="common-pointer cursor-pointer text-[15px] text-center w-[444px]"
-              onClick={() => navigate("/paymentportalone1")}
-              shape="square"
-              color="indigo_800"
-              size="sm"
-              variant="fill"
-            >
-              Login
-            </Button>
+
+            <div className="sm:w-full sm:flex sm:justify-center"> 
+              <Button
+                className="cursor-pointer text-[15px] text-center w-[444px]"
+                shape="square"
+                color="indigo_800"
+                size="sm"
+                variant="fill"
+              >
+                Login
+              </Button>
+            </div>
           </div>
           <div className="flex flex-row gap-[9px] items-start justify-start w-auto">
             <Text
-              className="text-[15px] text-black-900 w-auto"
-              size="txtMontserratRegular15"
+              className="text-[15px] text-black-900 w-auto sm:text-white-A700"
+              size="txtMontserratRegular15Black900"
+ main
             >
               Not an existing user?
             </Text>

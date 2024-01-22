@@ -9,8 +9,17 @@ const RegisterPage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex sm:flex-col md:flex-col flex-row font-montserrat sm:gap-10 md:gap-10 gap-[98px] items-start mx-auto md:pr-10 sm:pr-5 pr-[168px] w-full">
-        <div className="bg-blue_gray-100_02 flex flex-col items-center justify-start md:px-5 w-[58%] md:w-full">
+
+      <div className="bg-white-A700 flex sm:flex-col md:flex-col flex-row font-montserrat sm:gap-10 md:gap-10 gap-[98px] items-start mx-auto md:pr-10 sm:pr-5 pr-[168px] w-full sm:h-[100vh]">
+      <div className="hidden sm:block absolute z-[0] h-full">
+        <Img
+            className="sm-auto object-cover w-full min-h-full object-"
+            src="images/img_rectangle7.png"
+            alt="rectangleSeven"
+          />
+        </div>
+        <div className="bg-blue_gray-100_01 flex flex-col items-center justify-start md:px-5 w-[58%] md:w-full sm:hidden">
+ main
           <div className="h-[1024px] relative w-full">
             <Img
               className="h-[1024px] m-auto object-cover w-full"
@@ -32,12 +41,12 @@ const RegisterPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-[52px] items-center justify-start md:mt-0 mt-[150px] w-auto sm:w-full">
+        <div className="flex flex-col gap-[52px] items-center justify-start md:mt-0 mt-[150px] w-auto sm:w-full sm:p-6 sm:justify-center sm:h-full sm:z-3 sm:relative">
           <a
             href="javascript:"
             className="text-2xl md:text-[22px] text-black-900 text-center sm:text-xl w-full"
           >
-            <Text size="txtMontserratSemiBold24Black900">Sign Up</Text>
+            <Text className="sm:text-white-A700" size="txtMontserratSemiBold24Black900">Sign Up</Text>
           </a>
           <div className="flex flex-col gap-9 items-start justify-start w-auto sm:w-full">
             <div className="flex flex-col gap-3 items-start justify-start w-auto sm:w-full">
@@ -118,7 +127,7 @@ const RegisterPage = () => {
               className="leading-[20.00px] max-w-[444px] md:max-w-full text-[15px] text-black-900"
               size="txtMontserratRegular15"
             >
-              <span className="text-black-900 font-montserrat text-left font-normal">
+              <span className="text-black-900 sm:text-white-A700 font-montserrat text-left font-normal">
                 By submitting this form you agree to our{" "}
               </span>
               <a
@@ -128,21 +137,24 @@ const RegisterPage = () => {
                 Terms & Conditions
               </a>
             </Text>
-            <Button
-              className="common-pointer cursor-pointer text-[15px] text-center w-[444px]"
-              onClick={() => navigate("/paymentportalone1")}
-              shape="square"
-              color="indigo_800"
-              size="sm"
-              variant="fill"
-            >
-              Register
-            </Button>
+
+            <div className="sm:w-full sm:flex sm:justify-center"> 
+              <Button
+                className="cursor-pointer text-[15px] text-center w-[444px]"
+                shape="square"
+                color="indigo_800"
+                size="sm"
+                variant="fill"
+              >
+                Register
+              </Button>
+            </div>
           </div>
           <div className="flex flex-row gap-[9px] items-start justify-start w-auto">
             <Text
-              className="text-[15px] text-black-900 w-auto"
-              size="txtMontserratRegular15"
+              className="text-[15px] text-black-900 w-auto sm:text-white-A700"
+              size="txtMontserratRegular15Black900"
+ main
             >
               Already an existing user?
             </Text>

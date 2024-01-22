@@ -29,8 +29,10 @@ const SunkwaplanPage = () => {
             Back
           </Text>
         </div>
-        <div className="bg-white-A700 flex flex-col items-center justify-start sm:justify-start sm:m-[] sm:mb-[] sm:mt-[] w-full">
-          <div className="sm:flex h-[481px] md:h-[484px] md:px-5 relative w-full">
+
+        <div className="bg-white-A700 flex flex-col items-center justify-start w-full">
+          <div className="h-[481px] sm:px-0 md:px-5 relative w-full">
+ main
             <Img
               className="h-[481px] m-auto object-cover w-full"
               src="images/img_rectangle1_481x1440_1.png"
@@ -73,10 +75,24 @@ const SunkwaplanPage = () => {
                   </Text>
                 </div>
               </div>
+
+              <Button
+                onClick={() => {
+                  handleSectionNavigation("block1");
+                }}
+                className="cursor-pointer min-w-[133px] md:ml-[0] ml-[143px] text-[15px] text-center"
+                shape="round"
+                color="white_A700"
+                size="sm"
+                variant="fill"
+              >
+                Purchase Plan
+              </Button>
             </div>
           </div>
         </div>
-        <div className="bg-indigo-800 sm:block h-[518px] sm:h-[913px] sm:p-[] pl-[78px] sm:pt-[] md:px-5 relative w-full">
+        <div className="bg-indigo-800 h-[518px] sm:h-[900px] sm:p-[] pl-[78px] md:px-5 relative w-full">
+ main
           <div className="absolute h-[518px] sm:hidden inset-y-[0] my-auto right-[0] w-[22%]">
             <div className="absolute flex sm:hidden inset-y-[0] left-[0] my-auto w-[82%]">
               <Img
@@ -96,7 +112,9 @@ const SunkwaplanPage = () => {
               alt="vectorThree"
             />
           </div>
-          <div className="absolute flex flex-col gap-6 sm:gap-6 inset-x-[0] items-center justify-start max-w-[846px] mx-auto sm:relative top-[13%] sm:top-[7%] w-full">
+
+          <div className="absolute flex flex-col gap-6 sm:gap-6 inset-x-[0] items-center justify-start max-w-[846px] mx-auto sm:relative top-[13%] sm:top-[4%] w-full">
+ main
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700 w-full"
               size="txtMontserratBold32WhiteA700"
@@ -118,7 +136,9 @@ const SunkwaplanPage = () => {
             </Text>
           </div>
           <List
-            className="absolute bottom-[13%] sm:bottom-[] sm:flex-col flex-row gap-[11px] grid md:grid-cols-2 grid-cols-4 h-[198px] inset-x-[0] justify-start max-w-[1284px] mx-auto sm:relative sm:top-[120px] w-full"
+
+            className="absolute bottom-[13%] sm:flex-col flex-row gap-[11px] grid md:grid-cols-2 grid-cols-4 h-[198px] inset-x-[0] justify-start max-w-[1284px] mx-auto sm:relative w-full sm:bottom-0 sm:h-[300px] sm:mt-16"
+ main
             orientation="horizontal"
           >
             <div className="bg-indigo-600 flex flex-1 flex-col h-full items-start justify-start p-5 rounded-[16px] w-full">
@@ -220,11 +240,10 @@ const SunkwaplanPage = () => {
           </List>
         </div>
         <div
-          className="common-pointer bg-white-A700 flex flex-col items-center justify-start p-[67px] sm:p-[] sm:pb-[67px] sm:pt-[25px] md:px-10 sm:px-[67px] w-full"
+
+          className="common-pointer bg-white-A700 flex flex-col items-center justify-start p-[67px] md:px-10 sm:px-5 w-full sm:pt-[35px]"
+ main
           id="block1"
-          onClick={() => {
-            handleSectionNavigation("block1");
-          }}
         >
           <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between max-w-[1292px] mb-[3px] mt-[19px] mx-auto w-full">
             <div className="flex md:flex-1 flex-col gap-[52px] items-center justify-start w-[41%] md:w-full">
@@ -259,8 +278,12 @@ const SunkwaplanPage = () => {
                 className="flex flex-col gap-[19px] items-start justify-start w-auto sm:w-full"
                 onClick={() => navigate("/above")}
               />
+
+
             </div>
-            <div className="sm:h-[500px] md:h-[534px] h-[589px] relative w-[48%] md:w-full">
+
+            <div className="md:h-[534px] h-[589px] relative w-[48%] md:w-full sm:hidden">
+ main
               <Img
                 className="absolute sm:h-3/4 h-[534px] inset-y-[0] left-[6%] my-auto object-cover rounded-[32px] w-[77%] sm:w-[90%]"
                 src="images/img_rectangle12.png"
@@ -284,7 +307,7 @@ const SunkwaplanPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-50_01 flex flex-col items-center justify-end p-14 md:px-10 sm:px-5 w-full">
+        <div className="bg-gray-50_01 flex flex-col items-center justify-end p-14 md:px-10 sm:px-5 w-full sm:pt-[36px]">
           <div className="flex flex-col gap-7 items-center justify-start max-w-[1204px] mx-auto w-full">
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 w-full"
@@ -298,19 +321,21 @@ const SunkwaplanPage = () => {
                   className="sm:flex-col flex-row gap-[25px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-center w-full"
                   orientation="horizontal"
                 >
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center sm:justify-center justify-start sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs1 w-96 sm:w-full">
+
+                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full sm:items-start">
+ main
                     <Text
                       className="leading-[24.00px] text-[15px] text-black-900 sm:w-full"
                       size="txtMontserratRegular15"
                     >
                       <span className="text-indigo-800 font-montserrat text-left font-semibold">
                         <>
-                          Select Your Age-Specific Package
+                        Select Your Age-Specific Package
                           <br />
                         </>
                       </span>
                       <span className="text-gray-700 font-montserrat text-left font-normal">
-                        <>
+                      <>
                           Under 60 Years
                           <br />
                           60 Years and Above
@@ -318,7 +343,9 @@ const SunkwaplanPage = () => {
                       </span>
                     </Text>
                   </div>
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs1 w-96 sm:w-full">
+
+                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full sm:items-start">
+ main
                     <Text
                       className="leading-[24.00px] text-[15px] text-black-900"
                       size="txtMontserratRegular15"
@@ -335,7 +362,9 @@ const SunkwaplanPage = () => {
                       </span>
                     </Text>
                   </div>
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs1 w-96 sm:w-full">
+
+                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full sm:items-start">
+ main
                     <Text
                       className="leading-[24.00px] text-[15px] text-black-900"
                       size="txtMontserratRegular15"
@@ -356,8 +385,10 @@ const SunkwaplanPage = () => {
                     </Text>
                   </div>
                 </List>
-                <div className="flex md:flex-col flex-row gap-[25px] items-center justify-center w-[66%] md:w-full">
-                  <div className="bg-white-A700 flex flex-col items-center justify-center p-6 sm:px-5 rounded-lg shadow-bs1 w-96 sm:w-full">
+
+                <div className="flex md:flex-col flex-row gap-[25px] items-center justify-center w-[66%] md:w-full sm:items-start">
+                  <div className="bg-white-A700 flex flex-col items-center justify-center p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
+ main
                     <Text
                       className="leading-[24.00px] text-[15px] text-black-900"
                       size="txtMontserratRegular15"
@@ -374,27 +405,37 @@ const SunkwaplanPage = () => {
                       </span>
                     </Text>
                   </div>
-                  <Input
-                    name="description_Five"
-                    placeholder="Instant Confirmation
-Receive instant confirmation and policy details via email."
-                    className="leading-[24.00px] p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                    wrapClassName="shadow-bs1 w-[49%] md:w-full"
-                    type="email"
-                    shape="round"
-                    color="white_A700"
-                    size="lg"
-                    variant="fill"
-                  ></Input>
+
+                </div>
+                <div className="flex md:flex-col flex-row gap-[25px] items-center justify-center w-[66%] md:w-full sm:items-start">
+                  <div className="bg-white-A700 flex flex-col items-center justify-center p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
+                    <Text
+                      className="leading-[24.00px] text-[15px] text-black-900"
+                      size="txtMontserratRegular15Black900"
+                    >
+                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
+                        <>
+                          Instant Confirmation
+                          <br />
+                        </>
+                      </span>
+                      <span className="text-gray-700 font-montserrat text-left font-normal">
+                        Receive instant confirmation and policy details via email.
+                      </span>
+                    </Text>
+                  </div>
+ main
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-center justify-start w-full">
-          <div className="h-[336px] md:px-5 relative w-full">
+          <div className="h-[336px] md:px-5 relative w-full sm:px-0">
             <Img
-              className="h-[336px] sm:h-full m-auto object-cover sm:relative sm:right-[] w-full"
+
+              className="h-[336px] m-auto object-cover w-full sm:object-[25%]"
+ main
               src="images/img_rectangle2.png"
               alt="rectangleTwo"
             />
