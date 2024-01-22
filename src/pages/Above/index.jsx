@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Img, Input, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
+import "../../assets/css/theme.css"
 
 const AbovePage = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const AbovePage = () => {
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <Button
           className="common-pointer cursor-pointer flex items-center justify-center min-w-[1440px] md:min-w-full"
-          onClick={() => navigate("/aboveone")}
+          onClick={() => navigate("/")}
           leftIcon={
             <Img
               className="h-5 mt-px mr-2.5"
@@ -563,6 +564,706 @@ const AbovePage = () => {
             </div>
           </div>
         </div>
+        
+
+        <section className="vc_row pt-50 pb-35">
+  <div className="container">
+    <div className="row">
+      <div className="lqd-column col-lg-8 col-lg-offset-2">
+        <h3 className="text-center mb-5">Active Underlined</h3>
+        <div className="tabs tabs-nav-centered tabs-nav-active-underlined tabs-nav-sm">
+          <ul className="nav tabs-nav" role="tablist">
+            <li role="presentation" className="h5 active">
+              <a
+                href="#ld-tab-pane-29"
+                aria-expanded="false"
+                aria-controls="ld-tab-pane-29"
+                role="tab"
+                data-toggle="tab"
+              >
+                {" "}
+                Out-Patient Benefits{" "}
+              </a>
+            </li>
+            <li role="presentation" className="h5">
+              <a
+                href="#ld-tab-pane-30"
+                aria-expanded="false"
+                aria-controls="ld-tab-pane-30"
+                role="tab"
+                data-toggle="tab"
+              >
+                {" "}
+                In-Patient Benefits{" "}
+              </a>
+            </li>
+            <li role="presentation" className="h5">
+              <a
+                href="#ld-tab-pane-31"
+                aria-expanded="false"
+                aria-controls="ld-tab-pane-31"
+                role="tab"
+                data-toggle="tab"
+              >
+                {" "}
+                Additional Benefits{" "}
+              </a>
+            </li>
+            
+          </ul>
+          <div className="tabs-content">
+            <div
+              id="ld-tab-pane-29"
+              role="tabpanel"
+              className="tabs-pane fade active in"
+            >
+              <table className="min-w-full content-center border border-collapse border-gray-500">
+      <thead>
+        <tr>
+          <th className="border p-2">Category</th>
+          <th className="border p-2">Coverage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="border p-2">Total max benefit per person per annum</td>
+          <td className="border p-2">GH¢6,000</td>
+        </tr>
+        <tr>
+          <td className="border p-2"><strong>Specialist Consultation</strong> (Pediatrician, Gynecologists', Ophthalmology, Cardiology, etc...)</td>
+          <td className="border p-2 items-center">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2"><strong>Procedures Pathology</strong><br></br> 
+            Laboratory Test required by doctor(Biopsy, Histology, etc...)
+          
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Imaging</strong><br></br> 
+            <ul>
+              <li>X-ray, USG Scan, CT Scan(No limit on body parts), MRI(No Limit on boy part)</li>
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Out-Patient Minor Surgery </strong><br></br> 
+            <ul>
+              <li>Suturing of lacerations, incisions and Drainage
+                 </li>
+
+              <li> Post-Surgery wound dressing</li>
+
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Prescribed Drugs</strong><br></br> 
+            <ul>
+              <li>Acute Medicines</li>
+
+              <li>Chronic Medicines & Treatment</li>
+
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Eye Care</strong><br></br> 
+            
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">Prescribed Drugs - Chronic Medicines & Treatment</td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">Eye Care - Optical</td>
+          <td className="border p-2">Covered up to GH¢600 (Every 2 years)</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Dentistry - Basic Dental Procedures</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Dentistry - Special Dental Procedures</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Physiotherapy</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Speech Therapy</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Chiropractic</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Ambulance Services</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Complementary Medicine</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Herbal Medicine</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Fees for Doctors, Specialists, Surgeon, Anesthetists, Physiotherapist</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Laparoscopic procedures</td>
+          <td className="border p-2">To be disclosed at the point of registration</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Operating Theatre Fees</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Surgical Procedure (Minor & Major)</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Ward Medicines & Take home Medicines</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Consumables</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Pathology Procedures Lab. Tests</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Intensive Care</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Ambulance</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Physiotherapy (Upon referral)</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Emergencies due to legal addiction</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Investigations</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Organ Transplant</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Kidney Dialysis</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Annual Medical Checkup/Screening</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+      </tbody>
+            </table>
+            </div>
+            {/* /.tab-pane */}
+            <div id="ld-tab-pane-30" role="tabpanel" className="tabs-pane fade">
+            <table className="min-w-full content-center border border-collapse border-gray-500">
+      <thead>
+        <tr>
+          <th className="border p-2">Category</th>
+          <th className="border p-2">Coverage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="border p-2">Total max benefit per person per annum</td>
+          <td className="border p-2">GH¢6,000</td>
+        </tr>
+        <tr>
+          <td className="border p-2"><strong>Specialist Consultation</strong> (Pediatrician, Gynecologists', Ophthalmology, Cardiology, etc...)</td>
+          <td className="border p-2 items-center">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2"><strong>Procedures Pathology</strong><br></br> 
+            Laboratory Test required by doctor(Biopsy, Histology, etc...)
+          
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Imaging</strong><br></br> 
+            <ul>
+              <li>X-ray, USG Scan, CT Scan(No limit on body parts), MRI(No Limit on boy part)</li>
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Out-Patient Minor Surgery </strong><br></br> 
+            <ul>
+              <li>Suturing of lacerations, incisions and Drainage
+                 </li>
+
+              <li> Post-Surgery wound dressing</li>
+
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Prescribed Drugs</strong><br></br> 
+            <ul>
+              <li>Acute Medicines</li>
+
+              <li>Chronic Medicines & Treatment</li>
+
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Eye Care</strong><br></br> 
+            
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">Prescribed Drugs - Chronic Medicines & Treatment</td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">Eye Care - Optical</td>
+          <td className="border p-2">Covered up to GH¢600 (Every 2 years)</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Dentistry - Basic Dental Procedures</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Dentistry - Special Dental Procedures</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Physiotherapy</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Speech Therapy</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Chiropractic</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Ambulance Services</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Complementary Medicine</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Herbal Medicine</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Fees for Doctors, Specialists, Surgeon, Anesthetists, Physiotherapist</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Laparoscopic procedures</td>
+          <td className="border p-2">To be disclosed at the point of registration</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Operating Theatre Fees</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Surgical Procedure (Minor & Major)</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Ward Medicines & Take home Medicines</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Consumables</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Pathology Procedures Lab. Tests</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Intensive Care</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Ambulance</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Physiotherapy (Upon referral)</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Emergencies due to legal addiction</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Investigations</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Organ Transplant</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Kidney Dialysis</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Annual Medical Checkup/Screening</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+      </tbody>
+            </table>
+            </div>
+            {/* /.tab-pane */}
+            <div id="ld-tab-pane-31" role="tabpanel" className="tabs-pane fade content-center ">
+            <table className="min-w-full content-center border border-collapse border-gray-500">
+      <thead>
+        <tr>
+          <th className="border p-2">Category</th>
+          <th className="border p-2">Coverage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="border p-2">Total max benefit per person per annum</td>
+          <td className="border p-2">GH¢6,000</td>
+        </tr>
+        <tr>
+          <td className="border p-2"><strong>Specialist Consultation</strong> (Pediatrician, Gynecologists', Ophthalmology, Cardiology, etc...)</td>
+          <td className="border p-2 items-center">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2"><strong>Procedures Pathology</strong><br></br> 
+            Laboratory Test required by doctor(Biopsy, Histology, etc...)
+          
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Imaging</strong><br></br> 
+            <ul>
+              <li>X-ray, USG Scan, CT Scan(No limit on body parts), MRI(No Limit on boy part)</li>
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Out-Patient Minor Surgery </strong><br></br> 
+            <ul>
+              <li>Suturing of lacerations, incisions and Drainage
+                 </li>
+
+              <li> Post-Surgery wound dressing</li>
+
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Prescribed Drugs</strong><br></br> 
+            <ul>
+              <li>Acute Medicines</li>
+
+              <li>Chronic Medicines & Treatment</li>
+
+            </ul>
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">
+          <strong>Eye Care</strong><br></br> 
+            
+          </td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">Prescribed Drugs - Chronic Medicines & Treatment</td>
+          <td className="border p-2">
+          <Img
+                    className="h-10 w-10"
+                    src="images/img_checkmark_indigo_800.svg"
+                    alt="checkmark_Six"
+                  />
+          </td>
+        </tr>
+        <tr>
+          <td className="border p-2">Eye Care - Optical</td>
+          <td className="border p-2">Covered up to GH¢600 (Every 2 years)</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Dentistry - Basic Dental Procedures</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Dentistry - Special Dental Procedures</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Physiotherapy</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Speech Therapy</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Chiropractic</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Ambulance Services</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Complementary Medicine</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Herbal Medicine</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Fees for Doctors, Specialists, Surgeon, Anesthetists, Physiotherapist</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Laparoscopic procedures</td>
+          <td className="border p-2">To be disclosed at the point of registration</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Operating Theatre Fees</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Surgical Procedure (Minor & Major)</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Ward Medicines & Take home Medicines</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Consumables</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Pathology Procedures Lab. Tests</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Intensive Care</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Ambulance</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Auxiliary Services - Physiotherapy (Upon referral)</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Emergencies due to legal addiction</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Investigations</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Organ Transplant</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Cancer Treatment - Kidney Dialysis</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+        <tr>
+          <td className="border p-2">Annual Medical Checkup/Screening</td>
+          <td className="border p-2">Covered within benefit limit</td>
+        </tr>
+      </tbody>
+            </table>
+            </div>
+            {/* /.tab-pane */}
+            
+            {/* /.tab-pane */}
+          </div>
+          {/* /.tabs-content */}
+        </div>
+        {/* /.tabs */}
+        <hr className="mt-100" />
+      </div>
+      {/* /.lqd-column col-lg-8 col-lg-offset-2 */}
+    </div>
+    {/* /.row */}
+  </div>
+  {/* /.container */}
+</section>
+
         <div className="flex flex-col items-center justify-start w-full">
           <div className="h-[336px] md:px-5 relative w-full">
             <Img

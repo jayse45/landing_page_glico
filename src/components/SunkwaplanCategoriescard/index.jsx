@@ -1,15 +1,24 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Button, Img, Input, Text } from "components";
 
 const SunkwaplanCategoriescard = (props) => {
+  const navigate = useNavigate();
   return (
     <>
       <div className={props.className}>
-        <div className="flex flex-col items-start justify-start w-auto md:w-full">
-          <div className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full">
+      <>
+  {/* component */}
+  <div className="m-2 space-y-2 bg-gray-100">
+    <div
+      className="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
+      tabIndex={1}
+    >
+      <div className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full">
             <Input
-              name="duration"
+              name="duration_One"
               placeholder="Under 60 Years Plan"
               className="font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
               wrapClassName="flex w-full"
@@ -25,10 +34,35 @@ const SunkwaplanCategoriescard = (props) => {
               size="sm"
               variant="fill"
             ></Input>
+            <div className="bg-gray-100 flex flex-col items-center justify-start w-full invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
+              <Text
+                className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
+                size="txtMontserratRegular15"
+              >
+                {props?.descriptionTwo}
+              </Text>
+
+              <div className="bg-gray-100 flex flex-col items-center justify-start px-5 py-2 w-full">
+              <Button
+                className="common-pointer !text-deep_purple-A700 cursor-pointer font-montserrat min-w-[111px] rounded-[16px] text-[15px] text-center"
+                onClick={() => navigate("/under60")}
+                color="deep_purple_A700_14"
+                size="xs"
+                variant="fill"
+              >
+                {props?.learnMore}
+              </Button>
+            </div>
+            </div>
+            
           </div>
-        </div>
-        <div className="flex flex-col items-start justify-start w-auto md:w-full">
-          <div className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full">
+    </div>
+    
+    <div
+      className="group flex flex-col gap-2 rounded-lg bg-black p-5 text-white"
+      tabIndex={3}
+    >
+      <div className="bg-gray-100 flex flex-col items-start justify-start p-3 rounded-[12px] w-[523px] md:w-full">
             <Input
               name="duration_One"
               placeholder="60 Years and Above Plan"
@@ -46,15 +80,15 @@ const SunkwaplanCategoriescard = (props) => {
               size="sm"
               variant="fill"
             ></Input>
-            <div className="bg-gray-100 flex flex-col items-center justify-start p-5 w-full">
+            <div className="bg-gray-100 flex flex-col items-center justify-start w-full invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
               <Text
                 className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
                 size="txtMontserratRegular15"
               >
                 {props?.descriptionThree}
               </Text>
-            </div>
-            <div className="bg-gray-100 flex flex-col items-center justify-start px-5 py-2 w-full">
+
+              <div className="bg-gray-100 flex flex-col items-center justify-start px-5 py-2 w-full">
               <Button
                 className="common-pointer !text-deep_purple-A700 cursor-pointer font-montserrat min-w-[111px] rounded-[16px] text-[15px] text-center"
                 onClick={props?.onClick}
@@ -65,14 +99,22 @@ const SunkwaplanCategoriescard = (props) => {
                 {props?.learnMore}
               </Button>
             </div>
+            </div>
+            
           </div>
-        </div>
+    </div>
+  </div>
+</>
+
+        
       </div>
     </>
   );
 };
 
 SunkwaplanCategoriescard.defaultProps = {
+  descriptionTwo:
+    "Designed for individuals who are below the age of 60. Offering a comprehensive range of health benefits to ensure that your family members receive the care they need",
   descriptionThree:
     "Designed for individuals who are above the age of 60. Offering a comprehensive range of health benefits to ensure that your family members receive the care they need",
   learnMore: "Learn more",
