@@ -2,9 +2,11 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { Button, Img, Input, List, Text } from "components";
+import { BackButton, Button, HowItWorks, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header1 from "components/Header1";
+import Header from "components/Header";
+import { LastSection } from "components/LastSection";
 
 const Under60SevenPage = () => {
   const navigate = useNavigate();
@@ -12,34 +14,16 @@ const Under60SevenPage = () => {
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
-        <Header1 className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
-        <Button
-          className="common-pointer cursor-pointer flex items-center justify-center min-w-[1440px] md:min-w-full"
-          onClick={() => navigate("/")}
-          leftIcon={
-            <Img
-              className="h-5 mt-px mr-2.5"
-              src="images/img_arrowdown.svg"
-              alt="arrow_down"
-            />
-          }
-          shape="square"
-          color="white_A700"
-          size="sm"
-          variant="fill"
-        >
-          <div className="!text-gray-700 font-medium text-[15px] text-left">
-            Back
-          </div>
-        </Button>
-        <div className="bg-white-A700 md:h-[481px] h-[482px] md:px-5 relative w-full">
+        <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
+        <BackButton onClick={() => navigate("/")} />
+        <div className="bg-white-A700 md:h-[481px] h-[620px] md:px-5 relative w-full">
           <Img
-            className="h-[481px] m-auto object-cover w-full"
+            className="h-[620px] m-auto object-cover w-full"
             src="images/img_rectangle1_1.png"
             alt="rectangleOne"
           />
-          <div className="absolute bg-gradient1  flex flex-col gap-[39px] h-max inset-[0] items-start justify-center m-auto p-[49px] md:px-10 sm:px-5 w-full">
-            <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[151px] mt-[95px] w-[538px] sm:w-full">
+          <div className="absolute bg-gradient1 flex flex-col gap-[39px] h-full inset-[0] items-start justify-center m-auto p-[49px] md:px-10 sm:px-5 w-full">
+            <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[151px] mt-[95px] mb-20 w-[538px] sm:w-full">
               <Text
                 className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
                 size="txtMontserratBold44"
@@ -56,15 +40,6 @@ const Under60SevenPage = () => {
                 diverse needs of this dynamic age group.
               </Text>
             </div>
-            <Button
-              className="cursor-pointer min-w-[133px] md:ml-[0] ml-[151px] text-[15px] text-center"
-              shape="round"
-              color="white_A700"
-              size="sm"
-              variant="fill"
-            >
-              Purchase Plan
-            </Button>
           </div>
         </div>
         <div className="bg-gray-50 flex flex-col gap-[42px] items-center justify-start p-[61px] md:px-10 sm:px-5 w-full">
@@ -134,9 +109,9 @@ const Under60SevenPage = () => {
           </List>
         </div>
         <div className="bg-white-A700 flex flex-col items-end justify-start sm:pl-5 pl-6 py-6 w-full">
-          <div className="flex flex-col items-start justify-start mb-[17px] md:px-5 w-[97%] md:w-full">
-            <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full">
-              <div className="flex flex-col gap-[19px] items-start justify-start md:mt-0 mt-[39px]">
+          <div className="flex flex-col items-start justify-start mb-[17px] md:px-5 w-full md:w-full">
+            <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full pl-20">
+              <div className="flex flex-col gap-[23px] items-start justify-start md:mt-0 mt-[39px]">
                 <Button
                   className="cursor-pointer font-semibold min-w-[152px] rounded-[16px] text-center text-xs"
                   color="red_50"
@@ -153,7 +128,7 @@ const Under60SevenPage = () => {
                     Uncover the benefits
                   </Text>
                   <Text
-                    className="leading-[24.00px] max-w-[522px] md:max-w-full text-[15px] text-gray-700"
+                    className="leading-[24.00px] max-w-[522px] md:max-w-full text-[16px] text-gray-700"
                     size="txtMontserratRegular15"
                   >
                     Abusua ap)muden nti.. Discover the distinct benefits of each
@@ -163,13 +138,13 @@ const Under60SevenPage = () => {
                 </div>
               </div>
               <Img
-                className="h-[315px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px]"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px]"
                 src="images/img_rectangle25_315x720.png"
                 alt="rectangleTwentyFive"
               />
             </div>
             <List
-              className="sm:flex-col flex-row gap-[21px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-start max-w-7xl mt-20 w-full"
+              className="sm:flex-col flex-row gap-[21px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-cetner mt-20 w-full px-32"
               orientation="horizontal"
             >
               <div className="bg-indigo-800 flex flex-1 flex-col gap-4 items-start justify-start p-5 rounded-[20px] w-full">
@@ -189,14 +164,18 @@ const Under60SevenPage = () => {
                   </Text>
                 </div>
                 <Button
-                  className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center"
+                  className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60three")}
                   shape="round"
                   color="white_A700"
                   size="sm"
                   variant="outline"
                 >
-                  Purchase Plan
+                  View Plan 
+                  <svg className="fill-white-A700 group-hover:fill-indigo-800" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.9164 6.03125V15.7812C18.9164 15.9802 18.8374 16.1709 18.6968 16.3116C18.5561 16.4522 18.3653 16.5312 18.1664 16.5312C17.9675 16.5312 17.7768 16.4522 17.6361 16.3116C17.4954 16.1709 17.4164 15.9802 17.4164 15.7812V7.84156L6.69706 18.5619C6.55633 18.7026 6.36546 18.7817 6.16643 18.7817C5.96741 18.7817 5.77654 18.7026 5.63581 18.5619C5.49508 18.4211 5.41602 18.2303 5.41602 18.0312C5.41602 17.8322 5.49508 17.6414 5.63581 17.5006L16.3561 6.78125H8.41643C8.21752 6.78125 8.02675 6.70223 7.8861 6.56158C7.74545 6.42093 7.66643 6.23016 7.66643 6.03125C7.66643 5.83234 7.74545 5.64157 7.8861 5.50092C8.02675 5.36027 8.21752 5.28125 8.41643 5.28125H18.1664C18.3653 5.28125 18.5561 5.36027 18.6968 5.50092C18.8374 5.64157 18.9164 5.83234 18.9164 6.03125Z"/>
+                  </svg>
+                  
                 </Button>
               </div>
               <div className="bg-indigo-800 flex flex-1 flex-col gap-4 items-start justify-start p-5 rounded-[20px] w-full">
@@ -216,17 +195,20 @@ const Under60SevenPage = () => {
                   </Text>
                 </div>
                 <Button
-                  className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center"
+                  className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60one")}
                   shape="round"
                   color="white_A700"
                   size="sm"
                   variant="outline"
                 >
-                  Purchase Plan
+                  View Plan 
+                  <svg className="fill-white-A700 group-hover:fill-indigo-800" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.9164 6.03125V15.7812C18.9164 15.9802 18.8374 16.1709 18.6968 16.3116C18.5561 16.4522 18.3653 16.5312 18.1664 16.5312C17.9675 16.5312 17.7768 16.4522 17.6361 16.3116C17.4954 16.1709 17.4164 15.9802 17.4164 15.7812V7.84156L6.69706 18.5619C6.55633 18.7026 6.36546 18.7817 6.16643 18.7817C5.96741 18.7817 5.77654 18.7026 5.63581 18.5619C5.49508 18.4211 5.41602 18.2303 5.41602 18.0312C5.41602 17.8322 5.49508 17.6414 5.63581 17.5006L16.3561 6.78125H8.41643C8.21752 6.78125 8.02675 6.70223 7.8861 6.56158C7.74545 6.42093 7.66643 6.23016 7.66643 6.03125C7.66643 5.83234 7.74545 5.64157 7.8861 5.50092C8.02675 5.36027 8.21752 5.28125 8.41643 5.28125H18.1664C18.3653 5.28125 18.5561 5.36027 18.6968 5.50092C18.8374 5.64157 18.9164 5.83234 18.9164 6.03125Z"/>
+                  </svg>
                 </Button>
               </div>
-              <div className="bg-indigo-800 flex flex-1 flex-col gap-4 items-start justify-start p-5 rounded-[20px] w-full">
+              <div className="bg-indigo-800 flex flex-1 flex-col gap-4 items-start justify-start p-5 rounded-[20px] w-full ">
                 <div className="flex flex-col gap-2 items-start justify-start w-auto">
                   <Text
                     className="text-white-A700 text-xl tracking-[-1.00px] w-full"
@@ -243,187 +225,34 @@ const Under60SevenPage = () => {
                   </Text>
                 </div>
                 <Button
-                  className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center"
+                  className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60five")}
                   shape="round"
                   color="white_A700"
                   size="sm"
-                  variant="fill"
+                  variant="outline"
                 >
-                  Purchase Plan
+                  View Plan 
+                  <svg className="fill-white-A700 group-hover:fill-indigo-800" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.9164 6.03125V15.7812C18.9164 15.9802 18.8374 16.1709 18.6968 16.3116C18.5561 16.4522 18.3653 16.5312 18.1664 16.5312C17.9675 16.5312 17.7768 16.4522 17.6361 16.3116C17.4954 16.1709 17.4164 15.9802 17.4164 15.7812V7.84156L6.69706 18.5619C6.55633 18.7026 6.36546 18.7817 6.16643 18.7817C5.96741 18.7817 5.77654 18.7026 5.63581 18.5619C5.49508 18.4211 5.41602 18.2303 5.41602 18.0312C5.41602 17.8322 5.49508 17.6414 5.63581 17.5006L16.3561 6.78125H8.41643C8.21752 6.78125 8.02675 6.70223 7.8861 6.56158C7.74545 6.42093 7.66643 6.23016 7.66643 6.03125C7.66643 5.83234 7.74545 5.64157 7.8861 5.50092C8.02675 5.36027 8.21752 5.28125 8.41643 5.28125H18.1664C18.3653 5.28125 18.5561 5.36027 18.6968 5.50092C18.8374 5.64157 18.9164 5.83234 18.9164 6.03125Z"/>
+                  </svg>
                 </Button>
               </div>
             </List>
-            <Button
-              className="cursor-pointer font-medium min-w-[156px] md:ml-[0] ml-[562px] mt-[39px] rounded-[24px] text-[15px] text-center"
-              color="red_700"
-              size="sm"
-              variant="outline"
-            >
-              Compare Plans
-            </Button>
-          </div>
-        </div>
-        <div className="bg-gray-50_01 flex flex-col items-center justify-end p-14 md:px-10 sm:px-5 w-full">
-          <div className="flex flex-col gap-7 items-center justify-start max-w-[1204px] mx-auto w-full">
-            <Text
-              className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 w-full"
-              size="txtMontserratBold32"
-            >
-              How it Works
-            </Text>
-            <div className="flex flex-col items-start justify-center w-full">
-              <div className="flex flex-col gap-[23px] items-center justify-start w-full">
-                <List
-                  className="sm:flex-col flex-row gap-[25px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-center w-full"
-                  orientation="horizontal"
-                >
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-start sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15Black900"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                          Select Your Age-Specific Package
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        <>
-                          Under 60 Years
-                          <br />
-                          60 Years and Above
-                        </>
-                      </span>
-                    </Text>
-                  </div>
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15Black900"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                          Choose Your Plan
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Select a plan that fits the healthcare needs of your
-                        family.
-                      </span>
-                    </Text>
-                  </div>
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15Black900"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        Provide Details
-                      </span>
-                      <span className="text-indigo-800 font-montserrat text-left font-normal">
-                        <>
-                          {" "}
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Fill in the necessary information about your dependents
-                        in Ghana.
-                      </span>
-                    </Text>
-                  </div>
-                </List>
-                <div className="flex md:flex-col flex-row gap-[25px] items-center justify-center w-[66%] md:w-full">
-                  <div className="bg-white-A700 flex flex-col items-center justify-center p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15Black900"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                          Make Payment
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Securely make your payment online using our convenient
-                        payment options.
-                      </span>
-                    </Text>
-                  </div>
-                  <Input
-                    name="description_Three"
-                    placeholder="Instant Confirmation
-Receive instant confirmation and policy details via email."
-                    className="leading-[24.00px] p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                    wrapClassName="shadow-bs w-[49%] md:w-full"
-                    type="email"
-                    shape="round"
-                    color="white_A700"
-                    size="md"
-                    variant="fill"
-                  ></Input>
-                </div>
-              </div>
+            <div className="flex justify-center w-full">
+              <Button
+                className="cursor-pointer font-medium min-w-[156px] md:ml-[0] mt-[60px] rounded-[24px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-red-700 hover:text-white-A700"
+                color="red_700"
+                size="sm"
+                variant="outline"
+              >
+                Compare Plans
+              </Button>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-start w-full">
-          <div className="h-[336px] md:px-5 relative w-full">
-            <Img
-              className="h-[336px] m-auto object-cover w-full"
-              src="images/img_rectangle2.png"
-              alt="rectangleTwo"
-            />
-            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[61px] md:px-10 sm:px-5 w-full">
-              <div className="flex flex-col gap-10 items-start justify-start mb-2.5 md:ml-[0] ml-[74px] w-auto md:w-full">
-                <div className="flex flex-col gap-5 items-start justify-center w-[598px] md:w-full">
-                  <div className="flex flex-col gap-[15px] items-start justify-start w-full">
-                    <Text
-                      className="text-2xl md:text-[22px] text-white-A700 sm:text-xl w-auto"
-                      size="txtMontserratSemiBold24"
-                    >
-                      Need more information?
-                    </Text>
-                    <Text
-                      className="text-[15px] text-white-A700 w-full"
-                      size="txtMontserratRegular15WhiteA700"
-                    >
-                      Get in touch with our team know about all that Sunkwa has
-                      for you
-                    </Text>
-                  </div>
-                  <Button
-                    className="cursor-pointer font-medium min-w-[308px] text-[15px] text-center"
-                    shape="round"
-                    color="white_A700"
-                    size="sm"
-                    variant="fill"
-                  >
-                    Contact Customer Experience Center
-                  </Button>
-                </div>
-                <div className="flex flex-row gap-[27px] items-end justify-start w-auto">
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 274 6500
-                  </Text>
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 225 5742
-                  </Text>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <HowItWorks/>
+        <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
       </div>
     </>

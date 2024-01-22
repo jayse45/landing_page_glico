@@ -7,6 +7,7 @@ const variants = {
     red_700: "border border-red-700 border-solid text-red-700",
     white_A700: "border border-solid border-white-A700 text-white-A700",
     blue_gray_100: "border-blue_gray-100 border-solid border-t text-indigo-800",
+    blue_gray_101: "border-indigo-800 border-solid border-2 text-indigo-800",
   },
   fill: {
     red_50: "bg-red-50 text-red-700",
