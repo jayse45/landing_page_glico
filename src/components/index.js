@@ -7,3 +7,5 @@ export { List } from "./List";
 export { Radio } from "./Radio";
 export { RadioGroup } from "./RadioGroup";
 export { Text } from "./Text";
+export { HowItWorks } from "./HowItWorks";
+export { BackButton } from "./BackButton";

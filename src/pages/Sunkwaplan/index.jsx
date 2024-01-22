@@ -2,12 +2,13 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { Button, Img, Input, List, Text } from "components";
-import Footer1 from "components/Footer1";
-import Header1 from "components/Header1";
+import { Button, Img, List, Text, HowItWorks } from "components";
+import Footer from "components/Footer";
+import Header from "components/Header";
 import SunkwaplanCategoriescard from "components/SunkwaplanCategoriescard";
+import { LastSection } from "components/LastSection";
 
-import { handleSectionNavigation } from "utils";
+// import { handleSectionNavigation } from "utils";
 
 const SunkwaplanPage = () => {
   const navigate = useNavigate();
@@ -15,79 +16,52 @@ const SunkwaplanPage = () => {
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
-        <Header1 className="bg-white-A700 flex gap-[188px] sm:gap-[18px] items-center justify-center px-20 md:px-5 py-5 w-full" />
+        <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <div className="bg-white-A700 flex flex-row gap-2.5 items-center justify-start md:px-10 px-20 sm:px-5 py-3 w-full">
-          <Img
-            className="h-5 w-5"
-            src="images/img_arrowdown.svg"
-            alt="arrowdown"
-          />
-          <Text
-            className="text-[15px] text-gray-700 w-auto"
-            size="txtMontserratMedium15Gray700"
-          >
-            Back
-          </Text>
-        </div>
-
-        <div className="bg-white-A700 flex flex-col items-center justify-start w-full">
-          <div className="h-[481px] sm:px-0 md:px-5 relative w-full">
- main
+        {/* <Button
+          className="common-pointer cursor-pointer flex items-center justify-start w-full ml-10 md:min-w-full"
+          onClick={() => navigate("/")}
+          leftIcon={
             <Img
-              className="h-[481px] m-auto object-cover w-full"
-              src="images/img_rectangle1_481x1440_1.png"
+              className="h-5 mt-px mr-2.5"
+              src="images/img_arrowdown.svg"
+              alt="arrow_down"
+            />
+          }
+          shape="square"
+          color="white_A700"
+          size="sm"
+          variant="fill"
+        >
+          <div className="!text-gray-700 font-medium text-[15px] text-left">
+            Back
+          </div>
+        </Button> */}
+        </div>
+        <div className="items-center justify-start w-full">
+          <div className="h-[620px] sm:px-0 md:px-5 relative w-full">
+            <Img
+              className="h-[620px] m-auto object-cover w-full object-top"
+              src="images/img_rectangle1.png"
               alt="rectangleOne"
             />
-            <div className="absolute bg-gradient1  flex flex-col sm:gap-[26px] h-full inset-[0] items-start justify-center m-auto p-[102px] sm:p-[54px] md:px-10 w-full">
-              <div className="flex flex-col items-start justify-start mb-[52px] md:ml-[0] ml-[98px] w-[556px] sm:w-full">
-                <div className="flex flex-col gap-4 items-start justify-start w-full">
-                  <div className="flex flex-col gap-2 items-start justify-start w-full">
-                    <Text
-                      className="md:text-3xl sm:text-[28px] text-[32px] text-white-A700 tracking-[-1.00px] w-full"
-                      size="txtMontserratBold32WhiteA700"
-                    >
-                      Bringing Quality{" "}
-                    </Text>
-                    <div className="flex flex-col items-center justify-start w-[74%] md:w-full">
-                      <div className="flex flex-col items-start justify-start w-auto sm:w-full">
-                        <Text
-                          className="md:text-3xl sm:text-[28px] text-[32px] text-white-A700 tracking-[-1.00px] w-[407px]"
-                          size="txtMontserratBold32WhiteA700"
-                        >
-                          Hospital Accommodation
-                        </Text>
-                      </div>
-                    </div>
-                    <Text
-                      className="leading-[36.00px] max-w-[556px] md:max-w-full md:text-3xl sm:text-[28px] text-[32px] text-white-A700 tracking-[-1.00px]"
-                      size="txtMontserratBold32WhiteA700"
-                    >
-                      for your family back home, as if you were there
-                    </Text>
-                  </div>
-                  <Text
-                    className="leading-[24.00px] max-w-[556px] md:max-w-full text-[15px] text-white-A700"
-                    size="txtMontserratMedium15WhiteA700"
-                  >
-                    Sunkwa Health Plan offers your loved ones a tailored
-                    package, 24/7 support and access to the best health care
-                    services back home.
-                  </Text>
-                </div>
+            <div className="absolute flex flex-col bg-gradient1 gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full">
+              <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[141px] mt-2.5 w-[538px] sm:w-full">
+                <Text
+                  className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
+                  size="txtMontserratBold44"
+                >
+                  Bringing Quality Healthcare to Your Loved Ones in Ghana
+                </Text>
+                <Text
+                  className="leading-[24.00px] max-w-[442px] md:max-w-full text-[16px] text-white-A700"
+                  size="txtMontserratMedium15WhiteA700"
+                >
+                  The GLICO Sunkwa Health Plan is a special package designed to
+                  help Ghanaians living abroad purchase a health insurance plan
+                  for their dependants and relatives residing in Ghana.
+                </Text>
               </div>
-
-              <Button
-                onClick={() => {
-                  handleSectionNavigation("block1");
-                }}
-                className="cursor-pointer min-w-[133px] md:ml-[0] ml-[143px] text-[15px] text-center"
-                shape="round"
-                color="white_A700"
-                size="sm"
-                variant="fill"
-              >
-                Purchase Plan
-              </Button>
             </div>
           </div>
         </div>
@@ -101,7 +75,7 @@ const SunkwaplanPage = () => {
                 alt="vectorOne"
               />
               <Img
-                className="h-[518px] sm:hidden ml-[-61.24px] my-auto z-[1]"
+                className="h-[518px] sm:hidden ml-[-61.24px] my-auto z-[0]"
                 src="images/img_vector2.svg"
                 alt="vectorTwo"
               />
@@ -275,8 +249,8 @@ const SunkwaplanPage = () => {
                 </div>
               </div>
               <SunkwaplanCategoriescard
-                className="flex flex-col gap-[19px] items-start justify-start w-auto sm:w-full"
-                onClick={() => navigate("/above")}
+                className="flex flex-col gap-[19px] items-start justify-start w-auto sm:w-full bg-white-A700 h-[350px]"
+                onClick={() => navigate("/aboveone")}
               />
 
 
@@ -307,176 +281,9 @@ const SunkwaplanPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-50_01 flex flex-col items-center justify-end p-14 md:px-10 sm:px-5 w-full sm:pt-[36px]">
-          <div className="flex flex-col gap-7 items-center justify-start max-w-[1204px] mx-auto w-full">
-            <Text
-              className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 w-full"
-              size="txtMontserratBold32"
-            >
-              How it Works
-            </Text>
-            <div className="flex flex-col items-start justify-center w-full">
-              <div className="flex flex-col gap-[23px] items-center justify-start w-full">
-                <List
-                  className="sm:flex-col flex-row gap-[25px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-center w-full"
-                  orientation="horizontal"
-                >
-
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full sm:items-start">
- main
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900 sm:w-full"
-                      size="txtMontserratRegular15"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                        Select Your Age-Specific Package
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                      <>
-                          Under 60 Years
-                          <br />
-                          60 Years and Above
-                        </>
-                      </span>
-                    </Text>
-                  </div>
-
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full sm:items-start">
- main
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                          Choose Your Plan
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Select a plan that fits the healthcare needs of your
-                        family.
-                      </span>
-                    </Text>
-                  </div>
-
-                  <div className="bg-white-A700 flex sm:flex-1 flex-col items-center justify-center sm:ml-[0] p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full sm:items-start">
- main
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        Provide Details
-                      </span>
-                      <span className="text-indigo-800 font-montserrat text-left font-normal">
-                        <>
-                          {" "}
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Fill in the necessary information about your dependents
-                        in Ghana.
-                      </span>
-                    </Text>
-                  </div>
-                </List>
-
-                <div className="flex md:flex-col flex-row gap-[25px] items-center justify-center w-[66%] md:w-full sm:items-start">
-                  <div className="bg-white-A700 flex flex-col items-center justify-center p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
- main
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                          Make Payment
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Securely make your payment online using our convenient
-                        payment options.
-                      </span>
-                    </Text>
-                  </div>
-
-                </div>
-                <div className="flex md:flex-col flex-row gap-[25px] items-center justify-center w-[66%] md:w-full sm:items-start">
-                  <div className="bg-white-A700 flex flex-col items-center justify-center p-6 sm:px-5 rounded-lg shadow-bs w-96 sm:w-full">
-                    <Text
-                      className="leading-[24.00px] text-[15px] text-black-900"
-                      size="txtMontserratRegular15Black900"
-                    >
-                      <span className="text-indigo-800 font-montserrat text-left font-semibold">
-                        <>
-                          Instant Confirmation
-                          <br />
-                        </>
-                      </span>
-                      <span className="text-gray-700 font-montserrat text-left font-normal">
-                        Receive instant confirmation and policy details via email.
-                      </span>
-                    </Text>
-                  </div>
- main
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-start w-full">
-          <div className="h-[336px] md:px-5 relative w-full sm:px-0">
-            <Img
-
-              className="h-[336px] m-auto object-cover w-full sm:object-[25%]"
- main
-              src="images/img_rectangle2.png"
-              alt="rectangleTwo"
-            />
-            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[67px] md:px-10 sm:px-5 w-full">
-              <Text
-                className="md:ml-[0] ml-[122px] mt-[17px] md:text-3xl sm:text-[28px] text-[32px] text-white-A700"
-                size="txtMontserratSemiBold32"
-              >
-                Need more information?
-              </Text>
-              <Text
-                className="leading-[24.00px] md:ml-[0] ml-[122px] mt-4 text-[15px] text-white-A700 w-[33%] sm:w-full"
-                size="txtMontserratRegular15WhiteA700"
-              >
-                Get in touch with our team know about all that Sunkwa has for
-                you
-              </Text>
-              <div className="flex flex-row gap-[27px] items-end justify-start md:ml-[0] ml-[123px] mt-[15px] w-auto">
-                <Text
-                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
-                  size="txtMontserratSemiBold22"
-                >
-                  030 274 6500
-                </Text>
-                <Text
-                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
-                  size="txtMontserratSemiBold22"
-                >
-                  030 225 5742
-                </Text>
-              </div>
-              <Text
-                className="md:ml-[0] ml-[123px] mt-[18px] text-[15px] text-white-A700"
-                size="txtMontserratMedium15WhiteA700"
-              >
-                Contact Customer Experience Center for more info.
-              </Text>
-            </div>
-          </div>
-        </div>
-        <Footer1 className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
+        <HowItWorks/>
+        <LastSection/>
+        <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
       </div>
     </>
   );

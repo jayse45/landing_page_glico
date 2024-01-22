@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <>
       <header className={props.className}>
-        <div className="flex md:flex-col flex-row md:gap-10 gap-[120px] sm:gap-[40%] items-center justify-between w-auto sm:w-full">
+        <div className="flex md:flex-col flex-row md:gap-10 gap-[120px] sm:gap-[40%] items-center justify-between w-full sm:w-full">
           <div className="header-row my-px">
             <Img
               className="h-auto object-cover w-[200px]"
@@ -62,17 +62,12 @@ const Header = (props) => {
             </li>
           </ul>
           <div className="flex flex-row gap-10 sm:hidden items-start justify-start w-auto">
-            <Text
-              className="text-[15px] text-indigo-800 w-auto"
-              size="txtMontserratRegular15Indigo800"
-            >
-              EN
-            </Text>
+            
             <Text
               className="text-[15px] text-indigo-800 w-auto"
               size="txtMontserratMedium15Indigo800"
             >
-              Login/Register
+              Login
             </Text>
           </div>
         </div>
