@@ -31,7 +31,7 @@ const SunkwaplanCategoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
             <div className="bg-gray-100 flex flex-col items-center justify-start w-full invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
@@ -77,13 +77,13 @@ const SunkwaplanCategoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
             <div className="bg-gray-100 flex flex-col items-center justify-start w-full invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
               <Text
                 className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 {props?.descriptionThree}
               </Text>

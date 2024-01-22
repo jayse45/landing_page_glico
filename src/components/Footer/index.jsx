@@ -9,7 +9,7 @@ const Footer = (props) => {
         <div className="flex md:flex-col flex-row gap-5 items-start justify-start max-w-7xl mb-[82px] mt-[55px] mx-auto w-full">
           <div className="flex flex-col gap-[30px] items-start justify-start w-auto">
             <Img
-              className="h-[27px] md:h-auto object-cover w-[212px] sm:w-[70%]"
+              className="h-[27px] md:h-auto object-cover w-[212px] sm:w-full"
               src="images/img_logoinverted1.png"
               alt="logoinvertedOne"
             />
