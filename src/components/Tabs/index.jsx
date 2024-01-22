@@ -13,12 +13,12 @@ const Tabs = ({ amount }) => {
         {/* Navigation Tabs */}
         <div className="tabs-nav">
           <List
-            className="sm:flex-col flex-row md:gap-10 gap-[70px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-start mt-[35px] md:px-5 w-auto md:w-full"
+            className="sm:flex-col flex-row md:gap-10 gap-[70px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-start mt-[35px] md:px-5 w-auto md:w-full sm:gap-[5px] sm:mt-2"
             orientation="horizontal"
           >
             <div className="flex flex-col items-center justify-start py-1 w-full">
               <Text
-                className={`text-center text-xl tracking-[-1.00px] common-pointer ${activeTab === "tab1" ? "text-indigo-800" : "text-gray-600"}`}
+                className={`text-center text-xl sm:text-[18px] tracking-[-1.00px] common-pointer ${activeTab === "tab1" ? "text-indigo-800" : "text-gray-600"}`}
                 size={`${activeTab === "tab1" ? "txtMontserratBold20" : "txtMontserratMedium20"}`}
                 onClick={() => handleTabClick('tab1')}
               >
@@ -27,7 +27,7 @@ const Tabs = ({ amount }) => {
             </div>
             <div className="flex flex-col items-center justify-start p-1 w-full">
               <Text
-                className={`text-center text-xl tracking-[-1.00px] common-pointer ${activeTab === "tab2" ? "text-indigo-800" : "text-gray-600"}`}
+                className={`text-center text-xl sm:text-[18px] tracking-[-1.00px] common-pointer ${activeTab === "tab2" ? "text-indigo-800" : "text-gray-600"}`}
                 size={`${activeTab === "tab2" ? "txtMontserratBold20" : "txtMontserratMedium20"}`}
                 onClick={() => handleTabClick('tab2')}
               >
@@ -36,7 +36,7 @@ const Tabs = ({ amount }) => {
             </div>
             <div className="flex flex-col items-center justify-start p-1 w-full">
               <Text
-                className={`text-center text-xl tracking-[-1.00px] common-pointer ${activeTab === "tab3" ? "text-indigo-800" : "text-gray-600"}`}
+                className={`text-center text-xl sm:text-[18px] tracking-[-1.00px] common-pointer ${activeTab === "tab3" ? "text-indigo-800" : "text-gray-600"}`}
                 size={`${activeTab === "tab3" ? "txtMontserratBold20" : "txtMontserratMedium20"}`}
                 onClick={() => handleTabClick('tab3')}
               >
@@ -48,12 +48,12 @@ const Tabs = ({ amount }) => {
   
         {/* Content for each tab */}
         {/* Content for each tab */}
-      <div className='w-full flex ml-24'>
+      <div className='w-full flex ml-24 sm:ml-4 sm:mt-6'>
         {activeTab === 'tab1' && (
           <table className='table-auto w-[90%]'>
-            <tbody>
+            <tbody className='sm:text-[12px]'>
                 <tr className='border-slate-300 border-b h-14'>
-                    <td className='w-[75%] font-semibold'>Total max benefit per person per annum</td>
+                    <td className='w-[75%] font-semibold sm:w-[80%]'>Total max benefit per person per annum</td>
                     <td className='text-center'>
                         <Text
                             className="text-indigo-800 text-center"
@@ -261,10 +261,10 @@ const Tabs = ({ amount }) => {
           </table>
         )}
         {activeTab === 'tab2' && (
-            <table className='table-fixed w-[90%]'>
-            <tbody>
+            <table className='table-fixed w-[90%] sm:table-auto'>
+            <tbody className='sm:text-[12px]'>
                 <tr className='border-slate-300 border-b h-14'>
-                    <td className='w-[75%] font-semibold'>Total max benefit per person per annum</td>
+                    <td className='w-[75%] font-semibold sm:w-[80%]'>Total max benefit per person per annum</td>
                     <td className='text-center'>
                         <Text
                             className="text-indigo-800 text-center"
@@ -477,10 +477,10 @@ const Tabs = ({ amount }) => {
             </table>
         )}
         {activeTab === 'tab3' && (
-            <table className='table-fixed insurance-info w-[90%] items-start'>
-            <tbody className='font-normal text-gray-400'>
+            <table className='table-auto insurance-info w-[90%]'>
+            <tbody className='sm:text-[12px]'>
                 <tr className='border-slate-300 border-b h-14'>
-                    <td className='w-[45%]'>
+                    <td className='w-[45%] font-normal sm:w-[50%]'>
                         <p>Vitamins</p>
                         <p>Vitamins A, B, C, D, E, K and Multivitamins in/for:</p>
                         <ul className='ml-6'>

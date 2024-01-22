@@ -14,9 +14,9 @@ const AboveOnePage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/")}/>
-        <div className="bg-white-A700 md:h-[481px] h-[520px] sm:p-[] sm:pl-[] sm:pr-[] md:px-5 relative w-full">
+        <div className="bg-white-A700 md:h-[481px] h-[520px] sm:p-[] sm:pl-[] sm:pr-[] md:px-5 relative w-full sm:h-[500px] sm:px-0">
           <Img
-            className="h-[520px] m-auto sm:m-auto object-cover w-full"
+            className="h-[520px] m-auto sm:m-auto object-cover w-full sm:h-[500px] sm:max-w-full"
             src="images/img_rectangle1_481x1440.png"
             alt="rectangleOne"
           />
@@ -48,7 +48,7 @@ const AboveOnePage = () => {
             Why you need this
           </Text>
           <List
-            className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-4 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full"
+            className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-4 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full sm:grid-cols-1"
             orientation="horizontal"
           >
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
@@ -101,9 +101,9 @@ const AboveOnePage = () => {
             </div>
           </List>
         </div>
-        <div className="bg-white-A700 flex flex-col items-end justify-end sm:p-[] sm:pb-[] pl-[21px] sm:pl-[] sm:pr-[] sm:pt-[] py-[21px] w-full">
+        <div className="bg-white-A700 flex flex-col items-end justify-end sm:p-[] sm:pb-[] pl-[21px] sm:pl-0 sm:pr-[] sm:pt-[] py-[21px] w-full">
           <div className="flex flex-col items-start justify-start mt-[3px] md:px-5 w-full md:w-full">
-            <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between w-full pl-20">
+            <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between w-full pl-20 sm:flex-col-reverse sm:pr-4 sm:pl-6">
               <div className="flex flex-col gap-[23px] items-start justify-start">
                 <Button
                   className="cursor-pointer font-semibold min-w-[152px] rounded-[16px] text-center text-xs"
@@ -132,13 +132,13 @@ const AboveOnePage = () => {
                 </div>
               </div>
               <Img
-                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-2xl"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-2xl sm:w-full sm:max-w-full sm:h-[300px] sm:rounded-[20px]"
                 src="images/img_rectangle25.png"
                 alt="rectangleTwentyFive"
               />
             </div>
             <List
-              className="sm:flex-col flex-row gap-[21px] grid md:grid-cols-2 grid-cols-3 justify-center sm:m-[] sm:ml-[] sm:mr-[] mt-20 sm:p-[] sm:pr-[21px] w-full px-32"
+              className="sm:flex-col flex-row gap-[21px] grid md:grid-cols-2 grid-cols-3 justify-center sm:m-[] sm:ml-[] sm:mr-[] mt-20 sm:p-[] sm:pr-[21px] w-full px-32 sm:grid-cols-1 sm:px-6 sm:mt-10"
               orientation="horizontal"
             >
               <div className="bg-indigo-800 flex flex-1 flex-col gap-4 items-start justify-start p-5 rounded-[20px] w-full">

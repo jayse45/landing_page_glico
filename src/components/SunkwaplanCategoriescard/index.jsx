@@ -23,7 +23,7 @@ const SunkwaplanCategoriescard = (props) => {
             <Input
               name="duration_One"
               placeholder="Under 60 Years Plan"
-              className="common-pointer font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
+              className="common-pointer font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg sm:text-[16px] w-full"
               wrapClassName="flex w-full"
               readonly="true"
               onClick={() => setDropBtn("btn1")}
@@ -43,7 +43,7 @@ const SunkwaplanCategoriescard = (props) => {
             {dropBtn === "btn1" &&
             <div className={`bg-gray-100 flex flex-col items-center justify-start w-full h-auto max-h-auto transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000`}>
               <Text
-                className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
+                className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700 sm:px-4"
                 size="txtMontserratRegular15"
               >
                 {props?.descriptionTwo}
@@ -78,7 +78,7 @@ const SunkwaplanCategoriescard = (props) => {
             <Input
               name="duration_One"
               placeholder="60 Years and Above Plan"
-              className="common-pointer font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg w-full"
+              className="common-pointer font-montserrat font-semibold p-0 placeholder:text-indigo-800 text-left text-lg sm:text-[16px] w-full"
               wrapClassName="flex w-full"
               readonly="true"
               onClick={() => setDropBtn("btn2")}
@@ -98,7 +98,7 @@ const SunkwaplanCategoriescard = (props) => {
             {dropBtn === "btn2" && 
             <div className={`bg-gray-100 flex flex-col items-center justify-start w-full h-auto max-h-0 opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000`}>
               <Text
-                className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700"
+                className="leading-[24.00px] max-w-[459px] md:max-w-full text-[15px] text-gray-700 sm:px-4"
                 size="txtMontserratRegular15"
               >
                 {props?.descriptionThree}

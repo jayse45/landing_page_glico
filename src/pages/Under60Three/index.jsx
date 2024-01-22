@@ -13,7 +13,7 @@ const Under60ThreePage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
+      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full overflow-x-hidden">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/under60seven")} />
         <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 pl-[103px] w-full sm:pl-4">
@@ -120,7 +120,7 @@ const Under60ThreePage = () => {
             />
           </div>
         </div>
-        <div className="bg-gray-50 flex flex-col items-center justify-end py-[33px] w-full">
+        <div className="bg-gray-50 flex flex-col items-center justify-end py-[33px] w-full sm:justify-start">
           <Text
             className="mt-[25px] md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 tracking-[-1.00px]"
             size="txtMontserratBold32"

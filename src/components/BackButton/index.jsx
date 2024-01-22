@@ -4,7 +4,7 @@ import { Button, Img } from "components";
 const BackButton = ({ onClick }) => {
  return (
     <Button
-          className="flex items-center justify-start ml-16 md:min-w-full"
+          className="flex items-center justify-start ml-16 md:min-w-full sm:ml-1 max-w-full"
           onClick={onClick}
           leftIcon={
             <Img
