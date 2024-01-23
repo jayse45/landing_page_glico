@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Img, Line, Text } from "components";
-import Header11 from "components/Header11";
+import Header from "components/Header";
 
 const PaymentPortalPage = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const PaymentPortalPage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
         <div className="flex flex-col items-center justify-start max-w-[1278px] mb-[89px] mx-auto md:px-5 w-full">
           <div className="flex flex-col md:gap-10 gap-[76px] items-center justify-start w-full">
-            <Header11 className="flex md:flex-col flex-row md:gap-10 gap-[191px] items-center justify-center w-full" />
+            <Header className="flex md:flex-col flex-row md:gap-10 gap-[191px] items-center justify-center w-full" />
             <div className="h-9 relative w-2/5 sm:w-full">
               <div className="h-9 m-auto w-full">
                 <Line className="absolute bg-blue_gray-100 h-1 inset-x-[0] mx-auto top-[11%] w-[81%]" />
@@ -266,3 +266,5 @@ const PaymentPortalPage = () => {
 };
 
 export default PaymentPortalPage;
+
+

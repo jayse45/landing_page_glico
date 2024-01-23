@@ -39,6 +39,7 @@ const PaymentPortalSix = React.lazy(() => import("pages/PaymentPortalSix"));
 const PaymentPortalOne = React.lazy(() => import("pages/PaymentPortalOne"));
 const Frame370 = React.lazy(() => import("pages/Frame370"));
 const DesktopThree = React.lazy(() => import("pages/DesktopThree"));
+const Payments = React.lazy(() => import("pages/Payments"));
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<>Loading...</>}>
@@ -80,6 +81,7 @@ const ProjectRoutes = () => {
           <Route path="/aboveeight" element={<AboveEight />} />
           <Route path="/register" element={<Register />} />
           {/* <Route path="/desktopthree" element={<DesktopThree />} /> */}
+          <Route path="/payments" element={<Payments />} />
           <Route
             path="/benefits60aboveenhanced"
             element={<Benefits60aboveenhanced />}
