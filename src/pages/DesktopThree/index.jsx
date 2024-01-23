@@ -148,7 +148,7 @@ const DesktopThreePage = () => {
                 className="text-blue_gray-700 text-center text-lg w-auto sm:text-white-A700 sm:font-bold sm:mb-10"
                 size="txtMontserratBold18Bluegray700"
               >
-                <strong>GLICO SUNKWA is  finally here</strong>
+                {/* <strong>GLICO SUNKWA is  finally here</strong> */}
               </Text>
             </div>
           </div>
