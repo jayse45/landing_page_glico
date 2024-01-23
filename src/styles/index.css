@@ -130,6 +130,10 @@ ul li a{
     padding-right: 10px;
     flex-wrap: wrap;
   }
+  .coming-soon {
+    background-position-x: 73%;
+    color: white;
+  }
 }
 .menu-close-icon {
   position: absolute;
@@ -195,4 +199,9 @@ ul li a{
 }
 .arrow-plan:hover {
   fill: rgba(35, 64, 146, 0.8);
+}
+
+.coming-soon {
+  background-image: url('/public/images/img_desktopthree.png');
+  background-repeat: no-repeat;
 }

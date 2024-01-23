@@ -45,6 +45,7 @@ module.exports = {
       backgroundImage: {
         gradient: "linear-gradient(33deg ,#0a205f,#6627a6,#23409230)",
         gradient1: "linear-gradient(34deg ,#00000049,#00000049)",
+        gradient2: "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000E33 100%)",
       },
       boxShadow: {
         bs: "0px 8px  14px 0px #0000001e",
