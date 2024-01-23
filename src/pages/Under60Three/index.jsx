@@ -127,7 +127,7 @@ const Under60ThreePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"4,000"}/>
+          <Tabs out_benefit={"4,000"} in_benefit={"30,000"} cancer_amount={"20,000"} type={"Enhanced"} dental_amount={"500"} eye_amount={"600"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />

@@ -13,7 +13,7 @@ const AbovePage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
+      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full overflow-x-hidden">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/aboveone")}/>
         <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 sm:pl-5 pl-[103px] w-full">
@@ -127,7 +127,7 @@ const AbovePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"7,500"}/>
+          <Tabs out_benefit={"7,500"} eye_amount={"1,500"} type={"Ultimate"} dental_amount={"1,500"} in_benefit={"80,000"} cancer_amount={"60,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />

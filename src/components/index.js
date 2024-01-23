@@ -6,3 +6,4 @@ export { List } from "./List";
 export { Text } from "./Text";
 export { HowItWorks } from "./HowItWorks";
 export { BackButton } from "./BackButton";
+export { Compare } from "./Compare";

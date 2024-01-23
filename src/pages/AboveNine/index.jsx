@@ -127,7 +127,7 @@ const AboveNinePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"6,000"}/>
+          <Tabs out_benefit={"6,000"} eye_amount={"1,000"} type={"Enhanced Plus"} dental_amount={"1,000"} in_benefit={"50,000"} cancer_amount={"40,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />

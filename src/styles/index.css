@@ -91,7 +91,20 @@ margin-right: 0;
 }
 .ReactModal__Overlay{
   z-index: 1051;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
 }
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+  animation: fadeOut 0.4s ease-in-out;
+}
+
 
 ul li a{
   display: block;
@@ -177,6 +190,10 @@ ul li a{
   height: 100%;
 }
 
+.compare-table tr > td {
+  border-right: 1px solid rgba(203, 213, 225, 0.8);
+}
+
 /* scroll */
 ::-webkit-scrollbar {
   width: 4px;
@@ -204,4 +221,39 @@ ul li a{
 .coming-soon {
   background-image: url('/public/images/img_desktopthree.png');
   background-repeat: no-repeat;
+}
+
+.compare-modal {
+  transition: all ease-in-out 300ms;
+}
+
+.react-modal-content {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.react-modal-content.react-modal-content-exit {
+  animation: fadeOut 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px below its normal position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Reach its normal position */
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0); /* Start at its normal position */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px); /* Move 20px below its normal position */
+  }
 }

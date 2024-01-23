@@ -127,7 +127,7 @@ const Under60FivePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"7,500"}/>
+          <Tabs out_benefit={"7,500"} eye_amount={"1,500"} type={"Ultimate"} dental_amount={"1,500"} in_benefit={"80,000"} cancer_amount={"60,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />

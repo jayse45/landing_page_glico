@@ -114,7 +114,7 @@ const Under60OnePage = () => {
               </Button>
             </div>
             <Img
-              className="md:flex-1 h-[563px] sm:h-auto object-cover w-[54%] md:w-full"
+              className="md:flex-1 h-[563px] sm:h-auto object-cover w-[54%] md:w-full object-top"
               src="images/img_rectangle28_563x720.png"
               alt="rectangleTwentyEight"
             />
@@ -127,7 +127,7 @@ const Under60OnePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"6,000"}/>
+          <Tabs out_benefit={"6,000"} eye_amount={"1,000"} type={"Enhanced Plus"} dental_amount={"1,000"} in_benefit={"50,000"} cancer_amount={"40,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
