@@ -66,7 +66,7 @@ const Under60SevenPage = () => {
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 Tailored for the dynamic and active members of your family
               </Text>
@@ -79,7 +79,7 @@ const Under60SevenPage = () => {
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 Enjoy comprehensive coverage designed for the hustle and bustle
                 of daily life
@@ -93,20 +93,20 @@ const Under60SevenPage = () => {
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 Exciting features to keep your loved ones at their absolute best
               </Text>
             </div>
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
-                className="h-8 w-8"
-                src="images/img_layer1_indigo_800.svg"
+                className="h-9 w-9"
+                src="images/img_layer1_indigo_800_1.svg"
                 alt="layerOne"
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 User-Friendly Online Management
               </Text>
@@ -171,7 +171,13 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60three")}
-                  shape="round"
+                  rightIcon={
+                    <Img
+                      className="h-6 ml-2.5"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
+                    />
+                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -202,7 +208,13 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60one")}
-                  shape="round"
+                  rightIcon={
+                    <Img
+                      className="h-6 ml-2.5"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
+                    />
+                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -232,7 +244,13 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60five")}
-                  shape="round"
+                  rightIcon={
+                    <Img
+                      className="h-6 ml-2.5"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
+                    />
+                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"

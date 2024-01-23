@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Img, Input, List, Text } from "components";
-import Footer from "components/Footer";
+import Footer1 from "components/Footer1";
 import Header from "components/Header";
 
 const AboveFourPage = () => {
@@ -28,9 +28,7 @@ const AboveFourPage = () => {
           size="sm"
           variant="fill"
         >
-          <div className="!text-gray-700 font-medium text-[15px] text-left">
-            Back
-          </div>
+          <div className="font-medium text-[15px] text-left">Back</div>
         </Button>
         <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 sm:pl-5 pl-[103px] w-full">
           <div className="flex md:flex-col flex-row md:gap-10 gap-[62px] items-center justify-end w-full">
@@ -43,7 +41,7 @@ const AboveFourPage = () => {
               </Text>
               <Text
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
                 Plan is crafted to offer essential health coverage while
@@ -54,7 +52,7 @@ const AboveFourPage = () => {
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
-                size="txtMontserratSemiBold15"
+                size="txtMontserratSemiBold15Indigo800"
               >
                 Key Features
               </Text>
@@ -71,7 +69,7 @@ const AboveFourPage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Essential Coverage{" "}
                     </Text>
@@ -84,7 +82,7 @@ const AboveFourPage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Affordable Premiums
                     </Text>
@@ -99,7 +97,7 @@ const AboveFourPage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Network Access
                     </Text>
@@ -112,7 +110,7 @@ const AboveFourPage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Versatility
                     </Text>
@@ -120,7 +118,8 @@ const AboveFourPage = () => {
                 </div>
               </List>
               <Button
-                className="cursor-pointer font-medium min-w-[134px] mt-[46px] text-[15px] text-center"
+                className="common-pointer cursor-pointer font-medium min-w-[134px] mt-[46px] text-[15px] text-center"
+                onClick={() => navigate("/paymentportalone")}
                 shape="round"
                 color="indigo_800"
                 size="sm"
@@ -149,7 +148,7 @@ const AboveFourPage = () => {
           >
             <div className="flex flex-col items-center justify-start py-[5px] w-full">
               <Text
-                className="text-center text-gray-600 text-xl tracking-[-1.00px]"
+                className="text-center text-gray-600_01 text-xl tracking-[-1.00px]"
                 size="txtMontserratMedium20"
               >
                 Out-Patient Benefits
@@ -157,7 +156,7 @@ const AboveFourPage = () => {
             </div>
             <div className="flex flex-col items-center justify-start p-1 w-full">
               <Text
-                className="text-center text-gray-600 text-xl tracking-[-1.00px]"
+                className="text-center text-gray-600_01 text-xl tracking-[-1.00px]"
                 size="txtMontserratMedium20"
               >
                 In-Patient Benefits
@@ -194,7 +193,7 @@ const AboveFourPage = () => {
                 <div className="flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     <>
                       Vitamins <br />
@@ -207,20 +206,20 @@ const AboveFourPage = () => {
                 </div>
                 <Text
                   className="border-blue_gray-100 border-solid border-t pl-[9px] sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Glico Healthcare Beneficiary App
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t pl-[9px] sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Client Portal
                 </Text>
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="text-[15px] text-gray-700 w-auto"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Quarterly News Letters
                   </Text>
@@ -232,13 +231,13 @@ const AboveFourPage = () => {
                   wrapClassName="w-full"
                   shape="square"
                   color="blue_gray_100"
-                  size="xs"
+                  size="sm"
                   variant="outline"
                 ></Input>
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] max-w-[472px] md:max-w-full text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Special Assistance at accredited
                     Government/Regional/Tertiary hospitals
@@ -247,26 +246,26 @@ const AboveFourPage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="text-[15px] text-gray-700 w-auto"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     E-Medicine Service
                   </Text>
                 </div>
                 <Text
                   className="border-blue_gray-100 border-solid border-t pb-[35px] pl-[9px] sm:pr-5 pr-[35px] pt-[13px] text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Chronic conditions management
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t pl-[9px] sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Death Benefit For Enrollee
                 </Text>
                 <Text
                   className="border-blue_gray-100 border-solid border-t pl-[9px] sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Mobile Pharmacy
                 </Text>
@@ -275,7 +274,7 @@ const AboveFourPage = () => {
                 <div className="flex flex-col h-[104px] md:h-auto items-start justify-start py-3 w-full">
                   <Text
                     className="text-[15px] text-center text-gray-700 w-auto"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Covered within benefit limit
                   </Text>
@@ -302,7 +301,7 @@ const AboveFourPage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] max-w-[807px] md:max-w-full text-[15px] text-center text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Health Tips, Updates on policy, Goodwill messages from Glico
                     team, etc. Daily updates on health related issues on social
@@ -322,7 +321,7 @@ const AboveFourPage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-center py-3 w-full">
                   <Text
                     className="leading-[20.00px] max-w-[719px] md:max-w-full text-[15px] text-center text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Designated Reps at Government/Regional/Tertiary accredited
                     hospitals to assist in swift service delivery
@@ -331,7 +330,7 @@ const AboveFourPage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="leading-[20.00px] max-w-[807px] md:max-w-full text-[15px] text-center text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Access to doctors for consultation by virtual means at the
                     comfort of your home when unable to visit the hospital.
@@ -340,7 +339,7 @@ const AboveFourPage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start p-3 w-full">
                   <Text
                     className="leading-[20.00px] max-w-[783px] md:max-w-full text-[15px] text-center text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     A dedicated team will call known members with chronic
                     conditions to have an update of their medications taken.
@@ -361,7 +360,7 @@ const AboveFourPage = () => {
                 <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                   <Text
                     className="text-[15px] text-center text-gray-700 w-auto"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     Delivery of prescribed medications at place of convenience
                   </Text>
@@ -377,53 +376,44 @@ const AboveFourPage = () => {
               src="images/img_rectangle2.png"
               alt="rectangleTwo"
             />
-            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[61px] md:px-10 sm:px-5 w-full">
-              <div className="flex flex-col gap-10 items-start justify-start mb-[11px] md:ml-[0] ml-[74px] w-auto md:w-full">
-                <div className="flex flex-col gap-5 items-start justify-center w-[598px] md:w-full">
-                  <div className="flex flex-col gap-[15px] items-start justify-start w-full">
-                    <Text
-                      className="text-2xl md:text-[22px] text-white-A700 sm:text-xl w-auto"
-                      size="txtMontserratSemiBold24"
-                    >
-                      Need more information?
-                    </Text>
-                    <Text
-                      className="text-[15px] text-white-A700 w-full"
-                      size="txtMontserratRegular15WhiteA700"
-                    >
-                      Get in touch with our team know about all that Sunkwa has
-                      for you
-                    </Text>
-                  </div>
-                  <Button
-                    className="cursor-pointer font-medium min-w-[308px] text-[15px] text-center"
-                    shape="round"
-                    color="white_A700"
-                    size="sm"
-                    variant="fill"
-                  >
-                    Contact Customer Experience Center
-                  </Button>
-                </div>
-                <div className="flex flex-row gap-[27px] items-end justify-start w-auto">
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 274 6500
-                  </Text>
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 225 5742
-                  </Text>
-                </div>
+            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[67px] md:px-10 sm:px-5 w-full">
+              <Text
+                className="md:ml-[0] ml-[122px] mt-[17px] md:text-3xl sm:text-[28px] text-[32px] text-white-A700"
+                size="txtMontserratSemiBold32"
+              >
+                Need more information?
+              </Text>
+              <Text
+                className="leading-[24.00px] md:ml-[0] ml-[122px] mt-4 text-[15px] text-white-A700 w-[33%] sm:w-full"
+                size="txtMontserratRegular15WhiteA700"
+              >
+                Get in touch with our team know about all that Sunkwa has for
+                you
+              </Text>
+              <div className="flex flex-row gap-[27px] items-end justify-start md:ml-[0] ml-[123px] mt-[15px] w-auto">
+                <Text
+                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
+                  size="txtMontserratSemiBold22"
+                >
+                  030 274 6500
+                </Text>
+                <Text
+                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
+                  size="txtMontserratSemiBold22"
+                >
+                  030 225 5742
+                </Text>
               </div>
+              <Text
+                className="md:ml-[0] ml-[123px] mt-[18px] text-[15px] text-white-A700"
+                size="txtMontserratMedium15WhiteA700"
+              >
+                Contact Customer Experience Center for more info.
+              </Text>
             </div>
           </div>
         </div>
-        <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
+        <Footer1 className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
       </div>
     </>
   );

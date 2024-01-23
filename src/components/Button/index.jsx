@@ -12,8 +12,9 @@ const variants = {
   fill: {
     red_50: "bg-red-50 text-red-700",
     deep_purple_A700_14: "bg-deep_purple-A700_14",
+    black_900: "bg-black-900 text-white-A700",
+    white_A700: "bg-white-A700 text-gray-700",
     indigo_800: "bg-indigo-800 text-white-A700",
-    white_A700: "bg-white-A700 text-black-900",
   },
 };
 const sizes = {
@@ -59,6 +60,7 @@ Button.propTypes = {
     "blue_gray_100",
     "red_50",
     "deep_purple_A700_14",
+    "black_900",
     "indigo_800",
   ]),
 };

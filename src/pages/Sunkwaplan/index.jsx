@@ -69,7 +69,9 @@ const SunkwaplanPage = () => {
               alt="vectorThree"
             />
           </div>
+
           <div className="absolute flex flex-col gap-6 sm:gap-6 inset-x-[0] items-center justify-start max-w-[846px] mx-auto sm:relative top-[13%] sm:top-[4%] w-full">
+ main
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700 w-full"
               size="txtMontserratBold32WhiteA700"
@@ -104,7 +106,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     Comprehensive Coverage
                   </Text>
@@ -128,7 +130,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     24/7 Support
                   </Text>
@@ -152,7 +154,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     Flexibility
                   </Text>
@@ -176,7 +178,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     Peace of Mind
                   </Text>
@@ -193,7 +195,9 @@ const SunkwaplanPage = () => {
           </List>
         </div>
         <div
+
           className="common-pointer bg-white-A700 flex flex-col items-center justify-start p-[67px] md:px-10 sm:px-5 w-full sm:pt-[35px]"
+ main
           id="block1"
         >
           <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between max-w-[1292px] mb-[3px] mt-[19px] mx-auto w-full">
@@ -238,7 +242,7 @@ const SunkwaplanPage = () => {
                   </Text>
                   <Text
                     className="leading-[24.00px] max-w-[522px] md:max-w-full text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     You have the power to purchase health plans for everyone,
                     across all age ranges! Our health coverage is tailored to
@@ -254,9 +258,11 @@ const SunkwaplanPage = () => {
 
 
             </div>
+
             <div className="md:h-[534px] h-[589px] relative w-[48%] md:w-full sm:hidden">
+ main
               <Img
-                className="absolute h-[534px] inset-y-[0] left-[6%] my-auto object-cover rounded-[32px] w-[77%]"
+                className="absolute sm:h-3/4 h-[534px] inset-y-[0] left-[6%] my-auto object-cover rounded-[32px] w-[77%] sm:w-[90%]"
                 src="images/img_rectangle12.png"
                 alt="rectangleTwelve"
               />
@@ -267,7 +273,7 @@ const SunkwaplanPage = () => {
               />
               <div
                 className="absolute bg-cover bg-no-repeat flex flex-col h-32 items-center justify-start left-[0] p-8 sm:px-5 rounded-[20px] top-[0] w-32"
-                style={{ backgroundImage: "url('images/img_group3.svg')" }}
+                style={{ backgroundImage: "url('images/img_group373.svg')" }}
               >
                 <Img
                   className="h-[62px] w-[62px]"
