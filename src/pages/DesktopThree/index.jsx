@@ -76,7 +76,7 @@ const DesktopThreePage = () => {
                   className="text-lg text-red-700 w-full sm:text-white-A700 sm:font-bold"
                   size="txtMontserratBold18"
                 >
-                  Asomdwe aba fie
+                  Abusua apɔ mu din nti!
                 </Text>
                 <Text
                   className="max-w-[630px] md:max-w-full sm:text-[38px] md:text-[44px] text-[52px] text-indigo-800 sm:text-white-A700 sm:font-bold"
@@ -144,7 +144,12 @@ const DesktopThreePage = () => {
                   </Text>
                 </div>
               </List>
-              
+              <Text
+                className="text-blue_gray-700 text-center text-lg w-auto sm:text-white-A700 sm:font-bold sm:mb-10"
+                size="txtMontserratBold18Bluegray700"
+              >
+                <strong>GLICO SUNKWA is  finally here</strong>
+              </Text>
             </div>
           </div>
           <Text
