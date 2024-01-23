@@ -76,7 +76,7 @@ const DesktopThreePage = () => {
                   className="text-lg text-red-700 w-full sm:text-white-A700 sm:font-bold"
                   size="txtMontserratBold18"
                 >
-                  Abusua apɔ mu din nti!
+                  
                 </Text>
                 <Text
                   className="max-w-[630px] md:max-w-full sm:text-[38px] md:text-[44px] text-[52px] text-indigo-800 sm:text-white-A700 sm:font-bold"
@@ -156,7 +156,7 @@ const DesktopThreePage = () => {
             className="md:ml-[0] ml-[43px] mt-[24px] text-base text-blue_gray-500 sm:hidden"
             size="txtMontserratBold16"
           >
-            Sunkwa wɔ hɔ aa, efie yɛ dɛ!
+            Abusua apɔ mu din nti!
           </Text>
         </div>
       </div>
