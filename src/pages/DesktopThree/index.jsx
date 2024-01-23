@@ -144,12 +144,7 @@ const DesktopThreePage = () => {
                   </Text>
                 </div>
               </List>
-              <Text
-                className="text-blue_gray-700 text-center text-lg w-auto sm:text-white-A700 sm:font-bold sm:mb-10"
-                size="txtMontserratBold18Bluegray700"
-              >
-                <strong>To Launch</strong>
-              </Text>
+              
             </div>
           </div>
           <Text
