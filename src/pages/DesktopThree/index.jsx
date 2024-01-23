@@ -153,7 +153,7 @@ const DesktopThreePage = () => {
             </div>
           </div>
           <Text
-            className="md:ml-[0] ml-[3px] mt-[24px] text-base text-blue_gray-500 sm:hidden"
+            className="md:ml-[0] ml-[43px] mt-[24px] text-base text-blue_gray-500 sm:hidden"
             size="txtMontserratBold16"
           >
             Sunkwa wɔ hɔ aa, efie yɛ dɛ!
