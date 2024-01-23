@@ -13,8 +13,8 @@ const PaymentPortalOnePage = () => {
       <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
         <Header2 className="flex md:flex-col flex-row md:gap-10 gap-[191px] items-center justify-center md:px-5 w-full" />
         <div className="md:h-28 h-9 mt-[76px] md:px-5 relative w-[37%] sm:w-full">
-          <Line className="absolute bg-blue_gray-100 h-1 inset-x-[0] mx-auto top-[11%] w-[81%]" />
-          <div className="absolute bg-indigo-800 flex flex-col h-3 items-end justify-start left-[8%] pl-1 py-1 rounded-[50%] top-[0] w-3">
+          <Line className="absolute bg-blue_gray-100 h-1 inset-x-[0] mx-auto top-[11%] w-[100%]" />
+          <div className="absolute bg-indigo-800 flex flex-col h-3 items-end justify-start left-[0%] pl-1 py-1 rounded-[50%] top-[0] w-3">
             <div className="bg-indigo-800 h-1 w-[13%]"></div>
           </div>
           <Text
@@ -23,11 +23,11 @@ const PaymentPortalOnePage = () => {
           >
             Select Package
           </Text>
-          <div className="absolute flex flex-row gap-[54px] h-full inset-y-[0] items-center justify-center my-auto right-1/4 w-[46%]">
-            <div className="flex flex-col gap-1 items-center justify-start w-auto">
-              <div className="bg-blue_gray-100_01 h-3 rounded-[50%] w-3"></div>
+          <div className="absolute flex flex-row gap-[54px] h-full inset-y-[0] items-center justify-center my-auto right-1/4 w-[46%] ">
+            <div className="flex flex-col gap-1 items-center justify-start w-auto ">
+              <div className="bg-blue_gray-100_01 h-3 rounded-[50%] w-3 "></div>
               <Text
-                className="text-blue_gray-100_01 text-xs tracking-[0.30px] w-auto"
+                className="text-blue_gray-100_01 text-[10px] tracking-[0.30px] w-auto"
                 size="txtMontserratMedium12Bluegray10001"
               >
                 Fill Forms
@@ -36,14 +36,14 @@ const PaymentPortalOnePage = () => {
             <div className="flex flex-col gap-1 items-center justify-start w-auto">
               <div className="bg-blue_gray-100 h-3 rounded-[50%] w-3"></div>
               <Text
-                className="text-blue_gray-100 text-xs tracking-[0.30px] w-auto"
+                className="text-blue_gray-100 text-[10px] tracking-[0.30px] w-auto"
                 size="txtMontserratMedium12Bluegray100"
               >
                 Payment Method
               </Text>
             </div>
           </div>
-          <div className="absolute flex flex-col gap-1 h-full inset-y-[0] items-center justify-start my-auto right-[0] w-auto">
+          <div className="absolute flex flex-col gap-1 h-full inset-y-[0] items-end justify-start my-auto right-[0] w-auto">
             <div className="bg-blue_gray-100 h-3 rounded-[50%] w-3"></div>
             <Text
               className="text-blue_gray-100 text-xs tracking-[0.30px] w-auto"

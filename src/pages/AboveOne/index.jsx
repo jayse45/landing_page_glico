@@ -305,7 +305,7 @@ const AboveOnePage = () => {
             </div>
           </div>
         </div>
-        <Footer1 className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
+        <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
       </div>
     </>
   );
