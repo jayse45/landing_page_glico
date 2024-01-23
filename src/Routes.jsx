@@ -28,12 +28,13 @@ const Under60One = React.lazy(() => import("pages/Under60One"));
 const Sunkwaplan = React.lazy(() => import("pages/Sunkwaplan"));
 const Under60 = React.lazy(() => import("pages/Under60"));
 const Frame370 = React.lazy(() => import("pages/Frame370"));
+const DesktopThree = React.lazy(() => import("pages/DesktopThree"));
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<>Loading...</>}>
       <Router>
         <Routes>
-          <Route path="/" element={<Sunkwaplan />} />
+          <Route path="/" element={<DesktopThree />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/frame370" element={<Frame370 />} />
           <Route path="/under60" element={<Under60 />} />
@@ -57,6 +58,7 @@ const ProjectRoutes = () => {
           <Route path="/abovenine" element={<AboveNine />} />
           <Route path="/under60eight" element={<Under60Eight />} />
           <Route path="/register" element={<Register />} />
+          {/* <Route path="/desktopthree" element={<DesktopThree />} /> */}
           <Route
             path="/benefits60aboveenhanced"
             element={<Benefits60aboveenhanced />}
