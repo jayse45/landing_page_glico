@@ -18,7 +18,7 @@ const DesktopThreePage = () => {
         
       >
         <div className="flex flex-col items-start justify-start max-w-[auto] lg-mt-[0] mx-auto md:px-5 w-full sm:h-full sm:justify-between sm:bg-gradient2">
-          <div className="flex flex-row gap-2.5 items-start justify-between max-w-[1263px] w-full">
+          <div className="flex flex-row gap-2.5 items-start justify-between max-w-[1163px] w-full">
             
 
                 <Img
@@ -69,7 +69,7 @@ const DesktopThreePage = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 items-start justify-center max-w-[630px] md:ml-[0] ml-[3px] mt-[10vh] w-full">
+          <div className="flex flex-col gap-5 items-start justify-center max-w-[630px] md:ml-[0] ml-[43px] mt-[10vh] w-full">
             <div className="flex flex-col gap-5 items-start justify-center w-full">
               <div className="flex flex-col gap-3 items-start justify-center w-full">
                 <Text
@@ -101,9 +101,9 @@ const DesktopThreePage = () => {
                 orientation="horizontal"
               >
                 
-                <div className="bg-indigo-8001 flex flex-col gap-[5px] h-full items-center justify-center rounded-[12px] w-full">
+                <div className="bg-indigo-8001 flex flex-col gap-[5px] h-full items-center justify-center rounded-[12px] w-[70%]" style={{backgroundColor: "rgba(35, 64, 146, 0.09)"}}>
                   <Text
-                    className="sm:text-4xl md:text-[38px] text-[40px] text-center text-indigo-800 w-auto sm:text-white-A700 sm:font-bold"
+                    className="sm:text-4xl md:text-[8px] text-[40px] text-center text-indigo-800 w-auto sm:text-white-A700 sm:font-bold"
                     size="txtMontserratBold40"
                   >
                     {String(timeLeft.hours).padStart(2, '0')}
@@ -115,7 +115,7 @@ const DesktopThreePage = () => {
                     HOURS
                   </Text>
                 </div>
-                <div className="flex flex-col gap-[5px] h-full items-center justify-center rounded-[12px] w-full" style={{backgroundColor: "#23409216;"}}>
+                <div className="flex flex-col gap-[5px] h-full items-center justify-center rounded-[12px] w-[70%]" style={{backgroundColor: "rgba(35, 64, 146, 0.09)"}}>
                   <Text
                     className="sm:text-4xl md:text-[38px] text-[40px] text-center text-indigo-800 w-auto sm:text-white-A700 sm:font-bold"
                     size="txtMontserratBold40"
@@ -129,7 +129,7 @@ const DesktopThreePage = () => {
                     MINUTES
                   </Text>
                 </div>
-                <div className="bg-indigo-8001 flex flex-col gap-[5px] h-full items-center justify-center rounded-[12px] w-full">
+                <div className="bg-indigo-8001 flex flex-col gap-[5px] h-full items-center justify-center rounded-[12px] w-[70%]" style={{backgroundColor: "rgba(35, 64, 146, 0.09)"}}>
                   <Text
                     className="sm:text-4xl md:text-[38px] text-[40px] text-center text-indigo-800 w-auto sm:text-white-A700 sm:font-bold"
                     size="txtMontserratBold40"
@@ -148,7 +148,7 @@ const DesktopThreePage = () => {
                 className="text-blue_gray-700 text-center text-lg w-auto sm:text-white-A700 sm:font-bold sm:mb-10"
                 size="txtMontserratBold18Bluegray700"
               >
-                To Launch
+                <strong>To Launch</strong>
               </Text>
             </div>
           </div>
