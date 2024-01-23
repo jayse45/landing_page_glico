@@ -112,15 +112,7 @@ const DesktopThreePage = () => {
                 >
                  <strong> Need more information?</strong>
                 </Text>
-                <Text
-                className="max-w-[630px] md:max-w-full text-blue_gray-700 text-lg sm:text-xs"
-                size="txtMontserratMedium18"
-              >
-                <>
-                Get in touch with our team know about all that Sunkwa<br></br>
-                has for you
-                </>
-              </Text>
+                
               <Text
                   className="max-w-[630px] md:max-w-full sm:text-[12px] md:text-[14px] text-[22px] text-[#e61c23] sm:text-white-A700 sm:font-bold"
                   size="txtMontserratBold52"
@@ -130,7 +122,7 @@ const DesktopThreePage = () => {
                         <Text
                     className="md:ml-[0]  mt-[24px] text-base text-blue_gray-500  sm:text-xs"
                     size="txtMontserratBold16">
-                    Contact Customer Experience Center for more info.
+                    Contact Customer Experience Center For More Info.
                 </Text>
         </div>
         </div>
