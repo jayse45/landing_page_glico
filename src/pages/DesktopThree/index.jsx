@@ -105,7 +105,7 @@ const DesktopThreePage = () => {
             Abusua apɔ mu din nti!
           </Text>
 
-          <div className="md:ml-[0] ml-[43px] mt-[24px] text-base text-blue_gray-500 ">
+          <div className="md:ml-[0] ml-[43px] mt-[54px] text-base text-blue_gray-500 ">
                 <Text
                   className="max-w-[630px] md:max-w-full sm:text-[18px] md:text-[24px] text-[32px] text-indigo-800 sm:text-white-A700 sm:font-bold"
                   size="txtMontserratBold52"
