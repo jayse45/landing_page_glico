@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Button, CheckBox, Img, Line, Text, Input } from "components";
+import { Button, CheckBox, Img, Line, Text, Input, List } from "components";
 import StepWizard from "react-step-wizard";
+import Header from "components/Header";
+
 
 
 
@@ -9,57 +11,104 @@ const ActionButtons = (props) => {
   const handleNext = () => {
     props.nextStep();
   };
+  
 
   const handleFinish = () => {
     props.lastStep();
   };
 
   return (
-    <div>
-      <div>
-        <div className="w-full">
-          {props.currentStep < props.totalSteps && (
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
+        
+        <div className="md:h-28 h-9 mt-[76px] md:px-5 relative w-[37%] sm:w-full">
+          <Img
+                      className="h-5 w-5"
+                      src="images/new1.svg"
+                      alt="settings"
+                    />
+        </div>
+        <div className="flex flex-col gap-2 items-center justify-start mt-[55px] md:px-5 w-auto sm:w-full">
+          <Text
+            className="leading-[32.00px] max-w-[472px] md:max-w-full text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl"
+            size="txtMontserratSemiBold24"
+          >
+            Best Choice to safeguard your family from abroad
+          </Text>
+          <Text
+            className="text-[15px] text-black-900 text-center w-auto"
+            size="txtMontserratRegular15"
+          >
+            Selected a package that fits your needs
+          </Text>
+        </div>
+        <div className="flex flex-col items-center justify-start mb-[371px] mt-[98px] md:px-5 w-2/5 md:w-full">
+          <Input
+            name="frameThirty"
+            placeholder="Select Plan"
+            className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+            wrapClassName="border border-blue_gray-100 border-solid flex w-[545px] sm:w-full"
+            suffix={
+              <Img
+                className="mt-px mb-auto h-5 ml-[35px]"
+                src="images/img_checkmark.svg"
+                alt="checkmark"
+              />
+            }
+            shape="square"
+            color="white_A700"
+            size="xs"
+            variant="fill"
+          ></Input>
+          <Input
+            name="frameThirtyOne"
+            placeholder="Select Package"
+            className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+            wrapClassName="border border-blue_gray-100 border-solid flex mt-6 w-[545px] sm:w-full"
+            suffix={
+              <Img
+                className="mt-auto mb-px h-5 ml-[35px]"
+                src="images/img_checkmark.svg"
+                alt="checkmark"
+              />
+            }
+            shape="square"
+            color="white_A700"
+            size="xs"
+            variant="fill"
+          ></Input>
+          <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
             <Button
-              className="cursor-pointer font-medium max-w-full mt-[121px] text-center text-xl tracking-[-0.40px] w-full"
-              shape="round"
-              color="green_500_01"
-              size="lg"
-              variant="fill"
-              onClick={handleNext}
-            >
-              Redeem
-            </Button>
-          )}
-          {props.currentStep === props.totalSteps && (
-            <Button
-              className="cursor-pointer font-medium max-w-[716px] mt-[121px] text-center text-xl tracking-[-0.40px] w-full"
-              shape="round"
-              color="green_500_01"
-              size="lg"
-              variant="fill"
+              className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
               onClick={handleFinish}
+              shape="round"
+              color="black_900"
+              size="sm"
+              variant="fill"
             >
-              Redeem
+              Back
             </Button>
-          )}
+            <Button
+              className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+              onClick={handleNext}
+              shape="round"
+              color="indigo_800"
+              size="sm"
+              variant="fill"
+            >
+              Next
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
 const One = ({
-  user,
-  selectedItem,
-  valueSelected,
-  setValueSelected,
-  networkSelected,
-  setNetworkSelected,
-  processing,
-  setProcessing,
+  
   ...props
 }) => {
   const handleNext = () => {
+    
     
 
    
@@ -67,229 +116,96 @@ const One = ({
     props.nextStep();
   };
 
+
+
   return (
-    <div>
-      <div className="p-5 flex flex-col items-start justify-start w-[99%] md:pt-2 md:w-full sm:p-5 sm:pr-6 sm:pt-0 sm:flex-wrap">
-        <Text
-          className="leading-[100.00%] md:text-[26px] text-[30px] sm:text-[20px] text-green-400 sm:text-base sm:flex-wrap tracking-[-1.60px] w-[99%] sm:w-full sm:mb-0"
-          size="txtInterSemiBold20"
-        >
-          Get free airtime from your favorite network
-        </Text>
-
-        <Text
-          className="sm:text-sm sm:font-medium sm:mx-5 sm:mt-5 sm:mb-2 text-blue_gray-900_01 text-xl tracking-[-0.40px] m-5 mb-2"
-          size="txtInterRegular20Bluegray90001"
-        >
-          Select Network
-        </Text>
-        <div className="visible sm:hidden">
-          <div className="flex flex-row gap-2 flex-wrap items-start justify-start ml-[5px] mb-5 overflow-scroll w-[100%] md:mb-0 md:w-full sm:flex-wrap md:flex-row md:flex-wrap md:ml-4">
-            <Button
-              className={`${
-                networkSelected === "MTN" && "bg-[#204391] text-white-A700"
-              } cursor-pointer md:mb-2 sm:mb-0 flex items-center justify-center min-w-[100px] sm:min-w-[90px] rounded-[28px] sm:text-sm focus:bg-[#204391] focus:text-white-A700`}
-              leftIcon={
-                <Img
-                  className="h-5 mt-px mb-1 mr-1"
-                  src="images/img_checkmark_gray_400.svg"
-                  alt="checkmark"
-                />
-              }
-              color="gray_100_01"
-              size="md"
-              variant="fill"
-              onClick={() => setNetworkSelected("MTN")}
-            >
-              <div
-                className={`${
-                  networkSelected === "MTN" && "bg-[#204391] text-white-A700"
-                } sm:text-sm text-left text-xl md:text-lg mx-1 tracking-[-0.40px] focus:bg-[#204391] focus:text-white-A700`}
-              >
-                MTN
-              </div>
-            </Button>
-            <Button
-              className={`${
-                networkSelected === "VODAFONE" && "bg-[#204391] text-white-A700"
-              } cursor-pointer flex items-center justify-center min-w-[146px] md:min-w-[130px] sm:min-w-[100px] rounded-[28px] sm:text-sm focus:bg-[#204391] focus:text-white-A700`}
-              leftIcon={
-                <Img
-                  className="h-5 mt-px mb-1 mr-1"
-                  src="images/img_checkmark_gray_400.svg"
-                  alt="checkmark"
-                />
-              }
-              color="gray_100_01"
-              size="md"
-              variant="fill"
-              onClick={() => setNetworkSelected("VODAFONE")}
-            >
-              <div
-                className={`${
-                  networkSelected === "VODAFONE" &&
-                  "bg-[#204391] text-white-A700"
-                } sm:text-sm text-left text-xl md:text-lg tracking-[-0.40px] focus:bg-[#204391] focus:text-white-A700`}
-              >
-                Vodafone
-              </div>
-            </Button>
-            <Button
-              className={`${
-                networkSelected === "TIGO" && "bg-[#204391] text-white-A700"
-              } cursor-pointer flex items-center justify-center md:min-w-[130px] min-w-[157px] sm:min-w-[110px] rounded-[28px] sm:text-sm focus:bg-[#204391] focus:text-white-A700`}
-              leftIcon={
-                <Img
-                  className="h-5 mt-px mb-1 mr-1"
-                  src="images/img_checkmark_gray_400.svg"
-                  alt="checkmark"
-                />
-              }
-              color="gray_100_01"
-              size="md"
-              variant="fill"
-              onClick={() => setNetworkSelected("TIGO")}
-            >
-              <div
-                className={`${
-                  networkSelected === "TIGO" && "bg-[#204391] text-white-A700"
-                } sm:text-sm text-left text-xl md:text-lg tracking-[-0.40px] focus:bg-[#204391] focus:text-white-A700`}
-              >
-                AirtelTigo
-              </div>
-            </Button>
-            <Button
-              className={`${
-                networkSelected === "GLO" && "bg-[#204391] text-white-A700"
-              } cursor-pointer flex items-center justify-center md:min-w-[90px] min-w-[108px] sm:min-w-[85px] rounded-[28px] sm:text-sm focus:bg-[#204391] focus:text-white-A700`}
-              leftIcon={
-                <Img
-                  className="h-5 my-0.5 mr-1"
-                  src="images/img_checkmark_gray_400.svg"
-                  alt="checkmark"
-                />
-              }
-              color="gray_100_01"
-              size="md"
-              variant="fill"
-              onClick={() => setNetworkSelected("GLO")}
-            >
-              <div
-                className={`${
-                  networkSelected === "GLO" && "bg-[#204391] text-white-A700"
-                } sm:text-sm text-left text-xl md:text-lg tracking-[-0.40px] focus:bg-[#204391] focus:text-white-A700`}
-              >
-                GLO
-              </div>
-            </Button>
-          </div>
-        </div>
-        <div className="hidden sm:block w-full">
-          <div className="ml-[5px] mb-5 overflow-scroll w-[90%] sm:flex-wrap md:flex-row md:flex-wrap md:ml-4">
-           
-          </div>
-        </div>
-
-        <Text
-          className="sm:text-sm sm:font-medium sm:mx-5 sm:mt-0 sm:mb-2 text-blue_gray-900_01 text-xl tracking-[-0.40px] m-5 my-0"
-          size="txtInterRegular20Bluegray90001"
-        >
-          Select Package
-        </Text>
-        <div className="visible sm:hidden">
-          <div className="flex flex-wrap md:flex-row flex-row gap-3 items-start justify-start mb-[-5px] ml-[-5px] mt-4 overflow-scroll w-[100%] md:w-full md:flex-wrap md:ml-5 sm:flex-wrap sm:ml-5">
-            {selectedItem?.value?.map((i) => {
-              return (
-                <Button
-                  key={i?.value_label}
-                  className={`${
-                    valueSelected?.purchase_point === i?.purchase_point &&
-                    "bg-[#204391] text-white-A700"
-                  } cursor-pointer flex items-center justify-center min-w-[156px] rounded-[28px] sm:text-sm focus:bg-[#204391] focus:text-white-A700 group `}
-                  leftIcon={
-                    <Img
-                      className="h-5 mt-px mb-1 ml-1 mr-2 md:mr-1 sm:h-4 sm:ml-0"
-                      src="images/img_checkmark_gray_400.svg"
-                      alt="checkmark"
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
+        
+        <div className="md:h-28 h-9 mt-[76px] md:px-5 relative w-[37%] sm:w-full">
+          <Img
+                      className=" w-full"
+                      src="images/new1.svg"
+                      alt="settings"
                     />
-                  }
-                  color="gray_100_01"
-                  size="md"
-                  variant="fill"
-                  onClick={() => setValueSelected(i)}
-                >
-                  <div
-                    className={`${
-                      valueSelected?.purchase_point === i?.purchase_point &&
-                      "bg-[#204391] text-white-A700"
-                    } sm:text-sm text-left text-xl tracking-[-0.40px] focus:bg-[#204391] mr-2 md:text-lg md:mr-1 md:py-2`}
-                  >
-                    {i?.value_label}{" "}
-                    <span
-                      className={`${
-                        valueSelected?.purchase_point === i?.purchase_point
-                          ? "text-white-A700"
-                          : " text-orange-400 group-focus:text-white-A700"
-                      }`}
-                    >
-                      ({i?.purchase_point}pts)
-                    </span>
-                  </div>
-                </Button>
-              );
-            })}
-          </div>
         </div>
-        <div className="hidden sm:block w-full">
-          <div className="ml-[5px] mb-5 overflow-scroll w-[90%] sm:flex-wrap md:flex-row md:flex-wrap md:ml-4">
-            
-          </div>
-        </div>
-
-        <div className="flex md:flex-col flex-row gap-5 content-end items-center justify-between mt-[20px] md:gap-[20px] sm:gap-1 sm:mt-1 w-full sm:justify-start">
-          <div className="bg-green-50 flex sm:flex-1 flex-col flex-wrap items-center justify-start p-4 rounded-[12px] w-[60%] md:w-[92%] sm:w-full">
-            <Text
-              className="leading-[120.00%] max-w-[409px] md:max-w-full sm:text-[15px] text-gray-900_01 text-xl tracking-[-0.40px] md:mx-1"
-              size="txtInterRegular20Gray90001"
-            >
-              <span className="text-green-800 font-inter text-left font-normal ">
-                You currently have
-              </span>
-              <span className="text-gray-900_01 font-inter text-left font-normal">
-                {" "}
-              </span>
-              <span className="text-deep_orange-500 font-inter text-left font-semibold">
-                {user?.loyalty?.points}pts
-              </span>
-              {/* <span className="text-green-800 font-inter text-left font-normal">
-                You can purchase the package
-              </span> */}
-            </Text>
-          </div>
-          <Button
-            className="cursor-pointer font-medium md:mt-0 my-2 text-center sm:text-sm text-xl tracking-[-0.40px] w-[40%] md:h-14 sm:h-10 sm:my-0 sm:mt-5 sm:w-full"
-            shape="round"
-            color={processing ? "gray_100_01" : "green_500_01"}
-            size="lg"
-            variant="fill"
-            onClick={handleNext}
-            disabled={processing}
+        <div className="flex flex-col gap-2 items-center justify-start mt-[55px] md:px-5 w-auto sm:w-full">
+          <Text
+            className="leading-[32.00px] max-w-[472px] md:max-w-full text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl"
+            size="txtMontserratSemiBold24"
           >
-            {!processing ? "Continue" : "Loading..."}
-          </Button>
+            Best Choice to safeguard your family from abroad
+          </Text>
+          <Text
+            className="text-[15px] text-black-900 text-center w-auto"
+            size="txtMontserratRegular15"
+          >
+            Selected a package that fits your needs
+          </Text>
+        </div>
+        <div className="flex flex-col items-center justify-start mb-[371px] mt-[98px] md:px-5 w-2/5 md:w-full">
+          <Input
+            name="frameThirty"
+            placeholder="Select Plan"
+            className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+            wrapClassName="border border-blue_gray-100 border-solid flex w-[545px] sm:w-full"
+            suffix={
+              <Img
+                className="mt-px mb-auto h-5 ml-[35px]"
+                src="images/img_checkmark.svg"
+                alt="checkmark"
+              />
+            }
+            shape="square"
+            color="white_A700"
+            size="xs"
+            variant="fill"
+          ></Input>
+          <Input
+            name="frameThirtyOne"
+            placeholder="Select Package"
+            className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+            wrapClassName="border border-blue_gray-100 border-solid flex mt-6 w-[545px] sm:w-full"
+            suffix={
+              <Img
+                className="mt-auto mb-px h-5 ml-[35px]"
+                src="images/img_checkmark.svg"
+                alt="checkmark"
+              />
+            }
+            shape="square"
+            color="white_A700"
+            size="xs"
+            variant="fill"
+          ></Input>
+          <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
+            <Button
+              className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+              onClick={handleNext}
+              shape="round"
+              color="black_900"
+              size="sm"
+              variant="fill"
+            >
+              Back
+            </Button>
+            <Button
+              className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+              onClick={handleNext}
+              shape="round"
+              color="indigo_800"
+              size="sm"
+              variant="fill"
+            >
+              Next
+            </Button>
+          </div>
         </div>
       </div>
-
-      <br />
-    </div>
   );
 };
 
 const Two = ({
-  phoneNumber,
-  setPhoneNumber,
-  processing,
-  setProcessing,
+  
   ...props
 }) => {
   const handleNext = () => {
@@ -297,247 +213,707 @@ const Two = ({
     props.nextStep();
   };
 
+  const handlePrevious = () => {
+    
+    props.previousStep();
+  };
+
   return (
-    <div className="w-full" style={{ width: "100%" }}>
-      <div className="flex flex-col last:justify-end items-start justify-start w-[90%] md:w-full p-[40px] sm:p-4">
-      
-        <div className="flex flex-col justify-start w-full max-w-[716px] h-auto mt-5 sm:h-auto sm:mt-3">
-          <div className="flex flex-col gap-6 items-start justify-start max-w-[716px] mt-[10px] w-full mb-[-490] sm:gap-4 md:mb-4">
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
+        
+        <div className="h-9 md:h-[107px] mt-[76px] md:px-5 relative w-[37%] sm:w-full">
+                <Img
+                      className=" w-full"
+                      src="images/new2.svg"
+                      alt="settings"
+                    />
+             
+        </div>
+        <Text
+          className="mt-[58px] text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl"
+          size="txtMontserratSemiBold24"
+        >
+          Confirm Package
+        </Text>
+        <div className="flex flex-col gap-[21px] items-start justify-start mt-[65px] md:px-5 w-auto sm:w-full">
+          <Text
+            className="text-gray-600 text-xs uppercase w-auto"
+            size="txtMontserratSemiBold12"
+          >
+            Package Details
+          </Text>
+          <div className="flex flex-row sm:gap-10 gap-[163px] items-start justify-start w-auto sm:w-full">
+            <div className="flex flex-col gap-1 items-start justify-start w-auto">
+              <Text
+                className="text-[15px] text-black-900 w-auto"
+                size="txtMontserratSemiBold15"
+              >
+                GLICO Sunkwa Health Plan
+              </Text>
+              <Text
+                className="text-black-900 text-xs w-auto"
+                size="txtMontserratRegular12"
+              >
+                Under 60 Years package
+              </Text>
+            </div>
             <Text
-              className="text-blue_gray-900_01 text-xl tracking-[-0.40px] w-full mb-[-10] sm:text-sm sm:font-medium"
-              size="txtInterRegular20Bluegray90001"
+              className="text-[15px] text-black-900 text-right w-auto"
+              size="txtMontserratSemiBold15"
             >
-              Enter phone number
+              GH¢32,000
             </Text>
-            <div className="sm:hidden w-full">
-              <Input
-                name="value"
-                placeholder="0208989934"
-                className="p-0 placeholder:text-blue_gray-200 text-center sm:text-left text-xl tracking-[-0.40px] w-full mb-[-470px]"
-                wrapClassName="w-full"
-                type="tel"
-                maxLength={10}
-                autoComplete="tel"
-                onChange={(value) => {
-                  setPhoneNumber(value);
-                }}
-              />
-            </div>
-            <div className="hidden sm:flex w-full">
-              <Input
-                name="value"
-                placeholder="0208989934"
-                className="p-0 placeholder:text-blue_gray-200 text-center sm:text-left text-xl tracking-[-0.40px] w-full mb-[-470px] sm:text-sm sm:px-[16px]"
-                wrapClassName="w-full"
-                size="sm"
-                type="tel"
-                maxLength={10}
-                autoComplete="tel"
-                onChange={(value) => {
-                  setPhoneNumber(value);
-                }}
-              />
-            </div>
           </div>
+          <Line className="bg-blue_gray-50 h-px w-[99%]" />
+        </div>
+        <div className="flex sm:flex-col flex-row sm:gap-10 items-center justify-between mb-[439px] mt-[75px] md:px-5 w-[619px] md:w-full">
           <Button
-            className="cursor-pointer font-medium max-w-[716px] mt-[10px] text-center text-xl tracking-[-0.40px] w-full md:h-14 sm:h-10 sm:mt-4"
+            className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+            onClick={handlePrevious}
             shape="round"
-            color={processing ? "gray_100_01" : "green_500_01"}
-            size="lg"
+            color="black_900"
+            size="sm"
             variant="fill"
+          >
+            Back
+          </Button>
+          <Button
+            className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
             onClick={handleNext}
-            disabled={processing}
-            >
-            {!processing ? "Redeem" : "Loading..."}
+            shape="round"
+            color="indigo_800"
+            size="sm"
+            variant="fill"
+          >
+            Confirm Order
           </Button>
         </div>
       </div>
-      <br />
-    </div>
   );
 };
 
 const Three = ({
-  user,
-  selectedItem,
-  valueSelected,
-  setValueSelected,
-  networkSelected,
-  setNetworkSelected,
-  phoneNumber,
-  setPhoneNumber,
-  processing,
-  setProcessing,
+ 
   ...props
-}) => {
-  
-
-  const handleNext = async () => {
-    const payload = {
-      merchant: "MER12193",
-      network: networkSelected,
-      number: phoneNumber,
-      amount: parseFloat(valueSelected?.value_earned),
-      payment_type: "LPTS",
-      points: parseFloat(valueSelected?.purchase_point),
-      customer: user?._cid,
-      source: "DIGISTORE REWARDS",
-    };
-
+}) => { const handleNext = () => {
     
-
-    
-  };
-
-  return (
-    <div>
-      <div className="flex flex-col items-start justify-start w-[100%] md:w-full p-[40px] sm:justify-start sm:p-4 sm:h-auto">
-        <div>
-          <Text
-            className="md:text-[26px] text-[32px] text-green-400 tracking-[-1.60px] sm:text-[20px] sm:text-base"
-            size="txtInterSemiBold40"
-          >
-            Confirmation
-          </Text>
-          <Text
-            className="leading-[140.00%] mt-7 text-2xl md:text-[22px] text-blue_gray-900_01 tracking-[-0.48px] w-[93%] sm:w-full sm:text-sm sm:font-medium sm:my-7"
-            size="txtInterMedium24"
-          >
-            <span className="text-blue_gray-900_01 font-inter text-left font-normal sm:font-medium">
-              By clicking on redeem you confirm to redeeming
-            </span>
-            <span className="text-blue_gray-900_01 font-inter text-left font-medium">
-              {" "}
-            </span>
-            <span className="text-blue_gray-900_01 font-inter text-left font-semibold sm:font-medium">
-              {valueSelected?.value_label}
-            </span>
-            <span className="text-blue_gray-900_01 font-inter text-left font-medium">
-              {" "}
-              ({valueSelected?.purchase_point}pts){" "}
-            </span>
-            <span className="text-blue_gray-900_01 font-inter text-left font-normal sm:font-medium">
-              for{" "}
-            </span>
-            <span className="text-blue_gray-900_01 font-inter text-left font-semibold sm:font-medium">
-              {phoneNumber}
-            </span>
-          </Text>
-        </div>
-        <Button
-          className={`${""} cursor-pointer font-medium max-w-[721px] mt-[60px] text-center text-xl tracking-[-0.40px] w-full md:h-14 sm:h-10`}
-          shape="round"
-          color={processing ? "gray_100_01" : "green_500_01"}
-          size="lg"
-          variant="fill"
-          onClick={handleNext}
-          disabled={processing}
-        >
-          {!processing ? "Redeem" : "Loading..."}
-        </Button>
-      </div>
-    </div>
-  );
+  props.nextStep();
 };
 
-const Four = ({
-  user,
-  selectedItem,
-  valueSelected,
-  setValueSelected,
-  networkSelected,
-  setNetworkSelected,
-  phoneNumber,
-  setPhoneNumber,
-  processing,
-  setProcessing,
-  ...props
-}) => {
-  const handleLastStep = () => {
-    props.lastStep();
-    props.completeCallback();
-  };
+const handlePrevious = () => {
+    
+  props.previousStep();
+};
+
+  
+
+ 
 
   return (
-    <div>
-      <div className="bg-white-A700 flex flex-col gap-3 items-start justify-start w-auto md:w-full p-[40px] sm:flex-wrap sm:px-[20px] overflow-hidden md:p-8">
-        <Text
-          className="text-[32px] text-base md:text-[26px] text-green-400 tracking-[-1.44px] w-auto sm:text-[20px] sm:text-base sm:mt-[-10px]"
-          size="txtInterSemiBold36"
-        >
-          Your Redemption is Confirmed!
-        </Text>
-        <div className="flex flex-wrap sm:px[100px]">
-          <Text
-            className="leading-[140.00%] my-4 max-w-[560px] md:max-w-full text-blue_gray-800 tracking-[0.30px] text-base sm:text-sm sm:px-[2px] sm:flex-wrap"
-            size="txtMontserratRegular20"
-          >
-            Congratulations! Your recent redemption on Digistore has been
-            successfully processed.
-          </Text>
-          <div className="flex flex-col font-inter gap-3 items-center justify-start w-auto sm:items-start">
-            <div className="flex flex-row font-inter gap-3 items-center justify-start w-auto my-4">
-              <Button
-                className="cursor-pointer flex items-center justify-center rounded-[24px]"
-                leftIcon={
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
+        <div className="flex flex-col items-center justify-start max-w-[1282px] mb-[338px] mx-auto md:px-5 w-full">
+          
+          <div className="flex mt-[76px] relative w-2/5 sm:w-full">
+            <div className="h-9 md:h-[31px] my-auto w-[91%] sm:w-full">
+
+              <Img
+                      className=" w-full"
+                      src="images/new3.svg"
+                      alt="settings"
+                    />
+              
+            </div>
+            
+            
+          </div>
+          <div className="flex flex-col gap-2 items-start justify-start mt-[53px] w-auto">
+            <Text
+              className="text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl w-auto"
+              size="txtMontserratSemiBold24"
+            >
+              Beneficiary Details
+            </Text>
+            <Text
+              className="text-[15px] text-black-900 text-center w-auto"
+              size="txtMontserratRegular15"
+            >
+              Fill in forms to register recipient{" "}
+            </Text>
+          </div>
+          <div className="flex flex-col items-center justify-start mt-[55px] w-[48%] md:w-full">
+            <div className="flex sm:flex-col flex-row gap-4 items-center justify-between w-full">
+              <Text
+                className="bg-white-A700 border border-blue_gray-100 border-solid justify-center pl-3 sm:pr-5 pr-[35px] py-3 text-[15px] text-black-900 w-[296px]"
+                size="txtMontserratRegular15"
+              >
+                First name{" "}
+              </Text>
+              <Text
+                className="bg-white-A700 border border-blue_gray-100 border-solid justify-center pl-3 sm:pr-5 pr-[35px] py-3 text-[15px] text-black-900 w-[296px]"
+                size="txtMontserratRegular15"
+              >
+                Last Name
+              </Text>
+            </div>
+            <div className="flex sm:flex-col flex-row gap-4 items-center justify-between mt-[19px] w-full">
+              <Input
+                name="frameThirty"
+                placeholder="Gender"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                wrapClassName="border border-blue_gray-100 border-solid flex sm:flex-1 w-[296px] sm:w-full"
+                suffix={
                   <Img
-                    className="h-6 mb-0.5 mr-2 sm:h-4 sm:ml-2"
-                    src="images/img_trophy.svg"
-                    alt="trophy"
+                    className="mt-px mb-auto h-5 ml-[35px]"
+                    src="images/img_checkmark.svg"
+                    alt="checkmark"
                   />
                 }
-                color="deep_orange_50"
+                shape="square"
+                color="white_A700"
+                size="xs"
+                variant="fill"
+              ></Input>
+              <Input
+                name="frameFortyFour"
+                placeholder="Date of birth"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                shape="square"
+                color="white_A700"
+                size="xs"
+                variant="fill"
+              ></Input>
+            </div>
+            <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full">
+              <Input
+                name="frameFortyFive"
+                placeholder="Email Address"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                type="email"
+                shape="square"
+                color="white_A700"
+                size="xs"
+                variant="fill"
+              ></Input>
+              <Input
+                name="frameFortySix"
+                placeholder="Phone"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                type="number"
+                shape="square"
+                color="white_A700"
+                size="xs"
+                variant="fill"
+              ></Input>
+            </div>
+            <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full">
+              <Input
+                name="frameFortySeven"
+                placeholder="City"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                shape="square"
+                color="white_A700"
+                size="xs"
+                variant="fill"
+              ></Input>
+              <Input
+                name="frameFortyEight"
+                placeholder="Address"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                shape="square"
+                color="white_A700"
+                size="xs"
+                variant="fill"
+              ></Input>
+            </div>
+            <div className="flex flex-row sm:gap-10 items-center justify-between mt-[43px] w-[609px] md:w-full">
+              <Button
+                className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+                onClick={handlePrevious}
+                shape="round"
+                color="black_900"
                 size="sm"
                 variant="fill"
               >
-                <div className="text-red-900 text-left font-normal text-xl sm:text-xs tracking-[-0.40px] md:py-2 sm:mr-2">
-                  You currently have{" "}
-                  <span className="text-orange-500 font-bold">
-                    {user?.loyalty?.points}pts
-                  </span>
-                </div>
+                Back
               </Button>
-              <Img
-                className="h-8 w-8 sm:h-5 sm:w-5"
-                src="images/img_question.svg"
-                alt="question"
-              />
+              <Button
+                className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+                onClick={handleNext}
+                shape="round"
+                color="indigo_800"
+                size="sm"
+                variant="fill"
+              >
+                Next
+              </Button>
             </div>
-            <Text
-              className="text-blue_gray-800 text-base tracking-[0.30px] sm:px[10px] sm:text-sm mb-5"
-              size="txtMontserratRegular20"
-            >
-              Enjoy your reward and happy shopping!
-            </Text>
           </div>
-
-          <Text
-            className="leading-[140.00%] max-w-[760px] md:max-w-full text-blue_gray-800 text-xl tracking-[0.30px] my-4 sm:text-sm"
-            size="txtMontserratRegular20"
-          >
-            <span className="text-blue_gray-800 font-montserrat text-center font-normal text-base flex-wrap sm:text-sm">
-              Discover additional opportunities to use your loyalty points by
-              exploring new packages available for redemption.{" "}
-            </span>
-            <a
-              href="/loyalty"
-              className="text-blue-500 font-montserrat text-left font-normal underline"
-            >
-              Click here
-            </a>
-            <span className="text-blue_gray-800 font-montserrat text-left font-normal text-base sm:text-sm">
-              {" "}
-              to see what your loyalty points can get you.
-            </span>
-          </Text>
         </div>
       </div>
-    </div>
   );
 };
 
+const Five = ({
+ 
+  ...props
+}) => { const handleNext = () => {
+    
+  props.nextStep();
+};
+
+const handlePrevious = () => {
+    
+  props.previousStep();
+};
+
+  
+
+ 
+
+  return (
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
+        <div className="flex flex-col items-center justify-start max-w-[1282px] mb-[433px] mx-auto md:px-5 w-full">
+          
+          <div className="flex mt-[76px] relative w-2/5 sm:w-full">
+            <div className="h-9 md:h-[31px] my-auto w-[91%] sm:w-full">
+
+              <Img
+                      className=" w-full"
+                      src="images/new4.svg"
+                      alt="settings"
+                    />
+              
+            </div>
+            
+            
+          </div>
+          <div className="flex flex-col items-center justify-start mt-[53px] w-auto">
+            <Text
+              className="text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl w-[355px]"
+              size="txtMontserratSemiBold24"
+            >
+              Who is making the payment
+            </Text>
+          </div>
+          <div className="flex flex-col items-center justify-start mt-12 w-[48%] md:w-full">
+            <div className="flex sm:flex-col flex-row gap-2.5 items-center justify-between w-full">
+              <Text
+                className="bg-white-A700 border border-blue_gray-100 border-solid justify-center pl-3 sm:pr-5 pr-[35px] py-3 text-[15px] text-black-900 w-[296px]"
+                size="txtMontserratRegular15"
+              >
+                Full name
+              </Text>
+              <Text
+                className="bg-white-A700 border border-blue_gray-100 border-solid justify-center pl-3 sm:pr-5 pr-[35px] py-3 text-[15px] text-black-900 w-[296px]"
+                size="txtMontserratRegular15"
+              >
+                Email
+              </Text>
+            </div>
+            <div className="flex sm:flex-col flex-row gap-2.5 items-center justify-between mt-2.5 w-full">
+              <Text
+                className="bg-white-A700 border border-blue_gray-100 border-solid justify-center pl-3 sm:pr-5 pr-[35px] py-3 text-[15px] text-black-900 w-[296px]"
+                size="txtMontserratRegular15"
+              >
+                Phone
+              </Text>
+              <CheckBox
+                className="text-[15px] text-left"
+                inputClassName="border border-blue_gray-100 border-solid mr-[5px]"
+                name="whoisthebenefic_One"
+                id="whoisthebenefic_One"
+                label="Who is the beneficiary to you?"
+                color="white_A700"
+                size="sm"
+                variant="fill"
+              ></CheckBox>
+            </div>
+            <div className="flex flex-row sm:gap-10 items-center justify-between mt-[110px] w-[603px] md:w-full">
+              <Button
+                className="cursor-pointer text-[15px] text-center w-[168px]"
+                shape="round"
+                color="black_900"
+                size="sm"
+                variant="fill"
+                onClick={handlePrevious}
+              >
+                Back
+              </Button>
+              <Button
+                className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+                onClick={handleNext}
+                shape="round"
+                color="indigo_800"
+                size="sm"
+                variant="fill"
+              >
+                Next
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+  );
+};
+
+const Six = ({
+ 
+  ...props
+}) => { const handleNext = () => {
+    
+  props.nextStep();
+};
+
+const handlePrevious = () => {
+    
+  props.previousStep();
+};
+
+  
+
+ 
+
+  return (
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
+        <div className="flex flex-col items-center justify-start max-w-[1282px] mb-[89px] mx-auto md:px-5 w-full">
+          <div className="flex flex-col md:gap-10 gap-[76px] items-center justify-start w-full">
+            
+            <div className="flex mt-[76px] relative w-2/5 sm:w-full">
+            <div className="h-9 md:h-[31px] my-auto w-[91%] sm:w-full">
+
+              <Img
+                      className=" w-full"
+                      src="images/new4.svg"
+                      alt="settings"
+                    />
+              
+            </div>
+            
+            
+          </div>
+          </div>
+          <div className="flex flex-col items-center justify-start mt-[50px] w-auto">
+            <Text
+              className="text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl w-[195px]"
+              size="txtMontserratSemiBold24"
+            >
+              Confirm Details
+            </Text>
+          </div>
+          <div className="flex flex-col items-start justify-start mt-[46px] w-[48%] md:w-full">
+            <Text
+              className="text-gray-600 text-xs uppercase"
+              size="txtMontserratSemiBold12"
+            >
+              Package Details
+            </Text>
+            <div className="flex flex-row sm:gap-10 gap-[163px] items-start justify-start mt-7 w-auto sm:w-full">
+              <div className="flex flex-col gap-1 items-start justify-start w-auto">
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratSemiBold15"
+                >
+                  GLICO Sunkwa Health Plan
+                </Text>
+                <Text
+                  className="text-black-900 text-xs w-auto"
+                  size="txtMontserratRegular12"
+                >
+                  Under 60 Years package
+                </Text>
+              </div>
+              <Text
+                className="text-[15px] text-black-900 text-right w-auto"
+                size="txtMontserratSemiBold15"
+              >
+                GH¢32,000
+              </Text>
+            </div>
+            <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[15px] w-[96%]" />
+            <Text
+              className="mt-[17px] text-gray-600 text-xs uppercase"
+              size="txtMontserratSemiBold12"
+            >
+              Beneficiary Details
+            </Text>
+            <div className="flex sm:flex-col flex-row sm:gap-10 items-center justify-between mt-7 w-full">
+              <div className="flex flex-col gap-1 items-start justify-start w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Full name
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  Kwabena Batry
+                </Text>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-start w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Date of birth
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  25/02/1652
+                </Text>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-start w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Contact
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  +233 25 452 2548
+                </Text>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-start w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Email
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  kwabenaish12@gmail.com
+                </Text>
+              </div>
+            </div>
+            <div className="flex flex-col gap-1 items-start justify-start mt-[22px] w-auto">
+              <Text
+                className="text-gray-600 text-xs w-auto"
+                size="txtMontserratRegular12Gray600"
+              >
+                Address
+              </Text>
+              <Text
+                className="text-[15px] text-black-900 w-auto"
+                size="txtMontserratMedium15"
+              >
+                254 Beng st, Accra GHana
+              </Text>
+            </div>
+            <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[15px] w-[96%]" />
+            <Text
+              className="mt-[11px] text-gray-600 text-xs uppercase"
+              size="txtMontserratSemiBold12"
+            >
+              Benefactor Details
+            </Text>
+            <div className="flex sm:flex-col flex-row sm:gap-5 items-center justify-start mt-7 w-3/4 md:w-full">
+              <div className="flex flex-col gap-1 items-start justify-start w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Full name
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  Kofi Batry
+                </Text>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-start sm:ml-[0] ml-[71px] w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Date of birth
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  kofipapa@gmail.com
+                </Text>
+              </div>
+              <div className="flex flex-col gap-1 items-start justify-start sm:ml-[0] ml-[19px] w-auto">
+                <Text
+                  className="text-gray-600 text-xs w-auto"
+                  size="txtMontserratRegular12Gray600"
+                >
+                  Contact
+                </Text>
+                <Text
+                  className="text-[15px] text-black-900 w-auto"
+                  size="txtMontserratMedium15"
+                >
+                  +233 25 452 2548
+                </Text>
+              </div>
+            </div>
+            <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[25px] w-[96%]" />
+            <Text
+              className="mt-[11px] text-gray-600 text-xs uppercase"
+              size="txtMontserratSemiBold12"
+            >
+              Payment method
+            </Text>
+            <Text
+              className="mt-[18px] text-[15px] text-black-900"
+              size="txtMontserratMedium15"
+            >
+              Card - XXXX XXXX XXXX XXXX 3215
+            </Text>
+          </div>
+          <div className="flex flex-row sm:gap-10 items-center justify-between mt-[102px] w-[619px] md:w-full">
+            <Button
+              className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+              onClick={handlePrevious}
+              shape="round"
+              color="black_900"
+              size="sm"
+              variant="fill"
+            >
+              Back
+            </Button>
+            <Button
+              className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
+              onClick={handleNext}
+              shape="round"
+              color="indigo_800"
+              size="sm"
+              variant="fill"
+            >
+              Confirm Order
+            </Button>
+          </div>
+        </div>
+      </div>
+  );
+};
+
+
+
+const Four = ({
+
+  ...props
+}) => {
+  const handleNext = () => {
+    
+    props.nextStep();
+  };
+
+  const handlePrevious = () => {
+    
+    props.previousStep();
+  };
+
+    
+
+  return (
+    <div className="bg-white-A700 flex flex-col font-montserrat justify-start mx-auto p-9 sm:px-5 w-full">
+        <div className="flex flex-col md:gap-10 gap-[76px] items-center max-w-[1282px] mx-auto md:px-5 w-full">
+          
+          <div className="flex mt-[76px] relative w-2/5 sm:w-full">
+            <div className="h-9 md:h-[31px] my-auto w-[91%] sm:w-full">
+
+              <Img
+                      className=" w-full"
+                      src="images/new5.svg"
+                      alt="settings"
+                    />
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        <Img
+          className="h-10 md:ml-[0] ml-[auto] mr-[auto] mt-[117px] w-10"
+          src="images/img_checkmark_indigo_800_1.svg"
+          alt="checkmark"
+        />
+        <div className="flex flex-col items-center max-w-[1282px] mb-[5px] mt-[17px] mx-auto md:px-5 px-[214px] w-full">
+          <Text
+            className="leading-[32.00px] text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl w-[35%] sm:w-full"
+            size="txtMontserratSemiBold24"
+          >
+            Congratulations. Your Order is accepted
+          </Text>
+          <Text
+            className="leading-[20.00px] mt-[17px] text-[15px] text-center text-gray-800 w-[51%] sm:w-full"
+            size="txtMontserratRegular15Gray800"
+          >
+            You will receive an email shortly with detailed confirmation of your
+            policy. Keep an eye on your inbox.
+          </Text>
+          <Text
+            className="leading-[20.00px] mt-[31px] text-[15px] text-black-900 text-center w-[52%] sm:w-full"
+            size="txtMontserratRegular15"
+          >
+            <span className="text-black-900 font-montserrat font-normal">
+              To ensure a seamless and secure experience, we recommend signing
+              in to your account.{" "}
+            </span>
+            <a
+              href="javascript:"
+              className="text-deep_purple-A700 font-montserrat font-normal underline"
+            >
+              Login/Register
+            </a>
+          </Text>
+          <Button
+            className="cursor-pointer mt-[75px] text-[15px] text-center w-[168px]"
+            shape="round"
+            color="indigo_800"
+            size="sm"
+            variant="fill"
+          >
+            Done
+          </Button>
+          <Text
+            className="mt-8 text-[15px] text-black-900 text-center"
+            size="txtMontserratRegular15"
+          >
+            <span className="text-black-900 font-montserrat font-normal">
+              You can view and track your policies{" "}
+            </span>
+            <a
+              href="javascript:"
+              className="text-deep_purple-A700 font-montserrat font-normal underline"
+            >
+              here
+            </a>
+          </Text>
+          <Text
+            className="leading-[20.00px] mt-[234px] text-[15px] text-center text-gray-800 w-[95%] sm:w-full"
+            size="txtMontserratRegular15Gray800"
+          >
+            Thank you for choosing GLICO Sunkwa Health Plan. Your commitment to
+            the health and well-being of your family is truly commendable
+          </Text>
+        </div>
+      </div>
+  );
+};
+
+
 const Payments = (props) => {
   const { selectedItem } = props;
+  
   
   const [stepWizard, setStepWizard] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
@@ -573,20 +949,8 @@ const Payments = (props) => {
     
       <div className="sm:h-auto md:h-auto sm:w-full md:w-full">
         <div className="bg-white-A700 flex flex-col items-center justify-start w-auto">
-          <div className="flex flex-col gap-[10px] items-center justify-start w-full">
-            <div className="md:h-[auto] h-auto relative w-full">
-              <Img
-                className="h-auto m-auto object-cover min-w-full w-auto max-h-[250px] sm:max-h-max md:max-h-max"
-                src="images/img_rectangle81.png"
-                alt="rectangleEightyOne"
-              />
-              <Img
-                className="common-pointer absolute h-[52px] sm:h-auto right-[2%] top-[3%] sm:w-[12%] w-[52px]"
-                src="images/img_close.svg"
-                alt="close"
-                onClick={props.onRequestClose}
-              />
-            </div>
+          <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full mt-5">
+            <Header></Header>
             <StepWizard
               className="w-full"
               instance={assignStepWizard}
@@ -635,6 +999,37 @@ const Payments = (props) => {
                   setProcessing,
                 }}
               />
+
+              <Five
+                {...{
+                  
+                  selectedItem,
+                  valueSelected,
+                  setValueSelected,
+                  networkSelected,
+                  setNetworkSelected,
+                  phoneNumber,
+                  setPhoneNumber,
+                  processing,
+                  setProcessing,
+                }}
+              />
+
+                <Six
+                {...{
+                  
+                  selectedItem,
+                  valueSelected,
+                  setValueSelected,
+                  networkSelected,
+                  setNetworkSelected,
+                  phoneNumber,
+                  setPhoneNumber,
+                  processing,
+                  setProcessing,
+                }}
+              />
+
               <Four
                 completeCallback={handleComplete}
                 {...{
@@ -650,6 +1045,9 @@ const Payments = (props) => {
                   setProcessing,
                 }}
               />
+
+              
+
             </StepWizard>
           </div>
         </div>
