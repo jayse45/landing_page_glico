@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Button, CheckBox, Img, Line, Text, Input, List, Select } from "components";
 import StepWizard from "react-step-wizard";
 import Header from "components/Header";
-
-
-
+import { useNavigate } from "react-router-dom";
 
 
 const ActionButtons = (props) => {
@@ -790,6 +788,7 @@ const Four = ({
 
     props.previousStep();
   };
+  const navigate = useNavigate();
 
 
 
@@ -838,12 +837,13 @@ const Four = ({
             To ensure a seamless and secure experience, we recommend signing
             in to your account.{" "}
           </span>
-          <a
+          <Text
             href="javascript:"
             className="text-deep_purple-A700 font-montserrat font-normal underline"
+            onClick={() => navigate("/login")}
           >
             Login
-          </a>
+          </Text>
         </Text>
         <Button
           className="cursor-pointer mt-[75px] text-[15px] text-center w-[168px] sm:mt-[50px]"
