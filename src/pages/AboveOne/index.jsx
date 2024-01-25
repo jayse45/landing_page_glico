@@ -57,8 +57,11 @@ const AboveOnePage = () => {
           >
             Why you need this
           </Text>
-          <div className="flex flex-row">
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+          <List
+            className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-4 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full sm:grid-cols-1"
+            orientation="horizontal"
+          >
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8doctorsbag.svg"
@@ -66,21 +69,21 @@ const AboveOnePage = () => {
               />
               <Text
                 className="leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18"
+                size="txtMontserratSemiBold18Indigo800"
               >
                 Dedicated In-Patient and Out-Patient Services
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img className="h-8 w-8" src="images/img_user.svg" alt="user" />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18"
+                size="txtMontserratSemiBold18Indigo800"
               >
                 designed to address the unique health considerations of seniors
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8medicaldoctor.svg"
@@ -88,26 +91,26 @@ const AboveOnePage = () => {
               />
               <Text
                 className="leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18"
+                size="txtMontserratSemiBold18Indigo800"
               >
                 Enhanced Access to Specialists
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
-                className="h-9 w-9"
-                src="images/img_layer1_indigo_800_1.svg"
+                className="h-8 w-8"
+                src="images/img_layer1_indigo_800.svg"
                 alt="layerOne"
               />
               <Text
                 className="leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18"
+                size="txtMontserratSemiBold18Indigo800"
               >
                 User-Friendly Online Management
               </Text>
             </div>
-          </div>
-          </div>
+          </List>
+        </div>
         </div>
         <div className="bg-white-A700 flex flex-col items-end justify-end sm:p-[] sm:pb-[] pl-[21px] sm:pl-0 sm:pr-[] sm:pt-[] py-[21px] w-full">
           <div className="flex flex-col items-start justify-start mt-[3px] md:px-5 w-full md:w-full">
