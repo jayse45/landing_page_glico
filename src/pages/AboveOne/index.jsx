@@ -57,11 +57,8 @@ const AboveOnePage = () => {
           >
             Why you need this
           </Text>
-          <List
-            className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-4 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full sm:grid-cols-1"
-            orientation="horizontal"
-          >
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+          
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8doctorsbag.svg"
@@ -69,21 +66,21 @@ const AboveOnePage = () => {
               />
               <Text
                 className="leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 Dedicated In-Patient and Out-Patient Services
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
               <Img className="h-8 w-8" src="images/img_user.svg" alt="user" />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 designed to address the unique health considerations of seniors
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8medicaldoctor.svg"
@@ -91,25 +88,25 @@ const AboveOnePage = () => {
               />
               <Text
                 className="leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 Enhanced Access to Specialists
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
               <Img
-                className="h-8 w-8"
-                src="images/img_layer1_indigo_800.svg"
+                className="h-9 w-9"
+                src="images/img_layer1_indigo_800_1.svg"
                 alt="layerOne"
               />
               <Text
                 className="leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 User-Friendly Online Management
               </Text>
             </div>
-          </List>
+          </div>
         </div>
         <div className="bg-white-A700 flex flex-col items-end justify-end sm:p-[] sm:pb-[] pl-[21px] sm:pl-0 sm:pr-[] sm:pt-[] py-[21px] w-full">
           <div className="flex flex-col items-start justify-start mt-[3px] md:px-5 w-full md:w-full">
@@ -170,7 +167,13 @@ const AboveOnePage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/abovethree")}
-                  shape="round"
+                  rightIcon={
+                    <Img
+                      className="h-6 ml-2.5"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
+                    />
+                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -200,7 +203,13 @@ const AboveOnePage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out group hover:bg-white-A700 hover:text-indigo-800 flex justify-center items-center"
                   onClick={() => navigate("/abovenine")}
-                  shape="round"
+                  rightIcon={
+                    <Img
+                      className="h-6 ml-2.5"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
+                    />
+                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -230,7 +239,13 @@ const AboveOnePage = () => {
                 <Button
                   className="common-pointer cursor-pointer flex items-center justify-center font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 group hover:text-indigo-800"
                   onClick={() => navigate("/above")}
-                  shape="round"
+                  rightIcon={
+                    <Img
+                      className="h-6 ml-2.5"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
+                    />
+                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -263,49 +278,40 @@ const AboveOnePage = () => {
               src="images/img_rectangle2.png"
               alt="rectangleTwo"
             />
-            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[61px] md:px-10 sm:px-5 w-full">
-              <div className="flex flex-col gap-10 items-start justify-start mb-2.5 md:ml-[0] ml-[74px] w-auto md:w-full">
-                <div className="flex flex-col gap-5 items-start justify-center w-[598px] md:w-full">
-                  <div className="flex flex-col gap-[15px] items-start justify-start w-full">
-                    <Text
-                      className="text-2xl md:text-[22px] text-white-A700 sm:text-xl w-auto"
-                      size="txtMontserratSemiBold24"
-                    >
-                      Need more information?
-                    </Text>
-                    <Text
-                      className="text-[15px] text-white-A700 w-full"
-                      size="txtMontserratRegular15WhiteA700"
-                    >
-                      Get in touch with our team know about all that Sunkwa has
-                      for you
-                    </Text>
-                  </div>
-                  <Button
-                    className="cursor-pointer font-medium min-w-[308px] text-[15px] text-center"
-                    shape="round"
-                    color="white_A700"
-                    size="sm"
-                    variant="fill"
-                  >
-                    Contact Customer Experience Center
-                  </Button>
-                </div>
-                <div className="flex flex-row gap-[27px] items-end justify-start w-auto">
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 274 6500
-                  </Text>
-                  <Text
-                    className="text-[15px] text-white-A700 w-auto"
-                    size="txtMontserratSemiBold15WhiteA700"
-                  >
-                    030 225 5742
-                  </Text>
-                </div>
+            <div className="absolute bg-gradient  flex flex-col h-full inset-[0] items-start justify-center m-auto p-[67px] md:px-10 sm:px-5 w-full">
+              <Text
+                className="md:ml-[0] ml-[122px] mt-[17px] md:text-3xl sm:text-[28px] text-[32px] text-white-A700"
+                size="txtMontserratSemiBold32"
+              >
+                Need more information?
+              </Text>
+              <Text
+                className="leading-[24.00px] md:ml-[0] ml-[122px] mt-4 text-[15px] text-white-A700 w-[33%] sm:w-full"
+                size="txtMontserratRegular15WhiteA700"
+              >
+                Get in touch with our team know about all that Sunkwa has for
+                you
+              </Text>
+              <div className="flex flex-row gap-[27px] items-end justify-start md:ml-[0] ml-[123px] mt-[15px] w-auto">
+                <Text
+                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
+                  size="txtMontserratSemiBold22"
+                >
+                  030 274 6500
+                </Text>
+                <Text
+                  className="text-[22px] sm:text-lg text-white-A700 md:text-xl w-auto"
+                  size="txtMontserratSemiBold22"
+                >
+                  030 225 5742
+                </Text>
               </div>
+              <Text
+                className="md:ml-[0] ml-[123px] mt-[18px] text-[15px] text-white-A700"
+                size="txtMontserratMedium15WhiteA700"
+              >
+                Contact Customer Experience Center for more info.
+              </Text>
             </div>
           </div>
         </div>

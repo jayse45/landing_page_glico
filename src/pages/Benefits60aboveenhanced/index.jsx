@@ -15,7 +15,7 @@ const Benefits60aboveenhancedPage = () => {
         <div className="flex md:flex-col flex-row md:gap-10 gap-[70px] items-start justify-start mt-[35px] md:px-5 w-auto md:w-full">
           <div className="flex flex-col items-center justify-start py-[5px]">
             <Text
-              className="text-center text-gray-600 text-xl tracking-[-1.00px]"
+              className="text-center text-gray-600_01 text-xl tracking-[-1.00px]"
               size="txtMontserratMedium20"
             >
               Out-Patient Benefits
@@ -31,7 +31,7 @@ const Benefits60aboveenhancedPage = () => {
           </div>
           <div className="flex flex-col items-center justify-start p-1">
             <Text
-              className="text-center text-gray-600 text-xl tracking-[-1.00px]"
+              className="text-center text-gray-600_01 text-xl tracking-[-1.00px]"
               size="txtMontserratMedium20"
             >
               Additional Benefits
@@ -71,14 +71,14 @@ const Benefits60aboveenhancedPage = () => {
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Fees for Doctors, Specialists, Surgeon, Anesthetists,
                 Physiotherapist
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 <span className="text-blue_gray-900_01 font-montserrat text-left font-semibold">
                   Surgery
@@ -93,7 +93,7 @@ const Benefits60aboveenhancedPage = () => {
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t h-16 pb-[31px] pl-[9px] sm:pr-5 pr-[35px] pt-[13px] text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Laparoscopic procedures are to be disclosed at the point of
                 registration.
@@ -106,7 +106,7 @@ const Benefits60aboveenhancedPage = () => {
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 <span className="text-blue_gray-900_01 font-montserrat text-left font-semibold">
                   Surgical Procedure
@@ -126,7 +126,7 @@ const Benefits60aboveenhancedPage = () => {
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 <span className="text-blue_gray-900_01 font-montserrat text-left font-semibold">
                   Consumables
@@ -141,7 +141,7 @@ const Benefits60aboveenhancedPage = () => {
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t pl-2 sm:pr-5 pr-[35px] py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 <span className="text-blue_gray-900_01 font-montserrat text-left font-semibold">
                   Pathology Procedures
@@ -190,7 +190,7 @@ const Benefits60aboveenhancedPage = () => {
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   <span className="text-blue_gray-900_01 font-montserrat text-left font-semibold">
                     Auxiliary Services
@@ -214,7 +214,7 @@ const Benefits60aboveenhancedPage = () => {
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   <>
                     Cancer Treatment <br />
@@ -228,7 +228,7 @@ const Benefits60aboveenhancedPage = () => {
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="text-[15px] text-gray-700 w-auto"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Annual Medical Checkup/Screening (At designated Centers)
                 </Text>
@@ -241,7 +241,7 @@ const Benefits60aboveenhancedPage = () => {
                     <div className="flex flex-col items-center justify-center px-2 py-3 w-[366px]">
                       <Text
                         className="text-[15px] text-center text-indigo-800 w-auto"
-                        size="txtMontserratSemiBold15"
+                        size="txtMontserratSemiBold15Indigo800"
                       >
                         GH¢4,000
                       </Text>
@@ -249,7 +249,7 @@ const Benefits60aboveenhancedPage = () => {
                     <div className="flex flex-col items-center justify-center px-2 py-3 w-[366px]">
                       <Text
                         className="text-[15px] text-center text-indigo-800 w-auto"
-                        size="txtMontserratSemiBold15"
+                        size="txtMontserratSemiBold15Indigo800"
                       >
                         GH¢30,000
                       </Text>
@@ -379,7 +379,7 @@ const Benefits60aboveenhancedPage = () => {
               <div className="flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   <>
                     Vitamins <br />
@@ -392,26 +392,26 @@ const Benefits60aboveenhancedPage = () => {
               </div>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Mobile Pharmacy
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Glico Healthcare Beneficiary App
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Client Portal
               </Text>
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   <>
                     Quarterly News Letters
@@ -421,14 +421,14 @@ const Benefits60aboveenhancedPage = () => {
               </div>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Annual Health Seminar
               </Text>
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] max-w-[1px] md:max-w-full text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   Special Assistance at accredited Government/Regional/Tertiary
                   hospitals
@@ -437,7 +437,7 @@ const Benefits60aboveenhancedPage = () => {
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   <>
                     E-Medicine Service
@@ -448,7 +448,7 @@ const Benefits60aboveenhancedPage = () => {
               <div className="border-blue_gray-100 border-solid border-t flex flex-col items-start justify-start py-3 w-full">
                 <Text
                   className="leading-[20.00px] text-[15px] text-gray-700"
-                  size="txtMontserratRegular15"
+                  size="txtMontserratRegular15Gray700"
                 >
                   <>
                     Chronic conditions management
@@ -459,19 +459,19 @@ const Benefits60aboveenhancedPage = () => {
               </div>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Death Benefit For Enrollee
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Auxiliary Services
               </Text>
               <Text
                 className="border-blue_gray-100 border-solid border-t py-3 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 Complementary Medicine
               </Text>

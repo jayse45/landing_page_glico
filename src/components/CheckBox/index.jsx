@@ -4,12 +4,13 @@ import { ErrorMessage } from "../../components/ErrorMessage";
 
 const variants = {
   outline: {
-    blue_gray_100_01:
-      "border border-blue_gray-100_01 border-solid text-black-900",
+    blue_gray_100_02:
+      "border border-blue_gray-100_02 border-solid text-black-900",
   },
+  fill: { white_A700: "bg-white-A700 text-black-900" },
 };
 const shapes = { square: "rounded-none" };
-const sizes = { xs: "pb-px" };
+const sizes = { xs: "pt-px", sm: "pb-[11px] pt-[13px] px-[11px]" };
 
 const CheckBox = React.forwardRef(
   (
@@ -23,7 +24,7 @@ const CheckBox = React.forwardRef(
       shape = "square",
       size = "xs",
       variant = "outline",
-      color = "blue_gray_100_01",
+      color = "blue_gray_100_02",
       id = "checkbox_id",
       onChange,
       ...restProps
@@ -61,9 +62,9 @@ CheckBox.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   shape: PropTypes.oneOf(["square"]),
-  size: PropTypes.oneOf(["xs"]),
-  variant: PropTypes.oneOf(["outline"]),
-  color: PropTypes.oneOf(["blue_gray_100_01"]),
+  size: PropTypes.oneOf(["xs", "sm"]),
+  variant: PropTypes.oneOf(["outline", "fill"]),
+  color: PropTypes.oneOf(["blue_gray_100_02", "white_A700"]),
 };
 
 export { CheckBox };

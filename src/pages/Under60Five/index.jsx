@@ -27,7 +27,7 @@ const Under60FivePage = () => {
               </Text>
               <Text
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
                 The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
                 Plan is crafted to offer essential health coverage while
@@ -38,7 +38,7 @@ const Under60FivePage = () => {
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
-                size="txtMontserratSemiBold15"
+                size="txtMontserratSemiBold15Indigo800"
               >
                 Key Features
               </Text>
@@ -55,7 +55,7 @@ const Under60FivePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Essential Coverage{" "}
                     </Text>
@@ -68,7 +68,7 @@ const Under60FivePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Affordable Premiums
                     </Text>
@@ -83,7 +83,7 @@ const Under60FivePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Network Access
                     </Text>
@@ -96,7 +96,7 @@ const Under60FivePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Versatility
                     </Text>
