@@ -29,12 +29,10 @@ const AbovePage = () => {
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
                 size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                The Ultimate Package from GLICO's Sunkwa Health Plan is the premium choice for individuals and families above 60, 
+                offering the most extensive health coverage. This plan is the pinnacle of healthcare protection, catering to all 
+                your health needs with no compromises. It's designed to give you complete peace of mind, knowing that you have the 
+                highest level of coverage available.
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"

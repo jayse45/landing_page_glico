@@ -27,8 +27,8 @@ const Under60SevenPage = () => {
             alt="rectangleOne"
           /> */}
           <Img
-            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-[70%]"
-            src="images/img_rectangle1_481x1440.png"
+            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-[70%] object-top"
+            src="images/img_under60_landing.png"
             alt="rectangleOne"
           />
           <div className="absolute bg-gradient_below sm:bg-black-900_49 flex flex-col gap-[39px] h-full inset-[0] items-start justify-center m-auto p-[49px] md:px-10 sm:px-5 w-full">
@@ -147,8 +147,8 @@ const Under60SevenPage = () => {
                 </div>
               </div>
               <Img
-                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-3xl sm:w-full sm:max-w-full sm:h-[300px] sm:object-[90%]"
-                src="images/img_rectangle25.png"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-3xl object-[100%] sm:w-full sm:max-w-full sm:h-[300px] sm:object-[90%]"
+                src="images/img_under60_package.png"
                 alt="rectangleTwentyFive"
               />
             </div>

@@ -3,7 +3,7 @@ import { Button, CheckBox, Img, Line, Text, Input, List, Select } from "componen
 import StepWizard from "react-step-wizard";
 import Header from "components/Header";
 import { useNavigate } from "react-router-dom";
-
+import { PaystackButton } from 'react-paystack';
 
 const ActionButtons = (props) => {
   const handleNext = () => {
@@ -14,95 +14,11 @@ const ActionButtons = (props) => {
   const handleFinish = () => {
     props.lastStep();
   };
-
-  return (
-    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
-
-      <div className="md:h-28 h-9 mt-[76px] md:px-5 relative w-[37%] sm:w-full">
-        <Img
-          className="h-5 w-5"
-          src="images/new1.svg"
-          alt="settings"
-        />
-      </div>
-      <div className="flex flex-col gap-2 items-center justify-start mt-[55px] md:px-5 w-auto sm:w-full">
-        <Text
-          className="leading-[32.00px] max-w-[472px] md:max-w-full text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl"
-          size="txtMontserratSemiBold24"
-        >
-          Best Choice to safeguard your family from abroad
-        </Text>
-        <Text
-          className="text-[15px] text-black-900 text-center w-auto"
-          size="txtMontserratRegular15"
-        >
-          Selected a package that fits your needs
-        </Text>
-      </div>
-      <div className="flex flex-col items-center justify-start mb-[371px] mt-[98px] md:px-5 w-2/5 md:w-full">
-        <Input
-          name="frameThirty"
-          placeholder="Select Plan"
-          className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-          wrapClassName="border border-blue_gray-100 border-solid flex w-[545px] sm:w-full"
-          suffix={
-            <Img
-              className="mt-px mb-auto h-5 ml-[35px]"
-              src="images/img_checkmark.svg"
-              alt="checkmark"
-            />
-          }
-          shape="square"
-          color="white_A700"
-          size="xs"
-          variant="fill"
-        ></Input>
-        <Input
-          name="frameThirtyOne"
-          placeholder="Select Package"
-          className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-          wrapClassName="border border-blue_gray-100 border-solid flex mt-6 w-[545px] sm:w-full"
-          suffix={
-            <Img
-              className="mt-auto mb-px h-5 ml-[35px]"
-              src="images/img_checkmark.svg"
-              alt="checkmark"
-            />
-          }
-          shape="square"
-          color="white_A700"
-          size="xs"
-          variant="fill"
-        ></Input>
-        <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
-          <Button
-            className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
-            onClick={handleFinish}
-            shape="round"
-            color="black_900"
-            size="sm"
-            variant="fill"
-          >
-            Back
-          </Button>
-          <Button
-            className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
-            onClick={handleNext}
-            shape="round"
-            color="indigo_800"
-            size="sm"
-            variant="fill"
-          >
-            Next
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
 };
 
 const One = ({
-
+  handlePackageChange,
+  handlePlanChange,
   ...props
 }) => {
   const handleNext = () => {
@@ -136,25 +52,15 @@ const One = ({
         </Text>
       </div>
       <div className="flex flex-col items-center justify-start mb-[371px] gap-5 mt-[98px] md:px-5 w-2/5 md:w-full">
-        {/* <Input
-            name="frameThirty"
-            placeholder="Select Plan"
-            className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-            wrapClassName="border border-blue_gray-100 border-solid flex w-[545px] sm:w-full"
-            suffix={
-              <Img
-                className="mt-px mb-auto h-5 ml-[35px]"
-                src="images/img_checkmark.svg"
-                alt="checkmark"
-              />
-            }
-            shape="square"
-            color="white_A700"
-            size="xs"
-            variant="fill"
-          ></Input> */}
-        <Select options={planOptions} />
-        <Select options={packageOptions} />
+        <Select 
+        options={planOptions} 
+        setChange={handlePlanChange}
+        />
+
+        <Select 
+        options={packageOptions} 
+        setChange={handlePackageChange}
+        />
         <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
           <Button
             className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
@@ -183,11 +89,13 @@ const One = ({
 };
 
 const Two = ({
-
+  selectedPlan,
+  selectedPackage,
+  handleAmountChange,
   ...props
 }) => {
   const handleNext = () => {
-
+    handleAmountChange(amount);
     props.nextStep();
   };
 
@@ -195,6 +103,27 @@ const Two = ({
 
     props.previousStep();
   };
+  const getAmount = (selectedPackage, selectedPlan) => {
+    let prices = selectedPlan === "Under 60" ? [7002.93, 13320.54, 23419.17] : [8206.02, 16490.30, 32698.68];
+    let result;
+
+    switch (selectedPackage) {
+      case "Enhanced":
+        result = prices[0];
+        break;
+      case "Enhanced Plus":
+        result = prices[1];
+        break;
+      case "Ultimate":
+        result = prices[2];
+        break;
+      default:
+        result = 0;
+    }
+
+    return result;
+  }
+  const amount = getAmount(selectedPackage, selectedPlan);
 
   return (
     <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
@@ -232,14 +161,14 @@ const Two = ({
               className="text-black-900 text-xs w-auto"
               size="txtMontserratRegular12"
             >
-              Under 60 Years package
+              {selectedPlan} Years package - {selectedPackage}
             </Text>
           </div>
           <Text
             className="text-[15px] text-black-900 text-right w-auto"
             size="txtMontserratSemiBold15"
           >
-            GH¢32,000
+            GH¢{amount}
           </Text>
         </div>
         <Line className="bg-blue_gray-50 h-px w-[99%]" />
@@ -271,7 +200,14 @@ const Two = ({
 };
 
 const Three = ({
-
+  handleBFnameChange,
+  handleBLnameChange,
+  handleDOBChange,
+  handleBEmailChange,
+  handleBPhoneNumberChange,
+  handleCityChange,
+  handleAddressChange,
+  handleGenderChange,
   ...props
 }) => {
   const handleNext = () => {
@@ -327,6 +263,7 @@ const Three = ({
               color="white_A700"
               size="xs"
               variant="fill"
+              onChange={handleBFnameChange}
             ></Input>
             <Input
               name="Lname"
@@ -338,19 +275,25 @@ const Three = ({
               color="white_A700"
               size="xs"
               variant="fill"
+              onChange={handleBLnameChange}
             ></Input>
           </div>
           <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
-            <Select options={genderOptions} />
+            <Select 
+            options={genderOptions} 
+            setChange={handleGenderChange}
+            />
             <Input
               name="frameFortyFour"
               placeholder="Date of birth"
-              className="p-0 placeholder:text-black-900 text-[15px] text-left w-[296px] flex-1"
+              className="p-0 placeholder:text-black-900 text-[15px] text-left w-[276px] flex-1"
               wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 w-[296px] sm:w-full"
               shape="square"
               color="white_A700"
               size="xs"
               variant="fill"
+              type="date"
+              onChange={handleDOBChange}
             ></Input>
           </div>
           <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
@@ -364,6 +307,7 @@ const Three = ({
               color="white_A700"
               size="xs"
               variant="fill"
+              onChange={handleBEmailChange}
             ></Input>
             <Input
               name="frameFortySix"
@@ -375,6 +319,7 @@ const Three = ({
               color="white_A700"
               size="xs"
               variant="fill"
+              onChange={handleBPhoneNumberChange}
             ></Input>
           </div>
           <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
@@ -387,6 +332,7 @@ const Three = ({
               color="white_A700"
               size="xs"
               variant="fill"
+              onChange={handleCityChange}
             ></Input>
             <Input
               name="frameFortyEight"
@@ -397,6 +343,7 @@ const Three = ({
               color="white_A700"
               size="xs"
               variant="fill"
+              onChange={handleAddressChange}
             ></Input>
           </div>
           <div className="flex flex-row sm:gap-10 items-center justify-between mt-[43px] w-[609px] md:w-full">
@@ -428,16 +375,17 @@ const Three = ({
 };
 
 const Five = ({
-
+  handleFullNameChange,
+  handleEmailChange,
+  handlePhoneNumberChange,
+  handleRelationChange,
   ...props
 }) => {
   const handleNext = () => {
-
     props.nextStep();
   };
 
   const handlePrevious = () => {
-
     props.previousStep();
   };
 
@@ -476,6 +424,7 @@ const Five = ({
               size="xs"
               variant="fill"
               type="text"
+              onChange={handleFullNameChange}
             ></Input>
             <Input
               name="frameThirty"
@@ -487,6 +436,7 @@ const Five = ({
               size="xs"
               variant="fill"
               type="email"
+              onChange={handleEmailChange}
             ></Input>
           </div>
           <div className="flex sm:flex-col flex-row gap-[22px] items-center justify-between mt-6 w-full">
@@ -500,8 +450,12 @@ const Five = ({
               size="xs"
               variant="fill"
               type="tel"
+              onChange={handlePhoneNumberChange}
             ></Input>
-            <Select options={beneficiaryRelationOptions} />
+            <Select 
+            options={beneficiaryRelationOptions}
+            setChange={handleRelationChange}
+             />
           </div>
           <div className="flex flex-row sm:gap-10 items-center justify-between mt-[110px] w-[603px] md:w-full">
             <Button
@@ -532,7 +486,20 @@ const Five = ({
 };
 
 const Six = ({
-
+  selectedPlan,
+  selectedPackage,
+  amount,
+  b_fname,
+  b_lname,
+  DOB,
+  gender,
+  b_email,
+  b_phoneNumber,
+  city,
+  address,
+  fullName,
+  email,
+  phoneNumber,
   ...props
 }) => {
   const handleNext = () => {
@@ -545,9 +512,32 @@ const Six = ({
     props.previousStep();
   };
 
+  const config = {
+    reference: (new Date()).getTime().toString(),
+    email: email,
+    amount: amount * 100, 
+    publicKey: 'pk_test_2bb382cf83dcbbded35073cca76a746157a6dd61',
+    currency: "GHS"
+  };
 
+  const handlePaystackSuccessAction = (reference) => {
+    // Implementation for whatever you want to do with reference and after success call.
+    console.log(reference);
+    handleNext();
+  };
 
+  // you can call this function anything
+  const handlePaystackCloseAction = () => {
+    // implementation for  whatever you want to do when the Paystack dialog closed.
+    console.log('closed')
+  }
 
+  const componentProps = {
+      ...config,
+      text: 'Make Payment',
+      onSuccess: (reference) => handlePaystackSuccessAction(reference),
+      onClose: handlePaystackCloseAction,
+  };
 
   return (
     <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
@@ -580,7 +570,7 @@ const Six = ({
           >
             Package Details
           </Text>
-          <div className="flex flex-row sm:gap-10 gap-[163px] items-start justify-start mt-7 w-auto sm:w-full">
+          <div className="flex flex-row sm:gap-10 gap-[163px] items-start justify-between mt-7 w-full sm:w-full">
             <div className="flex flex-col gap-1 items-start justify-start w-auto">
               <Text
                 className="text-[15px] text-black-900 w-auto"
@@ -592,14 +582,14 @@ const Six = ({
                 className="text-black-900 text-xs w-auto"
                 size="txtMontserratRegular12"
               >
-                Under 60 Years package
+                {selectedPackage} Years package - {selectedPlan}
               </Text>
             </div>
             <Text
               className="text-[15px] text-black-900 text-right w-auto"
               size="txtMontserratSemiBold15"
             >
-              GH¢32,000
+              GH¢{amount}
             </Text>
           </div>
           <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[15px] w-[96%]" />
@@ -621,7 +611,7 @@ const Six = ({
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                Kwabena Batry
+                {b_fname} {b_lname}
               </Text>
             </div>
             <div className="flex flex-col gap-1 items-start justify-start w-auto">
@@ -635,7 +625,7 @@ const Six = ({
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                25/02/1652
+                {DOB}
               </Text>
             </div>
             <div className="flex flex-col gap-1 items-start justify-start w-auto">
@@ -649,7 +639,7 @@ const Six = ({
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                +233 25 452 2548
+                {b_phoneNumber}
               </Text>
             </div>
             <div className="flex flex-col gap-1 items-start justify-start w-auto">
@@ -663,7 +653,7 @@ const Six = ({
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                kwabenaish12@gmail.com
+                {b_email}
               </Text>
             </div>
           </div>
@@ -678,7 +668,7 @@ const Six = ({
               className="text-[15px] text-black-900 w-auto"
               size="txtMontserratMedium15"
             >
-              254 Beng st, Accra GHana
+              {address}
             </Text>
           </div>
           <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[15px] w-[96%]" />
@@ -688,7 +678,7 @@ const Six = ({
           >
             Benefactor Details
           </Text>
-          <div className="flex sm:flex-col flex-row sm:gap-5 items-center justify-start mt-7 w-full md:w-full sm:items-start">
+          <div className="flex sm:flex-col flex-row sm:gap-5 items-center justify-between mt-7 w-full md:w-full sm:items-start">
             <div className="flex flex-col gap-1 items-start justify-start w-auto">
               <Text
                 className="text-gray-600 text-xs w-auto"
@@ -700,7 +690,7 @@ const Six = ({
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                Kofi Batry
+                {fullName}
               </Text>
             </div>
             <div className="flex flex-col gap-1 items-start justify-start sm:ml-[0] ml-[71px] w-auto">
@@ -708,13 +698,13 @@ const Six = ({
                 className="text-gray-600 text-xs w-auto"
                 size="txtMontserratRegular12Gray600"
               >
-                Date of birth
+                Email
               </Text>
               <Text
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                kofipapa@gmail.com
+                {email}
               </Text>
             </div>
             <div className="flex flex-col gap-1 items-start justify-start sm:ml-[0] ml-[19px] w-auto">
@@ -728,12 +718,12 @@ const Six = ({
                 className="text-[15px] text-black-900 w-auto"
                 size="txtMontserratMedium15"
               >
-                +233 25 452 2548
+                {phoneNumber}
               </Text>
             </div>
           </div>
           <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[25px] w-[96%]" />
-          <Text
+          {/* <Text
             className="mt-[11px] text-gray-600 text-xs uppercase"
             size="txtMontserratSemiBold12"
           >
@@ -744,7 +734,7 @@ const Six = ({
             size="txtMontserratMedium15"
           >
             Card - XXXX XXXX XXXX XXXX 3215
-          </Text>
+          </Text> */}
         </div>
         <div className="flex flex-row sm:gap-10 items-center justify-between mt-[102px] w-[619px] md:w-full">
           <Button
@@ -757,7 +747,12 @@ const Six = ({
           >
             Back
           </Button>
-          <Button
+          <PaystackButton 
+          {...componentProps} 
+          className="common-pointer cursor-pointer text-[15px] text-center w-[168px] bg-indigo-800 text-white-A700 p-3 rounded"
+          />
+          {/* <PaystackButton
+            {...componentProps}
             className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
             onClick={handleNext}
             shape="round"
@@ -766,7 +761,7 @@ const Six = ({
             variant="fill"
           >
             Confirm Order
-          </Button>
+          </PaystackButton> */}
         </div>
       </div>
     </div>
@@ -833,17 +828,16 @@ const Four = ({
           className="leading-[20.00px] mt-[31px] text-[15px] text-black-900 text-center w-[52%] sm:w-full"
           size="txtMontserratRegular15"
         >
-          <span className="text-black-900 font-montserrat font-normal">
+          <span className="text-black-900 font-montserrat font-normal inline">
             To ensure a seamless and secure experience, we recommend signing
             in to your account.{" "}
-          </span>
-          <Text
-            href="javascript:"
-            className="text-deep_purple-A700 font-montserrat font-normal underline"
+            <span
+            className="text-deep_purple-A700 common-pointer font-montserrat font-normal underline"
             onClick={() => navigate("/login")}
           >
             Login
-          </Text>
+          </span>
+          </span>   
         </Text>
         <Button
           className="cursor-pointer mt-[75px] text-[15px] text-center w-[168px] sm:mt-[50px]"
@@ -855,7 +849,7 @@ const Four = ({
           Done
         </Button>
         <Text
-          className="mt-8 text-[15px] text-black-900 text-center"
+          className=" mt-8 text-[15px] text-black-900 text-center"
           size="txtMontserratRegular15"
         >
           <span className="text-black-900 font-montserrat font-normal">
@@ -882,14 +876,91 @@ const Four = ({
 
 
 const Payments = (props) => {
-  const { selectedItem } = props;
 
+  const { selectedItem } = props;
+  const [selectedPackage, setSelectedPackage] = useState(null);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [amount, setAmount] = useState(null);
+
+  const handlePackageChange = (selectedPackage) => {
+    setSelectedPackage(selectedPackage);
+  };
+
+  const handlePlanChange = (selectedPlan) => {
+    setSelectedPlan(selectedPlan);
+  };
+
+  const handleAmountChange = (amount) => {
+    setAmount(amount);
+  };
+
+  // Beneficiary state
+  const [b_fname, set_bFname] = useState("");
+  const [b_lname, set_bLname] = useState("");
+  const [DOB, setDOB] = useState("");
+  const [gender, setGender] = useState("");
+  const [b_email, set_bEmail] = useState("");
+  const [b_phoneNumber, set_bPhoneNumber] = useState("");
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleBFnameChange = (fname) => {
+    set_bFname(fname);
+  };
+  
+  const handleBLnameChange = (lname) => {
+    set_bLname(lname);
+  };
+  
+  const handleDOBChange = (DOB) => {
+    setDOB(DOB);
+  };
+  
+  const handleGenderChange = (gender) => {
+    setGender(gender);
+  };
+
+  const handleBEmailChange = (email) => {
+    set_bEmail(email);
+  };
+  
+  const handleBPhoneNumberChange = (phone) => {
+    set_bPhoneNumber(phone);
+  };
+  
+  const handleCityChange = (city) => {
+    setCity(city);
+  };
+  
+  const handleAddressChange = (address) => {
+    setAddress(address);
+  };
+
+  // User state
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [relation, setRelation] = useState("");
+
+  const handleFullNameChange = (fullname) => {
+    setFullName(fullname);
+  };
+  
+  const handleEmailChange = (email) => {
+    setEmail(email);
+  };
+  
+  const handlePhoneNumberChange = (phone) => {
+    setPhoneNumber(phone);
+  };
+  
+  const handleRelationChange = (relation) => {
+    setRelation(relation);
+  };
 
   const [stepWizard, setStepWizard] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
-  const [valueSelected, setValueSelected] = useState(null);
-  const [networkSelected, setNetworkSelected] = useState(null);
-  const [phoneNumber, setPhoneNumber] = useState(null);
+
   const [processing, setProcessing] = useState(false);
 
   const assignStepWizard = (instance) => {
@@ -904,7 +975,7 @@ const Payments = (props) => {
 
   const handleComplete = () => {
     alert("You r done. TQ");
-  };
+  }; 
 
   // Remove StepWizard default transitions
   let noTransitions = {
@@ -929,74 +1000,56 @@ const Payments = (props) => {
           >
             <One
               {...{
-
-                selectedItem,
-                valueSelected,
-                setValueSelected,
-                networkSelected,
-                setNetworkSelected,
-                phoneNumber,
-                setPhoneNumber,
-                processing,
-                setProcessing,
+                handlePackageChange,
+                handlePlanChange
               }}
             />
             <Two
               {...{
-
-                selectedItem,
-                valueSelected,
-                setValueSelected,
-                networkSelected,
-                setNetworkSelected,
-                phoneNumber,
-                setPhoneNumber,
-                processing,
-                setProcessing,
+                selectedPackage,
+                selectedPlan,
+                handleAmountChange,
               }}
             />
             <Three
               {...{
-
-                selectedItem,
-                valueSelected,
-                setValueSelected,
-                networkSelected,
-                setNetworkSelected,
-                phoneNumber,
-                setPhoneNumber,
-                processing,
-                setProcessing,
+                handleBFnameChange,
+                handleBLnameChange,
+                handleDOBChange,
+                handleBEmailChange,
+                handleBPhoneNumberChange,
+                handleCityChange,
+                handleAddressChange,
+                handleGenderChange
               }}
             />
 
             <Five
               {...{
-
-                selectedItem,
-                valueSelected,
-                setValueSelected,
-                networkSelected,
-                setNetworkSelected,
-                phoneNumber,
-                setPhoneNumber,
-                processing,
-                setProcessing,
+                handleFullNameChange,
+                handleEmailChange,
+                handlePhoneNumberChange,
+                handleRelationChange
               }}
             />
 
             <Six
               {...{
-
-                selectedItem,
-                valueSelected,
-                setValueSelected,
-                networkSelected,
-                setNetworkSelected,
+                selectedPlan,
+                selectedPackage,
+                amount,
+                b_fname,
+                b_lname,
+                DOB,
+                gender,
+                b_email,
+                b_phoneNumber,
+                city,
+                address,
+                fullName,
                 phoneNumber,
-                setPhoneNumber,
-                processing,
-                setProcessing,
+                email,
+                relation
               }}
             />
 
@@ -1005,10 +1058,6 @@ const Payments = (props) => {
               {...{
 
                 selectedItem,
-                valueSelected,
-                setValueSelected,
-                networkSelected,
-                setNetworkSelected,
                 phoneNumber,
                 setPhoneNumber,
                 processing,

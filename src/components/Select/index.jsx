@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Select = ({options}) => {
+const Select = ({options, setChange}) => {
   // State to manage the selected value
   const [selectedValue, setSelectedValue] = useState('');
 
@@ -8,6 +8,7 @@ const Select = ({options}) => {
   const handleSelectChange = (event) => {
     // Update the state with the selected value
     setSelectedValue(event.target.value);
+    setChange(event.target.value);
   };
 
   return (
