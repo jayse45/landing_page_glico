@@ -109,6 +109,7 @@ const AboveNinePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline"
+                onClick={() => navigate("/payments")}
               >
                 Purchase Plan
               </Button>

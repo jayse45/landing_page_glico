@@ -175,13 +175,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60three")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -212,13 +205,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60one")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -248,13 +234,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60five")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
