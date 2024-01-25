@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, CheckBox, Img, Line, Text, Input, List } from "components";
+import { Button, CheckBox, Img, Line, Text, Input, List, Select } from "components";
 import StepWizard from "react-step-wizard";
 import Header from "components/Header";
 
@@ -108,19 +108,11 @@ const One = ({
   ...props
 }) => {
   const handleNext = () => {
-    
-    
-
-   
-
-    props.nextStep();
+ props.nextStep();
   };
 
-
-
   return (
-    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
-        
+    <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full"> 
         <div className="md:h-28 h-9 mt-[76px] md:px-5 relative w-[37%] sm:w-full">
           <Img
                       className=" w-full"
@@ -177,6 +169,7 @@ const One = ({
             size="xs"
             variant="fill"
           ></Input>
+          {/* <Select options={["select something, and anohter"]}/> */}
           <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
             <Button
               className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
@@ -303,11 +296,7 @@ const Three = ({
 const handlePrevious = () => {
     
   props.previousStep();
-};
-
-  
-
- 
+}; 
 
   return (
     <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
@@ -323,9 +312,7 @@ const handlePrevious = () => {
                     />
               
             </div>
-            
-            
-          </div>
+       </div>
           <div className="flex flex-col gap-2 items-start justify-start mt-[53px] w-auto">
             <Text
               className="text-2xl md:text-[22px] text-center text-indigo-800 sm:text-xl w-auto"
@@ -340,7 +327,7 @@ const handlePrevious = () => {
               Fill in forms to register recipient{" "}
             </Text>
           </div>
-          <div className="flex flex-col items-center justify-start mt-[55px] w-[48%] md:w-full">
+          <div className="flex flex-col items-center justify-start mt-[55px] w-[60%] md:w-full">
             <div className="flex sm:flex-col flex-row gap-4 items-center justify-between w-full">
               <Text
                 className="bg-white-A700 border border-blue_gray-100 border-solid justify-center pl-3 sm:pr-5 pr-[35px] py-3 text-[15px] text-black-900 w-[296px]"
@@ -355,15 +342,15 @@ const handlePrevious = () => {
                 Last Name
               </Text>
             </div>
-            <div className="flex sm:flex-col flex-row gap-4 items-center justify-between mt-[19px] w-full">
+            <div className="flex sm:flex-col flex-row gap-4 items-center justify-between mt-[19px] w-full max-w-full">
               <Input
                 name="frameThirty"
                 placeholder="Gender"
-                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left flex-1"
                 wrapClassName="border border-blue_gray-100 border-solid flex sm:flex-1 w-[296px] sm:w-full"
                 suffix={
                   <Img
-                    className="mt-px mb-auto h-5 ml-[35px]"
+                    className="mt-px mb-auto h-5 ml-[15px]"
                     src="images/img_checkmark.svg"
                     alt="checkmark"
                   />
@@ -376,20 +363,20 @@ const handlePrevious = () => {
               <Input
                 name="frameFortyFour"
                 placeholder="Date of birth"
-                className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                className="p-0 placeholder:text-black-900 text-[15px] text-left flex-1"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 w-[296px] sm:w-full"
                 shape="square"
                 color="white_A700"
                 size="xs"
                 variant="fill"
               ></Input>
             </div>
-            <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full">
+            <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
               <Input
                 name="frameFortyFive"
                 placeholder="Email Address"
                 className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 w-[296px] sm:w-full"
                 type="email"
                 shape="square"
                 color="white_A700"
@@ -400,7 +387,7 @@ const handlePrevious = () => {
                 name="frameFortySix"
                 placeholder="Phone"
                 className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 w-[296px] sm:w-full"
                 type="number"
                 shape="square"
                 color="white_A700"
@@ -408,12 +395,12 @@ const handlePrevious = () => {
                 variant="fill"
               ></Input>
             </div>
-            <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full">
+            <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
               <Input
                 name="frameFortySeven"
                 placeholder="City"
                 className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 w-[296px] sm:w-full"
                 shape="square"
                 color="white_A700"
                 size="xs"
@@ -423,7 +410,7 @@ const handlePrevious = () => {
                 name="frameFortyEight"
                 placeholder="Address"
                 className="p-0 placeholder:text-black-900 text-[15px] text-left w-full"
-                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 sm:w-full"
+                wrapClassName="border border-blue_gray-100 border-solid sm:flex-1 w-[296px] sm:w-full"
                 shape="square"
                 color="white_A700"
                 size="xs"
