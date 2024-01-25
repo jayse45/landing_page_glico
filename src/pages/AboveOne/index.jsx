@@ -57,7 +57,7 @@ const AboveOnePage = () => {
           >
             Why you need this
           </Text>
-          
+          <div className="flex flex-row">
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full">
               <Img
                 className="h-8 w-8"
@@ -106,6 +106,7 @@ const AboveOnePage = () => {
                 User-Friendly Online Management
               </Text>
             </div>
+          </div>
           </div>
         </div>
         <div className="bg-white-A700 flex flex-col items-end justify-end sm:p-[] sm:pb-[] pl-[21px] sm:pl-0 sm:pr-[] sm:pt-[] py-[21px] w-full">
@@ -167,13 +168,6 @@ const AboveOnePage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/abovethree")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -203,13 +197,6 @@ const AboveOnePage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out group hover:bg-white-A700 hover:text-indigo-800 flex justify-center items-center"
                   onClick={() => navigate("/abovenine")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -239,13 +226,6 @@ const AboveOnePage = () => {
                 <Button
                   className="common-pointer cursor-pointer flex items-center justify-center font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 group hover:text-indigo-800"
                   onClick={() => navigate("/above")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -338,7 +318,6 @@ const AboveOnePage = () => {
           </div>
           <Compare/>
         </Modal>
-      </div>
     </>
   );
 };
