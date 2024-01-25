@@ -101,24 +101,6 @@ const LoginPage = () => {
               </Button>
             </div>
           </div>
-          <div className="flex flex-row gap-[9px] items-start justify-start w-auto">
-            <Text
-              className="text-[15px] text-black-900 w-auto sm:text-white-A700"
-              size="txtMontserratRegular15Black900"
- main
-            >
-              Not an existing user?
-            </Text>
-            <a className="text-[15px] text-deep_purple-A700 underline w-auto">
-              <Text
-                className="common-pointer"
-                size="txtMontserratRegular15DeeppurpleA700"
-                onClick={() => navigate("/register")}
-              >
-                Sign Up
-              </Text>
-            </a>
-          </div>
         </div>
       </div>
     </>
