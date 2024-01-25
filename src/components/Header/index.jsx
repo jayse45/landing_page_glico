@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Img, Text } from "components";
 import DropdownButton from "components/DropdownButton";
@@ -61,6 +62,7 @@ const ccareOptions = [
 ]
 
 const Header = (props) => {
+  const navigate = useNavigate();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleDropdownOpen = () => {
@@ -150,11 +152,12 @@ const Header = (props) => {
               </Text>
             </li>
           </ul>
-          <div className="flex flex-row gap-10 sm:hidden items-start justify-start w-auto">
+          <div className="flex common-pointer flex-row gap-10 sm:hidden items-start justify-start w-auto">
             
             <Text
               className="text-[15px] text-indigo-800 w-auto"
               size="txtMontserratMedium15Indigo800"
+              onClick={() => navigate("/login")}
             >
               Login
             </Text>

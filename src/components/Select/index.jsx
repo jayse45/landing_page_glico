@@ -11,11 +11,13 @@ const Select = ({options}) => {
   };
 
   return (
-    <div className='border border-blue_gray-100 border-solid flex mt-6 w-[545px] sm:w-full'>
+    <div className='border border-blue_gray-100 border-opacity-5 border-solid bg-transparent w-full flex sm:w-full'>
       <select 
-      className='pb-3 pt-[11px] px-[11px] placeholder:text-black-900 text-[15px] text-left w-full'
+      className='pb-3 pt-[11px] px-[11px] placeholder:text-black-900 text-[15px] w-full text-left'
       value={selectedValue} 
-      onChange={handleSelectChange}>
+      onChange={handleSelectChange}
+      autoFocus={false}
+      >
         {options.map(option => {
             return <option key={option} value={option}>{option}</option> 
         })}
