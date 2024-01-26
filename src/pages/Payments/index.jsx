@@ -842,7 +842,7 @@ const Four = ({
           </div>
         </div>
         <Img
-          className="h-10 md:ml-[0] ml-[auto] mr-[auto] mt-[117px] w-10"
+          className="h-10 md:ml-[auto] ml-[auto] mr-[auto] mt-[117px] w-10"
           src="images/img_checkmark_indigo_800_1.svg"
           alt="checkmark"
         />
