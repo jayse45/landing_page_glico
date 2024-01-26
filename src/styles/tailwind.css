@@ -23,6 +23,10 @@ select:focus {
   border-color: var(--primary-color);
 }
 
+select {
+  border-color: rgba(203, 207, 213);
+}
+
 .react-datepicker-wrapper .react-datepicker__input-container input{
   background-color: transparent;
   border: none;

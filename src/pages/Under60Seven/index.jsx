@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { BackButton, Button, HowItWorks, Img, List, Text } from "components";
+import { BackButton, Button, Compare, HowItWorks, Img, List, Text } from "components";
 import Footer from "components/Footer";
-import Header1 from "components/Header1";
 import Header from "components/Header";
 import { LastSection } from "components/LastSection";
+import Modal from "react-modal";
 
 const Under60SevenPage = () => {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -17,17 +21,17 @@ const Under60SevenPage = () => {
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/")} />
         <div className="bg-white-A700 md:h-[481px] h-[520px] relative w-full sm:h-[500px] sm:px-0">
-          <Img
+          {/* <Img
             className="h-[520px] m-auto object-cover w-full sm:h-[500px] hidden sm:block sm:object-cover sm:max-w-full"
             src="images/under60-banner-mobile.png"
             alt="rectangleOne"
-          />
+          /> */}
           <Img
-            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:hidden"
-            src="images/img_rectangle1_1.png"
+            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-[70%] object-top"
+            src="images/img_under60_landing.png"
             alt="rectangleOne"
           />
-          <div className="absolute bg-gradient1 flex flex-col gap-[39px] h-full inset-[0] items-start justify-center m-auto p-[49px] md:px-10 sm:px-5 w-full">
+          <div className="absolute bg-gradient_below sm:bg-black-900_49 flex flex-col gap-[39px] h-full inset-[0] items-start justify-center m-auto p-[49px] md:px-10 sm:px-5 w-full">
             <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[151px] mt-[95px] mb-20 w-[538px] sm:w-full">
               <Text
                 className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[34px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px]"
@@ -143,8 +147,8 @@ const Under60SevenPage = () => {
                 </div>
               </div>
               <Img
-                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-2xl sm:w-full sm:max-w-full sm:h-[300px]"
-                src="images/img_rectangle25_315x720.png"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-3xl object-[100%] sm:w-full sm:max-w-full sm:h-[300px] sm:object-[90%]"
+                src="images/img_under60_package.png"
                 alt="rectangleTwentyFive"
               />
             </div>
@@ -171,13 +175,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60three")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -208,13 +205,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60one")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -244,13 +234,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60five")}
-                  rightIcon={
-                    <Img
-                      className="h-6 ml-2.5"
-                      src="images/img_arrowleft.svg"
-                      alt="arrow_left"
-                    />
-                  }
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -262,12 +245,13 @@ const Under60SevenPage = () => {
                 </Button>
               </div>
             </List>
-            <div className="justify-center w-full hidden">
+            <div className="justify-center w-full flex">
               <Button
                 className="cursor-pointer font-medium min-w-[156px] md:ml-[0] mt-[60px] rounded-[24px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-red-700 hover:text-white-A700"
                 color="red_700"
                 size="sm"
                 variant="outline"
+                onClick={() => openModal()}
               >
                 Compare Plans
               </Button>
@@ -277,6 +261,28 @@ const Under60SevenPage = () => {
         <HowItWorks/>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
+        <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Compare Plans"
+        disableEnforcefocus
+        shouldCloseOnEsc
+        shouldCloseOnOverlayClick
+        closeTimeoutMS={300}
+        >
+          <div className="text-right">
+            <Button
+             color="indigo_800"
+             size="xs"
+             variant="fill"
+             shapes="round"
+             onClick={() => closeModal()}
+            >
+              <p className="font-bold">X</p>
+            </Button>
+          </div>
+          <Compare/>
+        </Modal>
       </div>
     </>
   );

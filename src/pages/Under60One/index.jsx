@@ -29,12 +29,10 @@ const Under60OnePage = () => {
                 className="leading-[24.00px] mt-[27px] text-[15px] text-gray-700 w-full"
                 size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                The Enhanced Plus Package for the under-60 crowd is the ultimate health coverage solution. 
+                Providing comprehensive protection that's still easy on your wallet. It's the smart choice 
+                for those who want a little extra peace of mind, blending top-notch coverage with affordability 
+                – because staying healthy shouldn't be a luxury.
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
@@ -109,12 +107,13 @@ const Under60OnePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline"
+                onClick={() => navigate("/payments")}
               >
                 Purchase Plan
               </Button>
             </div>
             <Img
-              className="md:flex-1 h-[563px] sm:h-auto object-cover w-[54%] md:w-full"
+              className="md:flex-1 h-[563px] sm:h-auto object-cover w-[54%] md:w-full object-top"
               src="images/img_rectangle28_563x720.png"
               alt="rectangleTwentyEight"
             />
@@ -127,7 +126,7 @@ const Under60OnePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"6,000"}/>
+          <Tabs out_benefit={"6,000"} eye_amount={"1,000"} type={"Enhanced Plus"} dental_amount={"1,000"} in_benefit={"50,000"} cancer_amount={"40,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />

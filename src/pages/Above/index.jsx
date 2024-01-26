@@ -13,7 +13,7 @@ const AbovePage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full">
+      <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full overflow-x-hidden">
         <Header className="bg-white-A700 flex gap-[188px] items-center justify-center px-20 md:px-5 py-5 w-full" />
         <BackButton onClick={() => navigate("/aboveone")}/>
         <div className="bg-white-A700 flex flex-col items-end justify-start md:pl-10 sm:pl-5 pl-[103px] w-full">
@@ -29,12 +29,10 @@ const AbovePage = () => {
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
                 size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                The Ultimate Package from GLICO's Sunkwa Health Plan is the premium choice for individuals and families above 60, 
+                offering the most extensive health coverage. This plan is the pinnacle of healthcare protection, catering to all 
+                your health needs with no compromises. It's designed to give you complete peace of mind, knowing that you have the 
+                highest level of coverage available.
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
@@ -109,6 +107,7 @@ const AbovePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline" 
+                onClick={() => navigate("/payments")}
               >
                 Purchase Plan
               </Button>
@@ -127,7 +126,7 @@ const AbovePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"7,500"}/>
+          <Tabs out_benefit={"7,500"} eye_amount={"1,500"} type={"Ultimate"} dental_amount={"1,500"} in_benefit={"80,000"} cancer_amount={"60,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />

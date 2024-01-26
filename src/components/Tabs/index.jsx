@@ -1,12 +1,26 @@
 import { List, Text } from 'components';
 import React, { useState } from 'react';
 
-const Tabs = ({ amount }) => {
+const Tabs = ({ out_benefit, type, dental_amount, eye_amount, special_dental_amount, in_benefit, cancer_amount }) => {
     const [activeTab, setActiveTab] = useState('tab1');
   
     const handleTabClick = (tab) => {
       setActiveTab(tab);
     };
+
+    let medicine = "Medication";
+    if (type === "Enhanced") {
+        medicine = "Herbal Medicine";
+    }
+    else if (type === "Enhanced Plus") {
+        medicine = "Chiropractic, Herbal Medicine";
+    }
+    else if (type === "Ultimate") {
+        medicine = "Acupuncture, Chiropractic, Herbal Medicine";
+    }
+
+    special_dental_amount = type === "Enhanced" ? "Not Covered" : "✔";
+    const ward = type === "Enhanced" ? "Side Ward" : "Private Ward";
   
     return (
       <div className="tabs-container">
@@ -59,12 +73,13 @@ const Tabs = ({ amount }) => {
                             className="text-indigo-800 text-center"
                             size="txtMontserratSemiBold18"
                         >
-                            GH₵ {amount}
+                            GH₵ {out_benefit}
                         </Text>
                     </td>
                 </tr>
                 <tr className='border-slate-300 border-b h-14'>
                     <td className='font-semibold'>
+                        General Practitioner Consultation <br/>
                         Specialist Consultation <span className='font-normal text-gray-400'>(Pediatrician, Gynecologists, Ophthalmology, Cardiology, etc... )</span>
                     </td>
                     <td className='text-center'>
@@ -106,9 +121,9 @@ const Tabs = ({ amount }) => {
                 </tr> 
                 <tr className='border-slate-300 border-b h-14'>
                     <td className='font-semibold'>
-                        Out-Patient Minor Surgery <br/>
+                        Out-Patient/ Minor Surgery <br/>
                         <ul className='ml-6 font-normal text-gray-400'>
-                            <li>Suturing of lacerations, incisions and drainage </li>
+                            <li>Suturing of lacerations, incisions and Drainage </li>
                             <li>Post-Surgery wound dressing</li>
                         </ul>
                     </td>
@@ -162,7 +177,7 @@ const Tabs = ({ amount }) => {
                 </tr>
                 <tr className='border-slate-300 border-b h-14'>
                     <td className='font-semibold'>
-                        Optical - Optometry, frames and lenses (Every 2 years) 
+                        Optical - Optometry, frames and lenses (every 2 years) 
                         <p className='ml-6 mt-4 font-normal text-gray-400'>
                             <strong className='text-black-900'>NB:</strong> If there is a change in prescription within the 2-year period, the cost of lens
                             would be covered within the benefit limit
@@ -173,7 +188,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratSemiBold18"
                     >
-                        ✔
+                        Covered up to GH₵ {eye_amount}
                     </Text>
                     </td>
                 </tr> 
@@ -190,7 +205,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratSemiBold18"
                     >
-                        ✔
+                        Covered up to GH₵ {dental_amount}
                     </Text>
                     </td>
                 </tr> 
@@ -208,7 +223,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratSemiBold18"
                     >
-                        ✔
+                        {special_dental_amount}
                     </Text>
                     </td>
                 </tr>
@@ -253,7 +268,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratSemiBold18"
                     >
-                        ✔
+                        {medicine}
                     </Text>
                     </td>
                 </tr>
@@ -270,7 +285,7 @@ const Tabs = ({ amount }) => {
                             className="text-indigo-800 text-center"
                             size="txtMontserratSemiBold18"
                         >
-                            GH₵ 30,000
+                            GH₵ {in_benefit}
                         </Text>
                     </td>
                 </tr>
@@ -283,7 +298,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratMedium20"
                     >
-                        Side Ward
+                        {ward}
                     </Text>
                     </td>
                 </tr>
@@ -297,6 +312,24 @@ const Tabs = ({ amount }) => {
                         size="txtMontserratSemiBold18"
                     >
                         ✔
+                    </Text>
+                    </td>
+                </tr>
+                <tr className='border-slate-300 border-b h-14'>
+                    <td className='font-semibold'>
+                        Surgery (Major and Minor) <span className='font-normal text-gray-400'>
+                            (e.g., Piles, Fibroid, Hernia, Thyroid, Prostate, Spine, etc.)
+                        </span>
+                        <p className='font-normal text-gray-400'>
+                        Laparoscopic procedures are to be disclosed at the point of registration
+                        </p>
+                    </td>
+                    <td className='text-center'>
+                    <Text
+                        className="text-indigo-800 text-center"
+                        size="txtMontserratMedium20"
+                    >
+                        Covered up to the cost of same traditional procedure / surgery
                     </Text>
                     </td>
                 </tr>
@@ -323,19 +356,6 @@ const Tabs = ({ amount }) => {
                         size="txtMontserratSemiBold18"
                     >
                         ✔
-                    </Text>
-                    </td>
-                </tr>
-                <tr className='border-slate-300 border-b h-14'>
-                    <td className='font-normal text-gray-400'>
-                        Laparoscopic procedures are to be disclosed at the point of registration
-                    </td>
-                    <td className='text-center'>
-                    <Text
-                        className="text-indigo-800 text-center"
-                        size="txtMontserratMedium20"
-                    >
-                        Covered up to the cost of same traditional procedure / surgery
                     </Text>
                     </td>
                 </tr>
@@ -381,13 +401,19 @@ const Tabs = ({ amount }) => {
                 <tr className='border-slate-300 border-b h-14'>
                     <td className='font-semibold'>
                         Imaging
+                        <ul className='ml-6 font-normal text-gray-400'>
+                            <li>X-ray</li>
+                            <li>USG Scan</li>
+                            <li>CT Scan (No limit on body parts)</li>
+                            <li>MRI (No limit on body parts)</li>
+                        </ul>
                     </td>
                     <td className='text-center'>
                     <Text
                         className="text-indigo-800 text-center"
                         size="txtMontserratMedium20"
                     >
-                        X-ray and USG Scan
+                        ✔
                     </Text>
                     </td>
                 </tr>
@@ -404,23 +430,6 @@ const Tabs = ({ amount }) => {
                     </Text>
                     </td>
                 </tr>
-                <tr className='border-slate-300 border-b h-14'>
-                    <td className='font-semibold'>
-                        Maternity <br/>
-                        <ul className='ml-6 font-normal text-gray-400'>
-                            <li>Confinement </li>
-                            <li>Delivery (Spontaneous and assisted)</li>
-                        </ul>
-                    </td>
-                    <td className='text-center'>
-                    <Text
-                        className="text-indigo-800 text-center"
-                        size="txtMontserratMedium20"
-                    >
-                        Covered up to GH₵3,000
-                    </Text>
-                    </td>
-                </tr> 
                 <tr className='border-slate-300 border-b h-14'>
                     <td className='font-semibold'>
                         Auxiliary Services <br/>
@@ -456,7 +465,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratMedium20"
                     >
-                        Covered up to GH₵20,000
+                        Covered up to GH₵ {cancer_amount}
                     </Text>
                     </td>
                 </tr>
@@ -469,7 +478,7 @@ const Tabs = ({ amount }) => {
                         className="text-indigo-800 text-center"
                         size="txtMontserratMedium20"
                     >
-                        BP. BMI, FBS, FBC
+                        BP, BMI, FBS, FBC
                     </Text>
                     </td>
                 </tr> 

@@ -71,7 +71,6 @@ const SunkwaplanPage = () => {
           </div>
 
           <div className="absolute flex flex-col gap-6 sm:gap-6 inset-x-[0] items-center justify-start max-w-[846px] mx-auto sm:relative top-[13%] sm:top-[4%] w-full">
- main
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700 w-full"
               size="txtMontserratBold32WhiteA700"
@@ -195,9 +194,7 @@ const SunkwaplanPage = () => {
           </List>
         </div>
         <div
-
           className="common-pointer bg-white-A700 flex flex-col items-center justify-start p-[67px] md:px-10 sm:px-5 w-full sm:pt-[35px]"
- main
           id="block1"
         >
           <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between max-w-[1292px] mb-[3px] mt-[19px] mx-auto w-full">
@@ -260,7 +257,6 @@ const SunkwaplanPage = () => {
             </div>
 
             <div className="md:h-[534px] h-[589px] relative w-[48%] md:w-full sm:hidden">
- main
               <Img
                 className="absolute sm:h-3/4 h-[534px] inset-y-[0] left-[6%] my-auto object-cover rounded-[32px] w-[77%] sm:w-[90%]"
                 src="images/img_rectangle12.png"

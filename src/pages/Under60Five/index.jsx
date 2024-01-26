@@ -29,12 +29,11 @@ const Under60FivePage = () => {
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
                 size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                Champion mu Champion! The Ultimate Package from GLICO's Sunkwa Health Plan is the all-encompassing health coverage. 
+                It's the full-package deal, offering the most extensive protection for individuals. This plan is all about giving you 
+                complete peace of mind, ensuring that every aspect of your health is covered. You're not just covered; you are fully 
+                secured for whatever life seeks to throw your way.
+
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
@@ -109,6 +108,7 @@ const Under60FivePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline"
+                onClick={() => navigate("/payments")}
               >
                 Purchase Plan
               </Button>
@@ -127,7 +127,7 @@ const Under60FivePage = () => {
           >
             Benefits
           </Text>
-          <Tabs amount={"7,500"}/>
+          <Tabs out_benefit={"7,500"} eye_amount={"1,500"} type={"Ultimate"} dental_amount={"1,500"} in_benefit={"80,000"} cancer_amount={"60,000"}/>
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
