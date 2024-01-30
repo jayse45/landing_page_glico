@@ -25,6 +25,11 @@ const One = ({
     props.nextStep();
   };
 
+  const handlePrevious = () => {
+    navigate(-1);
+  };
+
+  const navigate = useNavigate();
   const planOptions = ["Select Plan", "Under 60", "Above 60"];
   const packageOptions = ["Select Package", "Enhanced", "Enhanced Plus", "Ultimate"];
 
@@ -64,7 +69,7 @@ const One = ({
         <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
           <Button
             className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
-            onClick={handleNext}
+            onClick={() => handlePrevious()}
             shape="round"
             color="black_900"
             size="sm"

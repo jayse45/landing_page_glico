@@ -55,13 +55,52 @@ const AboveOnePage = () => {
             className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 tracking-[-1.00px]"
             size="txtMontserratBold32"
           >
-            Why you need this
+            Why you need this?
           </Text>
           <List
-            className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-4 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full sm:grid-cols-1"
+            className="sm:flex-col flex-row gap-5 grid md:grid-cols-2 grid-cols-3 h-[177px] sm:h-auto justify-start max-w-7xl mx-auto w-full sm:grid-cols-1"
             orientation="horizontal"
           >
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+              <Img
+                className="h-8 w-8"
+                src="images/affordable_icon.svg"
+                alt="icons8moveEleven"
+              />
+              <Text
+                className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
+                size="txtMontserratSemiBold18"
+              >
+                Affordable coverage with essential benefits for basic health needs.
+              </Text>
+            </div>
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+              <Img
+                className="h-8 w-8"
+                src="images/img_icons8okhand1.svg"
+                alt="icons8okhandOne"
+              />
+              <Text
+                className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
+                size="txtMontserratSemiBold18"
+              >
+                Comprehensive coverage with additional benefits for enhanced protection.
+              </Text>
+            </div>
+            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+              <Img
+                className="h-8 w-8"
+                src="images/icons8_best_seller_1.svg"
+                alt="frame381"
+              />
+              <Text
+                className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
+                size="txtMontserratSemiBold18"
+              >
+                Premium coverage offering extensive benefits for comprehensive health security.
+              </Text>
+            </div>
+            {/* <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
                 src="images/img_icons8doctorsbag.svg"
@@ -108,7 +147,7 @@ const AboveOnePage = () => {
               >
                 User-Friendly Online Management
               </Text>
-            </div>
+            </div> */}
           </List>
         </div>
         </div>

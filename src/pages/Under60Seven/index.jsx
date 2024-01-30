@@ -56,23 +56,23 @@ const Under60SevenPage = () => {
             className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 tracking-[-1.00px]"
             size="txtMontserratBold32"
           >
-            Why you need this
+            Why you need this?
           </Text>
           <List
-            className="sm:flex-col flex-row gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 h-[177px] justify-start max-w-7xl mx-auto w-full"
+            className="sm:flex-col flex-row gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 h-[177px] justify-start max-w-7xl mx-auto w-full"
             orientation="horizontal"
           >
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
-                src="images/img_icons8move11.svg"
+                src="images/affordable_icon.svg"
                 alt="icons8moveEleven"
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
                 size="txtMontserratSemiBold18"
               >
-                Tailored for the dynamic and active members of your family
+                Affordable coverage with essential benefits for basic health needs.
               </Text>
             </div>
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
@@ -85,24 +85,23 @@ const Under60SevenPage = () => {
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
                 size="txtMontserratSemiBold18"
               >
-                Enjoy comprehensive coverage designed for the hustle and bustle
-                of daily life
+                Comprehensive coverage with additional benefits for enhanced protection.
               </Text>
             </div>
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
-                src="images/img_frame381.svg"
+                src="images/icons8_best_seller_1.svg"
                 alt="frame381"
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
                 size="txtMontserratSemiBold18"
               >
-                Exciting features to keep your loved ones at their absolute best
+                Premium coverage offering extensive benefits for comprehensive health security.
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+            {/* <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-9 w-9"
                 src="images/img_layer1_indigo_800_1.svg"
@@ -114,7 +113,7 @@ const Under60SevenPage = () => {
               >
                 User-Friendly Online Management
               </Text>
-            </div>
+            </div> */}
           </List>
         </div>
         <div className="bg-white-A700 flex flex-col items-end justify-start pl-6 py-6 w-full sm:relative sm:items-start sm:pl-0 sm:w-full">
