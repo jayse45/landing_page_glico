@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -7,9 +7,30 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import Tabs from "components/Tabs";
 import { LastSection } from "components/LastSection";
+import { PurchaseRequestForm } from "components/PurchaseRequestForm";
+import Modal from "react-modal";
 
 const AbovePage = () => {
   const navigate = useNavigate();
+
+  const modalStyle = {
+    content: {
+      "position": "absolute",
+      inset: "40px 2.5%",
+      "border": "1px solid rgb(204, 204, 204)",
+      background: "rgb(255, 255, 255)",
+      overflow: "auto",
+      "border-radius": "4px",
+      outline: "none",
+      padding: "20px",
+      width: "clamp(60%, 95%, 1850px)",
+    }
+  }
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -107,7 +128,7 @@ const AbovePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline" 
-                onClick={() => navigate("/payments")}
+                onClick={() => openModal()}
               >
                 Purchase Plan
               </Button>
@@ -130,6 +151,29 @@ const AbovePage = () => {
         </div>
         <LastSection/>
         <Footer className="bg-indigo-800 flex items-center justify-center md:px-5 w-full" />
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          contentLabel="Compare Plans"
+          style={modalStyle}
+          disableEnforcefocus
+          shouldCloseOnEsc
+          shouldCloseOnOverlayClick
+          closeTimeoutMS={300}
+        >
+          <div className="text-right">
+            <Button
+              color="indigo_800"
+              size="xs"
+              variant="fill"
+              shapes="round"
+              onClick={() => closeModal()}
+            >
+              <p className="font-bold">X</p>
+            </Button>
+          </div>
+          <PurchaseRequestForm plan="60 & Above" Package="Ultimate" amount="GH¢ 32698.68" />
+        </Modal>
       </div>
     </>
   );
