@@ -19,8 +19,8 @@ const Select = ({options, setChange}) => {
       onChange={handleSelectChange}
       autoFocus={false}
       >
-        {options.map(option => {
-            return <option key={option} value={option}>{option}</option> 
+        {options.map((option, index) => {
+            return <option key={option} value={index === 0 ? "" : option}>{option}</option> 
         })}
       </select>
     </div>

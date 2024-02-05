@@ -4,6 +4,7 @@ import StepWizard from "react-step-wizard";
 import Header from "components/Header";
 import { useNavigate } from "react-router-dom";
 import { PaystackButton } from 'react-paystack';
+import firsttime_register from "utils/firsttime_register";
 
 const ActionButtons = (props) => {
   const handleNext = () => {
@@ -17,19 +18,30 @@ const ActionButtons = (props) => {
 };
 
 const One = ({
+  selectedPlan,
+  selectedPackage,
   handlePackageChange,
   handlePlanChange,
   ...props
 }) => {
   const handleNext = () => {
-    props.nextStep();
+    if (selectedPlan === null || selectedPlan.length === 0)
+      setMessage("Please select a plan.")
+    else if (selectedPackage === null || selectedPackage.length === 0)
+      setMessage("Please select a package.")
+    else {
+      setMessage("");
+      props.nextStep();
+    }
   };
 
   const handlePrevious = () => {
+    setMessage("");
     navigate(-1);
   };
 
   const navigate = useNavigate();
+  const [message, setMessage] = useState("");
   const planOptions = ["Select Plan", "Under 60", "Above 60"];
   const packageOptions = ["Select Package", "Enhanced", "Enhanced Plus", "Ultimate"];
 
@@ -57,14 +69,14 @@ const One = ({
         </Text>
       </div>
       <div className="flex flex-col items-center justify-start mb-[371px] gap-5 mt-[98px] md:px-5 w-2/5 md:w-full">
-        <Select 
-        options={planOptions} 
-        setChange={handlePlanChange}
+        <p className="font-bold text-red-600 min-h-5">{message.length > 0 && message}</p>
+        <Select
+          options={planOptions}
+          setChange={handlePlanChange}
         />
-
-        <Select 
-        options={packageOptions} 
-        setChange={handlePackageChange}
+        <Select
+          options={packageOptions}
+          setChange={handlePackageChange}
         />
         <div className="flex flex-row sm:gap-10 items-center justify-between mt-[45px] w-[545px] sm:w-full">
           <Button
@@ -205,6 +217,15 @@ const Two = ({
 };
 
 const Three = ({
+  b_fname,
+  b_lname,
+  DOB,
+  b_email,
+  b_phoneNumber,
+  city,
+  address,
+  gender,
+  selectedPlan,
   handleBFnameChange,
   handleBLnameChange,
   handleDOBChange,
@@ -216,16 +237,62 @@ const Three = ({
   ...props
 }) => {
   const handleNext = () => {
-
-    props.nextStep();
+    if (b_fname === null || b_fname.length === 0)
+      setMessage("Please enter the beneficiary's first name.")
+    else if (b_lname === null || b_lname.length === 0)
+      setMessage("Please enter the beneficiary's last name.")
+    else if (gender === null || gender.length === 0)
+      setMessage("Please enter the beneficiary's gender.")
+    else if (!(gender === "Male" || gender === "Female"))
+      setMessage("Please select an appropriate gender for the beneficiary.")
+    else if (DOB === null || DOB.length === 0)
+      setMessage("Please enter the beneficiary's date of birth.")
+    else if (!(selectedPlan === "Under 60" && calculateAge() < 60) && !(selectedPlan === "Above 60" && calculateAge() >= 60))
+      setMessage("Beneficiary's age is not suitable for this plan.")
+    else if (b_email === null || b_email.length === 0)
+      setMessage("Please enter the beneficiary's email address.")
+    else if (!(emailRegex.test(b_email)))
+      setMessage("Email address in the wrong format.")
+    else if (b_phoneNumber === null || b_phoneNumber.length === 0)
+      setMessage("Please enter the beneficiary's phone number.")
+    else if (!(phoneRegex.test(b_phoneNumber)))
+      setMessage("Phone number in the wrong format.")
+    else if (city === null || city.length === 0)
+      setMessage("Please enter the beneficiary's current city.")
+    else if (address === null || address.length === 0)
+      setMessage("Please enter the beneficiary's current address.")
+    else {
+      setMessage("");
+      props.nextStep();
+    }
   };
 
   const handlePrevious = () => {
-
+    setMessage("");
     props.previousStep();
   };
 
+  const calculateAge = () => {
+    const today = new Date();
+    const birthDate = new Date(DOB);
+    const age = today.getFullYear() - birthDate.getFullYear();
+
+    // Check if the birthday has occurred this year
+    if (
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
+    ) {
+      return age - 1;
+    }
+
+    return age;
+  };
+
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const phoneRegex = /^\+?[0-9]{10,}\/?[0-9]*$/;
+
   const genderOptions = ["Select Gender", "Male", "Female"];
+  const [message, setMessage] = useState("");
 
   return (
     <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
@@ -257,6 +324,7 @@ const Three = ({
           </Text>
         </div>
         <div className="flex flex-col items-center justify-start mt-[55px] w-[60%] md:w-full">
+          <p className="font-bold text-red-600 min-h-5">{message.length > 0 && message}</p>
           <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
             <Input
               name="frameFortyFive"
@@ -284,10 +352,12 @@ const Three = ({
             ></Input>
           </div>
           <div className="flex sm:flex-col flex-row gap-[18px] items-center justify-between mt-[19px] w-full max-w-full">
-            <Select 
-            options={genderOptions} 
-            setChange={handleGenderChange}
-            />
+            <div className="w-[296px]">
+              <Select
+                options={genderOptions}
+                setChange={handleGenderChange}
+              />
+            </div>
             <Input
               name="frameFortyFour"
               placeholder="Date of birth"
@@ -380,6 +450,10 @@ const Three = ({
 };
 
 const Five = ({
+  fullName,
+  email,
+  phoneNumber,
+  relation,
   handleFullNameChange,
   handleEmailChange,
   handlePhoneNumberChange,
@@ -387,14 +461,39 @@ const Five = ({
   ...props
 }) => {
   const handleNext = () => {
-    props.nextStep();
+    if (fullName === null || fullName.length === 0)
+      setMessage("Please enter your full name.")
+    else if (!(nameRegex.test(fullName)))
+      setMessage("Full name in the wrong format (eg. John Doe)")
+    else if (email === null || email.length === 0)
+      setMessage("Please enter your email address.")
+    else if (!(emailRegex.test(email)))
+      setMessage("Email address in the wrong format.")
+    else if (phoneNumber === null || phoneNumber.length === 0)
+      setMessage("Please enter your phone number.")
+    else if (!(phoneRegex.test(phoneNumber)))
+      setMessage("Phone number in the wrong format.")
+    else if (relation === null || relation.length === 0)
+      setMessage("Please enter your relationship with the person.")
+    else if (!(beneficiaryRelationOptions.includes(relation)))
+      setMessage("Invalid relation chosen.")
+    else {
+      setMessage("");
+      props.nextStep();
+    }
   };
 
   const handlePrevious = () => {
+    setMessage("");
     props.previousStep();
   };
 
+  const nameRegex = /^[A-Za-z]+ [A-Za-z]+$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const phoneRegex = /^\+?[0-9]{10,}\/?[0-9]*$/;
+
   const beneficiaryRelationOptions = ["Who is the beneficiary to you?", "Relative", "Friend", "Employee", "Other"];
+  const [message, setMessage] = useState("")
 
   return (
     <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto p-9 sm:px-5 w-full">
@@ -406,7 +505,6 @@ const Five = ({
               src="images/new4.svg"
               alt="settings"
             />
-
           </div>
         </div>
         <div className="flex flex-col items-center justify-start mt-[53px] w-auto">
@@ -418,6 +516,7 @@ const Five = ({
           </Text>
         </div>
         <div className="flex flex-col items-center justify-start mt-12 w-[60%] md:w-full">
+          <p className="font-bold text-red-600 min-h-5 mb-8">{message.length > 0 && message}</p>
           <div className="flex sm:flex-col sm:gap-6 flex-row gap-2.5 items-center justify-between w-full">
             <Input
               name="frameThirty"
@@ -457,10 +556,12 @@ const Five = ({
               type="tel"
               onChange={handlePhoneNumberChange}
             ></Input>
-            <Select 
-            options={beneficiaryRelationOptions}
-            setChange={handleRelationChange}
-             />
+            <div className="w-[296px]">
+              <Select
+                options={beneficiaryRelationOptions}
+                setChange={handleRelationChange}
+              />
+            </div>
           </div>
           <div className="flex flex-row sm:gap-10 items-center justify-between mt-[110px] w-[603px] md:w-full">
             <Button
@@ -505,6 +606,7 @@ const Six = ({
   fullName,
   email,
   phoneNumber,
+  relation,
   ...props
 }) => {
   const handleNext = () => {
@@ -520,15 +622,60 @@ const Six = ({
   const config = {
     reference: (new Date()).getTime().toString(),
     email: email,
-    amount: amount * 100, 
+    amount: amount * 100,
     publicKey: 'pk_test_2bb382cf83dcbbded35073cca76a746157a6dd61',
     currency: "GHS"
   };
 
-  const handlePaystackSuccessAction = (reference) => {
+  const handle_registration = async () => {
+    // User information
+    const user = {
+      "name": fullName,
+      "email": email,
+      "contact": phoneNumber
+    };
+
+    const beneficiary = {
+      "fname": b_fname,
+      "lname": b_lname,
+      "gender": gender,
+      "DOB": DOB,
+      "email": b_email,
+      "contact": b_phoneNumber,
+      "city": city,
+      "address": address,
+      "relation": relation
+    };
+
+    const transaction = {
+      "category_id": 1,
+      "tier_id": 1,
+      "currency": "GHS",
+      "amount": `${amount.toFixed(2)}`
+    };
+
+    const data = {
+      "user": user,
+      "beneficiary": beneficiary,
+      "transaction": transaction
+    };
+
+    const isSuccessful = await firsttime_register(data);
+    console.log(isSuccessful);
+    return isSuccessful;
+  }
+
+  const handlePaystackSuccessAction = async (reference) => {
     // Implementation for whatever you want to do with reference and after success call.
     console.log(reference);
-    handleNext();
+
+    const isSuccessful = await handle_registration();
+    if (!isSuccessful) {
+      alert("Payment failed. Try again.")
+    }
+    else {
+      handleNext();
+    }
   };
 
   // you can call this function anything
@@ -538,10 +685,10 @@ const Six = ({
   }
 
   const componentProps = {
-      ...config,
-      text: 'Make Payment',
-      onSuccess: (reference) => handlePaystackSuccessAction(reference),
-      onClose: handlePaystackCloseAction,
+    ...config,
+    text: 'Make Payment',
+    onSuccess: (reference) => handlePaystackSuccessAction(reference),
+    onClose: handlePaystackCloseAction,
   };
 
   return (
@@ -728,18 +875,6 @@ const Six = ({
             </div>
           </div>
           <Line className="bg-blue_gray-50 h-px ml-1.5 md:ml-[0] mt-[25px] w-[96%]" />
-          {/* <Text
-            className="mt-[11px] text-gray-600 text-xs uppercase"
-            size="txtMontserratSemiBold12"
-          >
-            Payment method
-          </Text>
-          <Text
-            className="mt-[18px] text-[15px] text-black-900"
-            size="txtMontserratMedium15"
-          >
-            Card - XXXX XXXX XXXX XXXX 3215
-          </Text> */}
         </div>
         <div className="flex flex-row sm:gap-10 items-center justify-between mt-[102px] w-[619px] md:w-full">
           <Button
@@ -752,21 +887,10 @@ const Six = ({
           >
             Back
           </Button>
-          <PaystackButton 
-          {...componentProps} 
-          className="common-pointer cursor-pointer text-[15px] text-center w-[168px] bg-indigo-800 text-white-A700 p-3 rounded"
-          />
-          {/* <PaystackButton
+          <PaystackButton
             {...componentProps}
-            className="common-pointer cursor-pointer text-[15px] text-center w-[168px]"
-            onClick={handleNext}
-            shape="round"
-            color="indigo_800"
-            size="sm"
-            variant="fill"
-          >
-            Confirm Order
-          </PaystackButton> */}
+            className="common-pointer cursor-pointer text-[15px] text-center w-[168px] bg-indigo-800 text-white-A700 p-3 rounded"
+          />
         </div>
       </div>
     </div>
@@ -789,6 +913,7 @@ const Four = ({
     props.previousStep();
   };
   const navigate = useNavigate();
+  localStorage.setItem('step', 0);
 
 
 
@@ -837,12 +962,12 @@ const Four = ({
             To ensure a seamless and secure experience, we recommend signing
             in to your account.{" "}
             <span
-            className="text-deep_purple-A700 common-pointer font-montserrat font-normal underline"
-            onClick={() => navigate("/login")}
-          >
-            Login
+              className="text-deep_purple-A700 common-pointer font-montserrat font-normal underline"
+              onClick={() => navigate("/login")}
+            >
+              Login
+            </span>
           </span>
-          </span>   
         </Text>
         <Button
           className="cursor-pointer mt-[75px] text-[15px] text-center w-[168px] sm:mt-[50px]"
@@ -912,15 +1037,15 @@ const Payments = (props) => {
   const handleBFnameChange = (fname) => {
     set_bFname(fname);
   };
-  
+
   const handleBLnameChange = (lname) => {
     set_bLname(lname);
   };
-  
+
   const handleDOBChange = (DOB) => {
     setDOB(DOB);
   };
-  
+
   const handleGenderChange = (gender) => {
     setGender(gender);
   };
@@ -928,15 +1053,15 @@ const Payments = (props) => {
   const handleBEmailChange = (email) => {
     set_bEmail(email);
   };
-  
+
   const handleBPhoneNumberChange = (phone) => {
     set_bPhoneNumber(phone);
   };
-  
+
   const handleCityChange = (city) => {
     setCity(city);
   };
-  
+
   const handleAddressChange = (address) => {
     setAddress(address);
   };
@@ -950,21 +1075,21 @@ const Payments = (props) => {
   const handleFullNameChange = (fullname) => {
     setFullName(fullname);
   };
-  
+
   const handleEmailChange = (email) => {
     setEmail(email);
   };
-  
+
   const handlePhoneNumberChange = (phone) => {
     setPhoneNumber(phone);
   };
-  
+
   const handleRelationChange = (relation) => {
     setRelation(relation);
   };
 
   const [stepWizard, setStepWizard] = useState(null);
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(localStorage.getItem('step'));
 
   const [processing, setProcessing] = useState(false);
 
@@ -975,12 +1100,18 @@ const Payments = (props) => {
   const handleStepChange = (e) => {
     console.log("step change");
     console.log(e);
-    setActiveStep(e.activeStep - 1);
+    setActiveStep(prevstep => {
+      prevstep = e.activeStep - 1;
+      localStorage.setItem('step', e.activeStep);
+      console.log(localStorage.getItem('step'));
+      return prevstep;
+    }
+    );
   };
 
   const handleComplete = () => {
     alert("You r done. TQ");
-  }; 
+  };
 
   // Remove StepWizard default transitions
   let noTransitions = {
@@ -996,8 +1127,9 @@ const Payments = (props) => {
     <div className="sm:h-auto md:h-auto sm:w-full md:w-full">
       <div className="bg-white-A700 flex flex-col items-center justify-start w-auto">
         <div className="bg-white-A700 flex flex-col font-montserrat items-start justify-start mx-auto w-auto sm:w-full md:w-full mt-5">
-          <Header className="w-full sm:px-5"/>
+          <Header className="w-full sm:px-5" />
           <StepWizard
+            initialStep={activeStep}
             className="w-full"
             instance={assignStepWizard}
             onStepChange={handleStepChange}
@@ -1005,6 +1137,8 @@ const Payments = (props) => {
           >
             <One
               {...{
+                selectedPackage,
+                selectedPlan,
                 handlePackageChange,
                 handlePlanChange
               }}
@@ -1018,6 +1152,15 @@ const Payments = (props) => {
             />
             <Three
               {...{
+                b_fname,
+                b_lname,
+                DOB,
+                b_email,
+                b_phoneNumber,
+                city,
+                address,
+                gender,
+                selectedPlan,
                 handleBFnameChange,
                 handleBLnameChange,
                 handleDOBChange,
@@ -1031,6 +1174,10 @@ const Payments = (props) => {
 
             <Five
               {...{
+                fullName,
+                email,
+                phoneNumber,
+                relation,
                 handleFullNameChange,
                 handleEmailChange,
                 handlePhoneNumberChange,
