@@ -27,20 +27,20 @@ const SunkwaplanPage = () => {
               alt="rectangleOne"
             />
             <Img
-              className="h-auto m-auto object-cover w-full object-top sm:hidden"
-              src="images/hero1.png"
+              className="h-[750px] m-auto object-cover w-full object-top sm:hidden"
+              src="images/hero1_1.png"
               alt="rectangleOne"
             />
             <div className="absolute sm:bg-gradient1 flex flex-col gap-7 h-full inset-[0] items-start justify-center p-[59px] md:px-10 sm:px-5 w-full sm:justify-start">
-              <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[141px] mt-2.5 w-[538px] sm:w-full">
+              <div className="flex flex-col gap-6 items-start justify-start md:ml-[0] ml-[141px] mt-2.5 w-[600px] sm:w-full">
                 <Text
-                  className="leading-[52.00px] max-w-[538px] md:max-w-full sm:text-[24px] md:text-[40px] text-[44px] text-white-A700 tracking-[-1.00px] sm:w-[58%]"
+                  className="leading-[52.00px] max-w-[600px] md:max-w-full sm:text-[24px] md:text-[40px] text-[55px] text-white-A700 tracking-[-1.00px] sm:w-[58%]"
                   size="txtMontserratBold44"
                 >
                   Sunkwa wɔ hɔ aa, efie yɛ  dɛ!
                 </Text>
                 <Text
-                  className="leading-[24.00px] max-w-[442px] md:max-w-full text-[16px] text-white-A700 sm:w-[50%]"
+                  className="leading-[24.00px] max-w-[442px] md:max-w-full sm:text-[16px] text-[20px] text-white-A700 sm:w-[50%]"
                   size="txtMontserratMedium15WhiteA700"
                 >
                   Save your family abroad from the stress of having to worry about your medical needs.
@@ -69,6 +69,7 @@ const SunkwaplanPage = () => {
               alt="vectorThree"
             />
           </div>
+
           <div className="absolute flex flex-col gap-6 sm:gap-6 inset-x-[0] items-center justify-start max-w-[846px] mx-auto sm:relative top-[13%] sm:top-[4%] w-full">
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700 w-full"
@@ -104,7 +105,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     Comprehensive Coverage
                   </Text>
@@ -128,7 +129,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     24/7 Support
                   </Text>
@@ -152,7 +153,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     Flexibility
                   </Text>
@@ -176,7 +177,7 @@ const SunkwaplanPage = () => {
                 <div className="flex flex-col gap-2 items-start justify-start w-full">
                   <Text
                     className="text-lg text-white-A700 w-full"
-                    size="txtMontserratSemiBold18"
+                    size="txtMontserratSemiBold18WhiteA700"
                   >
                     Peace of Mind
                   </Text>
@@ -238,7 +239,7 @@ const SunkwaplanPage = () => {
                   </Text>
                   <Text
                     className="leading-[24.00px] max-w-[522px] md:max-w-full text-[15px] text-gray-700"
-                    size="txtMontserratRegular15"
+                    size="txtMontserratRegular15Gray700"
                   >
                     You have the power to purchase health plans for everyone,
                     across all age ranges! Our health coverage is tailored to
@@ -254,9 +255,10 @@ const SunkwaplanPage = () => {
 
 
             </div>
+
             <div className="md:h-[534px] h-[589px] relative w-[48%] md:w-full sm:hidden">
               <Img
-                className="absolute h-[534px] inset-y-[0] left-[6%] my-auto object-cover rounded-[32px] w-[77%]"
+                className="absolute sm:h-3/4 h-[534px] inset-y-[0] left-[6%] my-auto object-cover rounded-[32px] w-[77%] sm:w-[90%]"
                 src="images/img_rectangle12.png"
                 alt="rectangleTwelve"
               />
@@ -267,7 +269,7 @@ const SunkwaplanPage = () => {
               />
               <div
                 className="absolute bg-cover bg-no-repeat flex flex-col h-32 items-center justify-start left-[0] p-8 sm:px-5 rounded-[20px] top-[0] w-32"
-                style={{ backgroundImage: "url('images/img_group3.svg')" }}
+                style={{ backgroundImage: "url('images/img_group373.svg')" }}
               >
                 <Img
                   className="h-[62px] w-[62px]"

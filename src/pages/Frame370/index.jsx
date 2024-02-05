@@ -26,7 +26,7 @@ const Frame370Page = () => {
                   }
                   shape="square"
                   color="gray_100"
-                  size="sm"
+                  size="md"
                   variant="fill"
                 ></Input>
               </div>
@@ -54,7 +54,7 @@ const Frame370Page = () => {
                   }
                   shape="square"
                   color="gray_100"
-                  size="sm"
+                  size="md"
                   variant="fill"
                 ></Input>
               </div>

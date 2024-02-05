@@ -27,8 +27,8 @@ const Under60SevenPage = () => {
             alt="rectangleOne"
           /> */}
           <Img
-            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-[70%]"
-            src="images/img_rectangle1_481x1440.png"
+            className="h-[520px] m-auto object-cover w-full sm:h-[500px] sm:object-[70%] object-top"
+            src="images/img_under60_landing.png"
             alt="rectangleOne"
           />
           <div className="absolute bg-gradient_below sm:bg-black-900_49 flex flex-col gap-[39px] h-full inset-[0] items-start justify-center m-auto p-[49px] md:px-10 sm:px-5 w-full">
@@ -56,23 +56,23 @@ const Under60SevenPage = () => {
             className="md:text-3xl sm:text-[28px] text-[32px] text-center text-indigo-800 tracking-[-1.00px]"
             size="txtMontserratBold32"
           >
-            Why you need this
+            Why you need this?
           </Text>
           <List
-            className="sm:flex-col flex-row gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 h-[177px] justify-start max-w-7xl mx-auto w-full"
+            className="sm:flex-col flex-row gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 h-[177px] justify-start max-w-7xl mx-auto w-full"
             orientation="horizontal"
           >
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
-                src="images/img_icons8move11.svg"
+                src="images/affordable_icon.svg"
                 alt="icons8moveEleven"
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
-                Tailored for the dynamic and active members of your family
+                Affordable coverage with essential benefits for basic health needs.
               </Text>
             </div>
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
@@ -83,38 +83,37 @@ const Under60SevenPage = () => {
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
-                Enjoy comprehensive coverage designed for the hustle and bustle
-                of daily life
+                Comprehensive coverage with additional benefits for enhanced protection.
               </Text>
             </div>
             <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
                 className="h-8 w-8"
-                src="images/img_frame381.svg"
+                src="images/icons8_best_seller_1.svg"
                 alt="frame381"
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
-                Exciting features to keep your loved ones at their absolute best
+                Premium coverage offering extensive benefits for comprehensive health security.
               </Text>
             </div>
-            <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
+            {/* <div className="bg-white-A700 border border-blue_gray-50 border-solid flex flex-1 flex-col gap-3.5 h-full items-center justify-start p-5 rounded-[24px] shadow-bs1 w-full transition-transform duration-300 ease-out hover:scale-110">
               <Img
-                className="h-8 w-8"
-                src="images/img_layer1_indigo_800.svg"
+                className="h-9 w-9"
+                src="images/img_layer1_indigo_800_1.svg"
                 alt="layerOne"
               />
               <Text
                 className="capitalize leading-[24.00px] max-w-[265px] md:max-w-full text-center text-indigo-800 text-lg"
-                size="txtMontserratSemiBold18Indigo800"
+                size="txtMontserratSemiBold18"
               >
                 User-Friendly Online Management
               </Text>
-            </div>
+            </div> */}
           </List>
         </div>
         <div className="bg-white-A700 flex flex-col items-end justify-start pl-6 py-6 w-full sm:relative sm:items-start sm:pl-0 sm:w-full">
@@ -147,8 +146,8 @@ const Under60SevenPage = () => {
                 </div>
               </div>
               <Img
-                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-3xl sm:w-full sm:max-w-full sm:h-[300px] sm:object-[90%]"
-                src="images/img_rectangle25.png"
+                className="h-[415px] md:h-auto object-cover rounded-bl-[20px] rounded-tl-[20px] max-w-3xl object-[100%] sm:w-full sm:max-w-full sm:h-[300px] sm:object-[90%]"
+                src="images/img_under60_package.png"
                 alt="rectangleTwentyFive"
               />
             </div>
@@ -175,7 +174,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60three")}
-                  shape="round"
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -206,7 +204,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60one")}
-                  shape="round"
                   color="white_A700"
                   size="sm"
                   variant="outline"
@@ -236,7 +233,6 @@ const Under60SevenPage = () => {
                 <Button
                   className="common-pointer cursor-pointer font-medium min-w-[134px] text-[15px] text-center transition duration-300 ease-in-out hover:bg-white-A700 hover:text-indigo-800 group flex justify-center items-center"
                   onClick={() => navigate("/under60five")}
-                  shape="round"
                   color="white_A700"
                   size="sm"
                   variant="outline"

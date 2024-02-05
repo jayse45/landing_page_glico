@@ -2,11 +2,12 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { BackButton, Button, Img, Input, List, Text } from "components";
+import { BackButton, Button, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import Tabs from "components/Tabs";
 import { LastSection } from "components/LastSection";
+
 
 const AbovePage = () => {
   const navigate = useNavigate();
@@ -27,18 +28,16 @@ const AbovePage = () => {
               </Text>
               <Text
                 className="leading-[24.00px] mt-7 text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                The Ultimate Package from GLICO's Sunkwa Health Plan is the premium choice for individuals and families above 60, 
+                offering the most extensive health coverage. This plan is the pinnacle of healthcare protection, catering to all 
+                your health needs with no compromises. It's designed to give you complete peace of mind, knowing that you have the 
+                highest level of coverage available.
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
-                size="txtMontserratSemiBold15"
+                size="txtMontserratSemiBold15Indigo800"
               >
                 Key Features
               </Text>
@@ -55,7 +54,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Essential Coverage{" "}
                     </Text>
@@ -68,7 +67,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Affordable Premiums
                     </Text>
@@ -83,7 +82,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Network Access
                     </Text>
@@ -96,7 +95,7 @@ const AbovePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Versatility
                     </Text>
@@ -109,8 +108,9 @@ const AbovePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline" 
+                onClick={() => navigate("/payments")}
               >
-                Purchase Plan
+                Purchase Plans
               </Button>
             </div>
             <Img

@@ -37,7 +37,7 @@ const SunkwaplanCategoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
             {dropBtn === "btn1" &&
@@ -92,7 +92,7 @@ const SunkwaplanCategoriescard = (props) => {
               }
               shape="square"
               color="gray_100"
-              size="sm"
+              size="md"
               variant="fill"
             ></Input>
             {dropBtn === "btn2" && 

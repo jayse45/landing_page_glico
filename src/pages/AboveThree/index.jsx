@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { BackButton, Button, Img, Input, List, Text } from "components";
+import { BackButton, Button, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import Tabs from "components/Tabs";
@@ -27,18 +27,15 @@ const AboveThreePage = () => {
               </Text>
               <Text
                 className="leading-[24.00px] mt-[27px] text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                The Enhanced Package from GLICO's Sunkwa Health Plan is thoughtfully designed for those above 60, 
+                offering a reliable and budget-friendly health coverage option. This plan is ideal for seniors seeking 
+                a fundamental level of protection. It ensures that your health needs are met without stretching your finances.
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
-                size="txtMontserratSemiBold15"
+                size="txtMontserratSemiBold15Indigo800"
               >
                 Key Features
               </Text>
@@ -55,7 +52,7 @@ const AboveThreePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Essential Coverage{" "}
                     </Text>
@@ -68,7 +65,7 @@ const AboveThreePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Affordable Premiums
                     </Text>
@@ -83,7 +80,7 @@ const AboveThreePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Network Access
                     </Text>
@@ -96,7 +93,7 @@ const AboveThreePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Versatility
                     </Text>
@@ -109,6 +106,7 @@ const AboveThreePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline"
+                onClick={() => navigate("/payments")}
               >
                 Purchase Plan
               </Button>

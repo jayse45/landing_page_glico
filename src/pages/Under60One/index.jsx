@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { BackButton, Button, HowItWorks, Img, Input, List, Text } from "components";
+import { BackButton, Button, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import { LastSection } from "components/LastSection";
@@ -27,18 +27,16 @@ const Under60OnePage = () => {
               </Text>
               <Text
                 className="leading-[24.00px] mt-[27px] text-[15px] text-gray-700 w-full"
-                size="txtMontserratRegular15"
+                size="txtMontserratRegular15Gray700"
               >
-                The Enhanced Package from GLICO 60 Year and Above Sunkwa Health
-                Plan is crafted to offer essential health coverage while
-                maintaining affordability. Tailored for individuals and families
-                in their golden age seeking a foundational level of protection,
-                this package provides peace of mind without straining your
-                budget.
+                The Enhanced Plus Package for the under-60 crowd is the ultimate health coverage solution. 
+                Providing comprehensive protection that's still easy on your wallet. It's the smart choice 
+                for those who want a little extra peace of mind, blending top-notch coverage with affordability 
+                – because staying healthy shouldn't be a luxury.
               </Text>
               <Text
                 className="mt-14 text-[15px] text-indigo-800"
-                size="txtMontserratSemiBold15"
+                size="txtMontserratSemiBold15Indigo800"
               >
                 Key Features
               </Text>
@@ -55,7 +53,7 @@ const Under60OnePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Essential Coverage{" "}
                     </Text>
@@ -68,7 +66,7 @@ const Under60OnePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Affordable Premiums
                     </Text>
@@ -83,7 +81,7 @@ const Under60OnePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Network Access
                     </Text>
@@ -96,7 +94,7 @@ const Under60OnePage = () => {
                     />
                     <Text
                       className="flex-1 text-[15px] text-gray-700 w-auto"
-                      size="txtMontserratRegular15"
+                      size="txtMontserratRegular15Gray700"
                     >
                       Versatility
                     </Text>
@@ -109,6 +107,7 @@ const Under60OnePage = () => {
                 color="blue_gray_101"
                 size="sm"
                 variant="outline"
+                onClick={() => navigate("/payments")}
               >
                 Purchase Plan
               </Button>
