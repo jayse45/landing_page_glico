@@ -623,7 +623,7 @@ const Six = ({
     reference: (new Date()).getTime().toString(),
     email: email,
     amount: amount * 100,
-    publicKey: 'pk_test_2bb382cf83dcbbded35073cca76a746157a6dd61',
+    publicKey: 'pk_live_b910833232d30c61c2121fc195c8529826880332',
     currency: "GHS"
   };
 
